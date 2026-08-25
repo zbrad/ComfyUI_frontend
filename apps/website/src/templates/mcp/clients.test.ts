@@ -18,6 +18,7 @@ describe('isConnectionId', () => {
   it.for([
     { label: 'a client id', value: 'claude-desktop' },
     { label: 'an empty string', value: '' },
+    { label: 'null', value: null },
     { label: 'undefined', value: undefined },
     { label: 'a number', value: 0 }
   ])('rejects $label', ({ value }) => {
@@ -36,6 +37,7 @@ describe('isMcpClientId', () => {
     { label: 'a connection id', value: 'cloud' },
     { label: 'an unprefixed local id', value: 'claude-code-local' },
     { label: 'an empty string', value: '' },
+    { label: 'null', value: null },
     { label: 'undefined', value: undefined },
     { label: 'an inherited Object property', value: 'toString' }
   ])('rejects $label', ({ value }) => {
