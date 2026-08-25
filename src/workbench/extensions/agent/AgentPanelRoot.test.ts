@@ -267,6 +267,14 @@ vi.mock('@/platform/telemetry', () => ({
   useTelemetry: () => telemetry
 }))
 
+const openAccountPrecondition = vi.hoisted(() => vi.fn())
+vi.mock(
+  '@/platform/cloud/subscription/composables/useAccountPreconditionDialog',
+  () => ({
+    useAccountPreconditionDialog: () => ({ open: openAccountPrecondition })
+  })
+)
+
 import type { TurnId } from './schemas/agentApiSchema'
 import { zAgentWsEvent } from './schemas/agentApiSchema'
 import { MAX_ATTACHMENT_BYTES } from './composables/agent/useAttachment'
@@ -347,6 +355,37 @@ function addTab(path: string, overrides: Partial<FakeTab> = {}): FakeTab {
   hostStores.workflow.tabs.set(tab.path, tab)
   return tab
 }
+
+describe('AgentPanelRoot paywall actions', () => {
+  beforeEach(() => {
+    setActivePinia(createPinia())
+    ws.clear()
+    openAccountPrecondition.mockClear()
+  })
+
+  it('routes the inline card actions through account preconditions', async () => {
+    render(AgentPanelRoot, { global: { plugins: [i18n] } })
+    useAgentConversationStore().messages.push({
+      id: 'msg-paywall' as TurnId,
+      role: 'assistant',
+      parts: [{ type: 'paywall' }],
+      streaming: false,
+      thinking: false
+    })
+
+    await userEvent.click(
+      await screen.findByRole('button', { name: 'Add credits' })
+    )
+    await userEvent.click(
+      screen.getByRole('button', { name: 'Upgrade subscription' })
+    )
+
+    expect(openAccountPrecondition.mock.calls).toEqual([
+      ['credits'],
+      ['subscription']
+    ])
+  })
+})
 
 describe('AgentPanelRoot session notices', () => {
   beforeEach(() => {
