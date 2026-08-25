@@ -1257,6 +1257,11 @@ const onLoadWorkflow = async (template: TemplateInfo) => {
     if (!prepared || generation !== detailGeneration) return
 
     const groups = buildTemplateDetailGroups(template, prepared)
+    if (isCloud) {
+      await openPreparedTemplate(prepared, generation)
+      return
+    }
+
     if (!isDesktop) {
       activeDetail.value = { template, prepared, groups }
       return
