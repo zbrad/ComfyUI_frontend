@@ -2,12 +2,19 @@ import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import {
+  deriveModelCategories,
+  type ModelCategory
+} from '../src/config/modelCategories'
+
 const WORKFLOW_TEMPLATES_BASE =
   'https://raw.githubusercontent.com/Comfy-Org/workflow_templates/main/templates'
 
-const TEMPLATES_DIR = fileURLToPath(
-  new URL('../../../../workflow_templates/templates', import.meta.url)
-)
+const TEMPLATES_DIR =
+  process.env['WORKFLOW_TEMPLATES_DIR'] ??
+  fileURLToPath(
+    new URL('../../../../workflow_templates/templates', import.meta.url)
+  )
 
 const QUANT_SUFFIXES = [
   '_fp8_e4m3fn_scaled',
@@ -26,6 +33,7 @@ interface ModelData {
   url: string
   directory: string
   templates: Set<string>
+  categories: Set<ModelCategory>
   firstTemplate?: string
 }
 
@@ -36,6 +44,7 @@ interface OutputModel {
   directory: string
   workflowCount: number
   displayName: string
+  categories: ModelCategory[]
   docsUrl?: string
   thumbnailUrl?: string
   canonicalSlug?: string
@@ -90,7 +99,8 @@ const LEGACY_SLUG_REDIRECTS: OutputModel[] = [
     displayName: 'Grok Image',
     directory: 'partner_nodes',
     huggingFaceUrl: '',
-    workflowCount: 0
+    workflowCount: 0,
+    categories: []
   }
 ]
 
@@ -130,12 +140,15 @@ function makeDisplayName(name: string): string {
 function extractModels(
   obj: unknown,
   templateName: string,
+  categories: readonly ModelCategory[],
   models: Map<string, ModelData>
 ): void {
   if (obj === null || typeof obj !== 'object') return
 
   if (Array.isArray(obj)) {
-    for (const item of obj) extractModels(item, templateName, models)
+    for (const item of obj) {
+      extractModels(item, templateName, categories, models)
+    }
     return
   }
 
@@ -157,15 +170,18 @@ function extractModels(
           url,
           directory,
           templates: new Set(),
+          categories: new Set(),
           firstTemplate: templateName
         })
       }
-      models.get(name)!.templates.add(templateName)
+      const modelData = models.get(name)!
+      modelData.templates.add(templateName)
+      for (const category of categories) modelData.categories.add(category)
     }
   }
 
   for (const value of Object.values(record)) {
-    extractModels(value, templateName, models)
+    extractModels(value, templateName, categories, models)
   }
 }
 
@@ -174,26 +190,81 @@ interface ApiModelData {
   name: string
   directory: 'partner_nodes'
   templateCount: number
+  categories: ModelCategory[]
 }
 
-function extractApiModels(files: string[]): ApiModelData[] {
-  const counts = new Map<string, number>()
+function extractApiModels(
+  files: string[],
+  templateCategories: ReadonlyMap<string, readonly ModelCategory[]>
+): ApiModelData[] {
+  const providers = new Map<
+    string,
+    { count: number; categories: Set<ModelCategory> }
+  >()
   for (const file of files) {
     if (!file.startsWith('api_')) continue
     const prefix = file.slice(4).split('_')[0]
     const entry = API_PROVIDER_MAP[prefix]
     if (!entry) continue
-    counts.set(entry.slug, (counts.get(entry.slug) ?? 0) + 1)
+    const provider = providers.get(entry.slug) ?? {
+      count: 0,
+      categories: new Set<ModelCategory>()
+    }
+    provider.count += 1
+    for (const category of templateCategories.get(stripJsonExtension(file)) ??
+      []) {
+      provider.categories.add(category)
+    }
+    providers.set(entry.slug, provider)
   }
-  return [...counts.entries()].map(([slug, count]) => {
+  return [...providers.entries()].map(([slug, provider]) => {
     const found = Object.values(API_PROVIDER_MAP).find((e) => e.slug === slug)!
     return {
       slug,
       name: found.name,
       directory: 'partner_nodes' as const,
-      templateCount: count
+      templateCount: provider.count,
+      categories: [...provider.categories]
     }
   })
+}
+
+function stripJsonExtension(file: string): string {
+  return file.replace(/\.json$/, '')
+}
+
+function buildTemplateCategoryMap(
+  templatesDir: string
+): Map<string, ModelCategory[]> {
+  const map = new Map<string, ModelCategory[]>()
+  const data: unknown = JSON.parse(
+    readFileSync(join(templatesDir, 'index.json'), 'utf8')
+  )
+  if (!Array.isArray(data)) return map
+
+  for (const category of data) {
+    if (typeof category !== 'object' || category === null) continue
+    const categoryRecord = category as Record<string, unknown>
+    const section =
+      typeof categoryRecord['title'] === 'string' ? categoryRecord['title'] : ''
+    const templates = categoryRecord['templates']
+    if (!Array.isArray(templates)) continue
+
+    for (const template of templates) {
+      if (typeof template !== 'object' || template === null) continue
+      const templateRecord = template as Record<string, unknown>
+      const name = templateRecord['name']
+      if (typeof name !== 'string') continue
+      const tags = Array.isArray(templateRecord['tags'])
+        ? templateRecord['tags'].filter(
+            (tag): tag is string => typeof tag === 'string'
+          )
+        : []
+      map.set(name, deriveModelCategories(section, tags))
+    }
+  }
+
+  return map
 }
 
 // Reads all locale index.json files to build a map of
@@ -296,13 +367,20 @@ function run(): void {
   const models = new Map<string, ModelData>()
 
   const files = readdirSync(TEMPLATES_DIR).filter((f) => f.endsWith('.json'))
+  const templateCategories = buildTemplateCategoryMap(TEMPLATES_DIR)
 
   for (const file of files) {
     const filePath = join(TEMPLATES_DIR, file)
     try {
       const raw = readFileSync(filePath, 'utf8')
       const data: unknown = JSON.parse(raw)
-      extractModels(data, file, models)
+      const templateName = stripJsonExtension(file)
+      extractModels(
+        data,
+        templateName,
+        templateCategories.get(templateName) ?? [],
+        models
+      )
     } catch (error) {
       throw new Error(
         `Failed to parse ${file}: ${
@@ -313,7 +391,7 @@ function run(): void {
     }
   }
 
-  const apiModels = extractApiModels(files)
+  const apiModels = extractApiModels(files, templateCategories)
   const tutorialUrlMap = buildTutorialUrlMap(TEMPLATES_DIR)
 
   const sorted = [...models.entries()].sort(
@@ -353,7 +431,8 @@ function run(): void {
       huggingFaceUrl: data.url,
       directory: data.directory,
       workflowCount: data.templates.size,
-      displayName: makeDisplayName(name)
+      displayName: makeDisplayName(name),
+      categories: [...data.categories]
     }
     const docsUrl = tutorialUrlMap.get(name)
     if (docsUrl) result.docsUrl = docsUrl
@@ -373,7 +452,8 @@ function run(): void {
       huggingFaceUrl: '',
       directory: m.directory,
       workflowCount: m.templateCount,
-      displayName: m.name
+      displayName: m.name,
+      categories: m.categories
     }))
 
   const combined = [...apiOutput, ...output, ...LEGACY_SLUG_REDIRECTS]
