@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/vue'
 import userEvent from '@testing-library/user-event'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { i18n } from '@/i18n'
 import type { TurnId } from '../../../schemas/agentApiSchema'
@@ -20,6 +20,57 @@ function thinkingMessage(thinkingText?: string): AssistantMessage {
     thinkingText
   }
 }
+
+function paywallMessage(): AssistantMessage {
+  return {
+    id: 'msg-paywall' as TurnId,
+    role: 'assistant',
+    parts: [{ type: 'paywall' }],
+    streaming: false,
+    thinking: false
+  } as unknown as AssistantMessage
+}
+
+describe('AgentMessage paywall reply', () => {
+  it('renders the usage-limit card as an inline assistant reply', () => {
+    render(AgentMessage, {
+      props: { message: paywallMessage() },
+      global: { plugins: [i18n] }
+    })
+
+    expect(screen.getByText('Usage limit reached')).toBeInTheDocument()
+    expect(
+      screen.getByText(
+        'You are out of monthly free usage and Comfy Credit balance now. Please top up or subscribe to get additional credits.'
+      )
+    ).toBeInTheDocument()
+    expect(
+      screen.getByRole('button', { name: 'Add credits' })
+    ).toBeInTheDocument()
+    expect(
+      screen.getByRole('button', { name: 'Upgrade subscription' })
+    ).toBeInTheDocument()
+  })
+
+  it('exposes distinct actions for adding credits and upgrading', async () => {
+    const user = userEvent.setup()
+    const onAddCredits = vi.fn()
+    const onUpgradeSubscription = vi.fn()
+    render(AgentMessage, {
+      props: { message: paywallMessage() },
+      attrs: { onAddCredits, onUpgradeSubscription },
+      global: { plugins: [i18n] }
+    })
+
+    await user.click(screen.getByRole('button', { name: 'Add credits' }))
+    await user.click(
+      screen.getByRole('button', { name: 'Upgrade subscription' })
+    )
+
+    expect(onAddCredits).toHaveBeenCalledOnce()
+    expect(onUpgradeSubscription).toHaveBeenCalledOnce()
+  })
+})
 
 describe('AgentMessage thinking narration', () => {
   it('shows the live narration text while thinking', () => {
