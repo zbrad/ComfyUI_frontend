@@ -28,7 +28,7 @@ function paywallMessage(): AssistantMessage {
     parts: [{ type: 'paywall' }],
     streaming: false,
     thinking: false
-  } as unknown as AssistantMessage
+  }
 }
 
 describe('AgentMessage paywall reply', () => {

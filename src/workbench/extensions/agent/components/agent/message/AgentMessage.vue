@@ -5,6 +5,7 @@ import type {
   ActivityPart,
   AssistantMessage,
   NoticePart,
+  PaywallPart,
   TabLinkPart,
   TextPart
 } from '../../../services/agent/agentMessageParts'
@@ -13,16 +14,22 @@ import { cn } from '@comfyorg/tailwind-utils'
 import { renderMarkdownToHtml } from '@/utils/markdownRendererUtil'
 
 import MarkdownStream from './MarkdownStream.vue'
+import AgentPaywallCard from './AgentPaywallCard.vue'
 import MessageFeedback from './MessageFeedback.vue'
 import TabLinkCard from './TabLinkCard.vue'
 import ToolCallGroup from './ToolCallGroup.vue'
 
 const { message } = defineProps<{ message: AssistantMessage }>()
-const emit = defineEmits<{ feedback: [vote: 'up' | 'down' | null] }>()
+const emit = defineEmits<{
+  feedback: [vote: 'up' | 'down' | null]
+  addCredits: []
+  upgradeSubscription: []
+}>()
 
 type Group =
   | { kind: 'text'; part: TextPart }
   | { kind: 'notice'; part: NoticePart }
+  | { kind: 'paywall'; part: PaywallPart }
   | { kind: 'activity'; parts: ActivityPart[] }
   | { kind: 'tabLinks'; parts: TabLinkPart[] }
 
@@ -41,6 +48,8 @@ const groups = computed<Group[]>(() => {
     } else if (part.type === 'tabLink') {
       if (prev?.kind === 'tabLinks') prev.parts.push(part)
       else out.push({ kind: 'tabLinks', parts: [part] })
+    } else if (part.type === 'paywall') {
+      out.push({ kind: 'paywall', part })
     } else {
       out.push({ kind: 'notice', part })
     }
@@ -85,6 +94,11 @@ const hasTools = computed(() =>
           :name="link.name"
         />
       </div>
+      <AgentPaywallCard
+        v-else-if="group.kind === 'paywall'"
+        @add-credits="emit('addCredits')"
+        @upgrade-subscription="emit('upgradeSubscription')"
+      />
       <div
         v-else
         :class="

@@ -36,9 +36,19 @@ export interface TabLinkPart {
   name?: string
 }
 
+export interface PaywallPart {
+  type: 'paywall'
+}
+
 export type ActivityPart = ThinkingPart | ToolPart
 
-type MessagePart = TextPart | ThinkingPart | ToolPart | NoticePart | TabLinkPart
+type MessagePart =
+  | TextPart
+  | ThinkingPart
+  | ToolPart
+  | NoticePart
+  | TabLinkPart
+  | PaywallPart
 
 export interface AssistantMessage {
   id: TurnId
