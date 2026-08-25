@@ -745,7 +745,6 @@ const hoveredTemplate = ref<string | null>(null)
 const cardRefs = ref<HTMLElement[]>([])
 type TemplateModelRowDownloads = ReturnType<typeof useTemplateModelRowDownloads>
 type ActiveTemplateModelSetup = {
-  requirements: readonly TemplateModelRequirementDetail[]
   result: TemplateModelSetupResult
   pending: boolean
   rowDownloads: TemplateModelRowDownloads
@@ -1287,7 +1286,6 @@ const onLoadWorkflow = async (template: TemplateInfo) => {
       prepared,
       groups,
       modelSetup: {
-        requirements: modelRequirements,
         result: deriveTemplateModelSetup(
           modelRequirements,
           modelAvailability,
