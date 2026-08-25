@@ -17,6 +17,8 @@ const { entries } = defineProps<{
 }>()
 const emit = defineEmits<{
   feedback: [turnId: string, vote: 'up' | 'down' | null]
+  addCredits: []
+  upgradeSubscription: []
 }>()
 
 const { t } = useI18n()
@@ -82,6 +84,8 @@ watch(
               v-else
               :message="entry"
               @feedback="emit('feedback', entry.id, $event)"
+              @add-credits="emit('addCredits')"
+              @upgrade-subscription="emit('upgradeSubscription')"
             />
           </template>
           <div ref="bottom" />
