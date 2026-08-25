@@ -9,11 +9,11 @@
     >
       <DialogPortal>
         <DialogOverlay
-          v-reka-z-index
+          v-reka-z-index="item.priority"
           :class="item.dialogComponentProps.overlayClass"
         />
         <DialogContent
-          v-reka-z-index
+          v-reka-z-index="item.priority"
           :size="item.dialogComponentProps.size ?? 'md'"
           :maximized="!!item.dialogComponentProps.maximized"
           :class="item.dialogComponentProps.contentClass"

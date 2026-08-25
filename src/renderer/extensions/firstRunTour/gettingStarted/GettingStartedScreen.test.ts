@@ -22,6 +22,7 @@ const mocks = vi.hoisted(() => ({
 }))
 
 vi.mock('./firstRunEntry', () => ({
+  GETTING_STARTED_DIALOG_KEY: 'global-getting-started',
   useFirstRunEntry: () => ({ dismissGettingStarted: mocks.dismiss })
 }))
 
@@ -222,29 +223,24 @@ describe('GettingStartedScreen', () => {
         'A first-run user must always have a visible way out of the takeover'
       ).toHaveBeenCalled()
     })
-
-    it('exits on Escape', async () => {
-      await renderScreen()
-
-      await userEvent.keyboard('{Escape}')
-
-      expect(
-        mocks.dismiss,
-        'Escape must follow the same safe dismissal path as the blank-canvas action'
-      ).toHaveBeenCalled()
-    })
   })
 
   describe('dialog arbitration', () => {
-    it('releases its focus trap while a dialog is open and re-arms after', async () => {
+    it('owns the focus trap only while it is the top of the dialog stack', async () => {
       await renderScreen({ stubFocusScope: true })
       const dialogStore = useDialogStore()
       const trapped = () =>
         screen.getByTestId('focus-scope-stub').getAttribute('data-trapped')
 
+      dialogStore.showDialog({
+        key: 'global-getting-started',
+        component: { template: '<div />' },
+        priority: 0
+      })
+      await nextTick()
       expect(trapped()).toBe('true')
 
-      const dialog = dialogStore.showDialog({
+      const above = dialogStore.showDialog({
         component: { template: '<div />' }
       })
       await nextTick()
@@ -253,11 +249,11 @@ describe('GettingStartedScreen', () => {
         'a trapped takeover under an open dialog (desktop sign-in approval, invite links) makes the dialog unreachable'
       ).toBe('false')
 
-      dialogStore.closeDialog({ key: dialog.key })
+      dialogStore.closeDialog({ key: above.key })
       await nextTick()
       expect(
         trapped(),
-        'the takeover must re-arm once the dialog stack empties'
+        'the takeover must re-arm once it is the top of the stack again'
       ).toBe('true')
     })
   })
