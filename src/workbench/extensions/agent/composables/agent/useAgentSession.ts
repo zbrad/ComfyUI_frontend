@@ -2,7 +2,11 @@ import { computed, ref } from 'vue'
 
 import { i18n } from '@/i18n'
 import type { AgentActiveTabData, TurnId } from '../../schemas/agentApiSchema'
-import { isAgentEvent, parseAgentWsEvent } from '../../schemas/agentApiSchema'
+import {
+  isAgentEvent,
+  parseAgentWsEvent,
+  zAgentAdmissionError
+} from '../../schemas/agentApiSchema'
 import { AgentApiError } from '../../services/agent/agentRestClient'
 import type {
   AgentRestClient,
@@ -60,6 +64,12 @@ const THREAD_STORAGE_KEY = 'Comfy.Agent.ThreadId'
 const PREPARE_TIMEOUT_MS = 3000
 
 let sessionGeneration = 0
+
+function parseAdmissionError(error: unknown) {
+  if (!(error instanceof AgentApiError)) return undefined
+  const parsed = zAgentAdmissionError.safeParse(error.body)
+  return parsed.success ? parsed.data.error : undefined
+}
 
 export function useAgentSession(deps: AgentSessionDeps) {
   const { rest, events, workflow } = deps
@@ -217,6 +227,7 @@ export function useAgentSession(deps: AgentSessionDeps) {
         return await post(threadId, upload)
       } catch (error) {
         if (!(error instanceof AgentApiError)) throw error
+        if (parseAdmissionError(error) !== undefined) throw error
         const serverVersion = (error.body as { version?: unknown } | null)
           ?.version
         if (
@@ -265,6 +276,19 @@ export function useAgentSession(deps: AgentSessionDeps) {
       }
       return true
     } catch (error) {
+      const admission = parseAdmissionError(error)
+      if (admission?.reason === 'no_funds') {
+        conversationStore.recordPaywall(nextLocalErrorId(), text)
+        return false
+      }
+      if (admission !== undefined) {
+        conversationStore.recordFailedSend(
+          nextLocalErrorId(),
+          text,
+          admission.message
+        )
+        return false
+      }
       const message =
         error instanceof AgentApiError
           ? error.message

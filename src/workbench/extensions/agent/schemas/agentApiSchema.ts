@@ -66,9 +66,44 @@ export const zAgentDraftSnapshot = z.object({
 })
 export type AgentDraftSnapshot = z.infer<typeof zAgentDraftSnapshot>
 
-export const zAgentError = z.object({
-  error: z.string()
-})
+const zPaymentRequiredAdmissionError = z.discriminatedUnion('reason', [
+  z
+    .object({
+      message: z.string(),
+      type: z.literal('PAYMENT_REQUIRED'),
+      reason: z.literal('no_funds')
+    })
+    .passthrough(),
+  z
+    .object({
+      message: z.string(),
+      type: z.literal('PAYMENT_REQUIRED'),
+      reason: z.literal('manual_block')
+    })
+    .passthrough()
+])
+
+const zServiceUnavailableAdmissionError = z
+  .object({
+    message: z.string(),
+    type: z.literal('SERVICE_UNAVAILABLE'),
+    reason: z.literal('funds_unavailable')
+  })
+  .passthrough()
+
+export const zAgentAdmissionError = z
+  .object({
+    error: z.union([
+      zPaymentRequiredAdmissionError,
+      zServiceUnavailableAdmissionError
+    ])
+  })
+  .passthrough()
+
+export const zAgentError = z.union([
+  z.object({ error: z.string() }),
+  zAgentAdmissionError
+])
 
 export const zUploadImageResult = z.object({
   name: z.string(),
