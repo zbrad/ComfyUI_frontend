@@ -2952,7 +2952,6 @@ export interface paths {
         /**
          * Create a Multi-Image to 3D Task
          * @description Create a new Multi-Image to 3D task. This task generates a 3D model from 1 to 4 images of the same object from different angles.
-         *     Mesh generation uses Meshy-5 model, while texture generation supports Meshy-6-preview model.
          */
         post: operations["meshyMultiImageTo3DCreate"];
         delete?: never;
@@ -3112,7 +3111,7 @@ export interface paths {
         put?: never;
         /**
          * Create a Text to 3D Preview Task
-         * @description Create a new Text to 3D Preview task. This task costs 20 credits for Meshy-6 models and 5 credits for other models.
+         * @description Create a new Text to 3D Preview task.
          */
         post: operations["meshyTextTo3DCreate"];
         delete?: never;
@@ -5323,7 +5322,10 @@ export interface paths {
             path?: never;
             cookie?: never;
         };
-        /** Retrieve all nodes */
+        /**
+         * Retrieve all nodes
+         * @description Returns at most the first 10 nodes for the publisher. This operation takes no pagination parameters and its response carries no total or page metadata, so a truncated result is indistinguishable from a complete one — including when include_banned=false filters the list. Use listNodesForPublisherV2 for a complete, paginated listing.
+         */
         get: operations["listNodesForPublisher"];
         put?: never;
         /** Create a new custom node */
@@ -7693,7 +7695,7 @@ export interface components {
             ratio?: "16:9" | "4:3" | "1:1" | "3:4" | "9:16" | "21:9" | "adaptive";
             /**
              * @description Video resolution. Seedance 2.5, 2.0 & 2.0 fast, 1.5 pro, 1.0 lite default: 720p. Seedance 1.0 pro & pro-fast default: 1080p.
-             *     Note: Seedance 2.0 & 2.0 fast do not support 1080p. Seedance 2.5 supports 480p and 720p only.
+             *     Note: Seedance 2.0 & 2.0 fast do not support 1080p. Seedance 2.5 supports 480p, 720p, and 1080p.
              * @enum {string}
              */
             resolution?: "480p" | "720p" | "1080p" | "4k";
@@ -12193,7 +12195,7 @@ export interface components {
          * @default latest
          * @enum {string}
          */
-        MeshyAiModel: "meshy-5" | "latest";
+        MeshyAiModel: "meshy-5" | "meshy-6" | "meshy-7" | "latest";
         MeshyAnimationCreateResponse: {
             /** @description The task id of the newly created animation task. */
             result: string;
@@ -12335,7 +12337,17 @@ export interface components {
             texture_image_url?: string;
             /** @description Provide a text prompt to guide the texturing process. Maximum 600 characters. */
             texture_prompt?: string;
+            /**
+             * @description Texture resolution of the generated textures. One of 2k, 4k or 8k. 4k and 8k require ai_model meshy-6, meshy-7 or latest. Only applies when should_texture is true.
+             * @default 2k
+             */
+            texture_resolution: string;
             topology?: components["schemas"]["MeshyTopology"];
+            /**
+             * @description Enables Ultra generation for higher-fidelity geometry with finer surface detail. Only supported when ai_model is meshy-7 or latest and model_type is standard.
+             * @default false
+             */
+            ultra_mode: boolean;
         };
         MeshyImageTo3DTask: {
             /** @description Timestamp of when the task was created, in milliseconds. */
@@ -12387,12 +12399,7 @@ export interface components {
             result: string;
         };
         MeshyMultiImageTo3DRequest: {
-            /**
-             * @description ID of the model to use.
-             * @default latest
-             * @enum {string}
-             */
-            ai_model: "meshy-5" | "latest";
+            ai_model?: components["schemas"]["MeshyAiModel"];
             /**
              * @description Generate PBR Maps (metallic, roughness, normal) in addition to the base color.
              * @default false
@@ -12422,7 +12429,7 @@ export interface components {
              */
             should_remesh: boolean;
             /**
-             * @description Determines if textures are generated. When false, provides a mesh without textures for 5 credits.
+             * @description Determines if textures are generated. When false, provides a mesh without textures.
              * @default true
              */
             should_texture: boolean;
@@ -12436,6 +12443,11 @@ export interface components {
             texture_image_url?: string;
             /** @description Provide a text prompt to guide the texturing process. Maximum 600 characters. */
             texture_prompt?: string;
+            /**
+             * @description Texture resolution of the generated textures. One of 2k, 4k or 8k. 4k and 8k require ai_model meshy-6, meshy-7 or latest. Only applies when should_texture is true.
+             * @default 2k
+             */
+            texture_resolution: string;
             topology?: components["schemas"]["MeshyTopology"];
         };
         MeshyMultiImageTo3DTask: {
@@ -12586,6 +12598,11 @@ export interface components {
             model_url?: string;
             /** @description Describe your desired texture style of the object using text. Maximum 600 characters. Required if image_style_url is not provided. */
             text_style_prompt?: string;
+            /**
+             * @description Texture resolution of the generated textures. One of 2k, 4k or 8k. 4k and 8k require ai_model meshy-6, meshy-7 or latest.
+             * @default 2k
+             */
+            texture_resolution: string;
         };
         MeshyRetextureTask: {
             /** @description Timestamp of when the task was created, in milliseconds. */
@@ -12736,6 +12753,11 @@ export interface components {
              */
             target_polycount: number;
             topology?: components["schemas"]["MeshyTopology"];
+            /**
+             * @description Enables Ultra generation for higher-fidelity geometry with finer surface detail. Only supported when ai_model is meshy-7 or latest.
+             * @default false
+             */
+            ultra_mode: boolean;
         };
         MeshyTextTo3DRefineRequest: {
             ai_model?: components["schemas"]["MeshyAiModel"];
@@ -12760,6 +12782,11 @@ export interface components {
             texture_image_url?: string;
             /** @description Provide an additional text prompt to guide the texturing process. Maximum 600 characters. */
             texture_prompt?: string;
+            /**
+             * @description Texture resolution of the generated textures. One of 2k, 4k or 8k. 4k and 8k require ai_model meshy-6, meshy-7 or latest.
+             * @default 2k
+             */
+            texture_resolution: string;
         };
         MeshyTextTo3DRequest: components["schemas"]["MeshyTextTo3DPreviewRequest"] | components["schemas"]["MeshyTextTo3DRefineRequest"];
         MeshyTextTo3DTask: {
@@ -15282,11 +15309,12 @@ export interface components {
             };
         };
         PixverseImageVideoRequest: {
-            /** @enum {integer} */
-            duration: 5 | 8;
+            duration: number;
+            /** @default false */
+            generate_audio_switch: boolean;
             img_id: number;
             /** @enum {string} */
-            model: "v3.5";
+            model: "v3.5" | "v6";
             /** @enum {string} */
             motion_mode?: "normal" | "fast";
             prompt: string;
@@ -15300,11 +15328,12 @@ export interface components {
         };
         PixverseTextVideoRequest: {
             /** @enum {string} */
-            aspect_ratio: "16:9" | "4:3" | "1:1" | "3:4" | "9:16";
-            /** @enum {integer} */
-            duration: 5 | 8;
+            aspect_ratio: "16:9" | "4:3" | "1:1" | "3:4" | "9:16" | "2:3" | "3:2" | "21:9";
+            duration: number;
+            /** @default false */
+            generate_audio_switch: boolean;
             /** @enum {string} */
-            model: "v3.5";
+            model: "v3.5" | "v6";
             /** @enum {string} */
             motion_mode?: "normal" | "fast";
             negative_prompt?: string;
@@ -15318,18 +15347,19 @@ export interface components {
             water_mark?: boolean;
         };
         PixverseTransitionVideoRequest: {
-            /** @enum {integer} */
-            duration: 5 | 8;
+            duration: number;
             first_frame_img: number;
+            /** @default false */
+            generate_audio_switch: boolean;
             last_frame_img: number;
             /** @enum {string} */
-            model: "v3.5";
+            model: "v3.5" | "v6";
             /** @enum {string} */
-            motion_mode: "normal" | "fast";
+            motion_mode?: "normal" | "fast";
             prompt: string;
             /** @enum {string} */
             quality: "360p" | "540p" | "720p" | "1080p";
-            seed: number;
+            seed?: number;
             /** @enum {string} */
             style?: "anime" | "3d_animation" | "clay" | "comic" | "cyberpunk";
             template_id?: number;
@@ -15347,6 +15377,7 @@ export interface components {
             ErrMsg?: string;
             Resp?: {
                 create_time?: string;
+                credits?: number;
                 id?: number;
                 modify_time?: string;
                 negative_prompt?: string;
@@ -18683,12 +18714,20 @@ export interface components {
             request_id: string;
             /** @description Output information statistics. Only successful results are counted */
             usage?: {
-                /** @description Video resolution level (I2V tasks) */
+                /** @description Video resolution level (I2V and wan3.0-video tasks) */
                 SR?: number;
-                /** @description Duration of generated video in seconds (I2V tasks) */
+                /** @description Duration of generated video in seconds (I2V and wan3.0-video tasks) */
                 duration?: number;
+                /** @description Frame rate of the generated video (wan3.0-video tasks) */
+                fps?: number;
                 /** @description Number of generated images (T2I tasks) */
                 image_count?: number;
+                /** @description Duration of the input video in seconds, 0.0 when no video input (wan3.0-video tasks) */
+                input_video_duration?: number;
+                /** @description Duration of the output video in seconds (wan3.0-video tasks) */
+                output_video_duration?: number;
+                /** @description Aspect ratio of the generated video, e.g. 16:9 (wan3.0-video tasks) */
+                ratio?: string;
                 /** @description Image resolution (T2I tasks) */
                 size?: string;
                 /** @description Number of generated videos (T2V tasks) */
@@ -18707,28 +18746,37 @@ export interface components {
                 /** @description First frame image URL or Base64 encoded data. Required for I2V models. Image formats: JPEG, JPG, PNG, BMP, WEBP. Resolution: 360-2000 pixels. File size: max 10MB. */
                 img_url?: string;
                 /**
-                 * @description Media asset list for wan2.7 models. Specifies reference materials (image, audio, video)
+                 * @description Media asset list for wan2.7 and wan3.0 models. Specifies reference materials (image, audio, video)
                  *     for video generation. Each element contains a type and url field.
                  *     Supported type values vary by model:
                  *     - wan2.7-i2v: first_frame, last_frame, driving_audio, first_clip
                  *     - wan2.7-r2v: reference_image, reference_video
                  *     - wan2.7-videoedit: video, reference_image
+                 *     - wan3.0-video: first_frame (max 1), last_frame (max 1), reference_image (max 10),
+                 *       reference_video (max 5 clips, total duration <= 15s), reference_audio (max 5 clips,
+                 *       total duration <= 15s), file (max 1, cannot be used with link), link (max 1, cannot
+                 *       be used with file). The reference_*\/file/link types and first_frame/last_frame types
+                 *       are mutually exclusive within the same request. The array order defines the reference
+                 *       order of assets in the prompt (Image 1, Video 1, Audio 1, ...).
                  */
                 media?: {
                     /**
                      * @description Media asset type
                      * @enum {string}
                      */
-                    type: "first_frame" | "last_frame" | "driving_audio" | "first_clip" | "reference_image" | "reference_video" | "video";
+                    type: "first_frame" | "last_frame" | "driving_audio" | "first_clip" | "reference_image" | "reference_video" | "reference_audio" | "video" | "file" | "link";
                     /** @description URL of the media file (public HTTP/HTTPS URL or OSS temporary URL) */
                     url: string;
                 }[];
                 /** @description Reverse prompt words are used to describe content that you do not want to see in the video screen */
                 negative_prompt?: string;
                 /**
-                 * @description Text prompt words. Support Chinese and English, length not exceeding 800 characters.
+                 * @description Text prompt words. Support Chinese and English, length not exceeding 800 characters
+                 *     (up to 20,000 characters for wan3.0-video; content exceeding the limit is truncated).
                  *     For wan2.6-r2v with multiple reference videos, use 'character1', 'character2', etc. to refer to subjects
                  *     in the order of reference videos. Example: "Character1 sings on the roadside, Character2 dances beside it"
+                 *     For wan3.0-video reference mode, use 'Image 1', 'Video 1', 'Audio 1', etc. to refer to media assets
+                 *     in the corresponding order within the media array.
                  */
                 prompt?: string;
                 /**
@@ -18750,7 +18798,7 @@ export interface components {
              * @description The ID of the model to call
              * @enum {string}
              */
-            model: "wan2.5-t2v-preview" | "wan2.5-i2v-preview" | "wan2.6-t2v" | "wan2.6-i2v" | "wan2.6-r2v" | "wan2.7-i2v" | "wan2.7-t2v" | "wan2.7-r2v" | "wan2.7-videoedit" | "happyhorse-1.0-t2v" | "happyhorse-1.0-i2v" | "happyhorse-1.0-r2v" | "happyhorse-1.0-video-edit" | "happyhorse-1.1-t2v" | "happyhorse-1.1-i2v" | "happyhorse-1.1-r2v";
+            model: "wan2.5-t2v-preview" | "wan2.5-i2v-preview" | "wan2.6-t2v" | "wan2.6-i2v" | "wan2.6-r2v" | "wan2.7-i2v" | "wan2.7-t2v" | "wan2.7-r2v" | "wan2.7-videoedit" | "wan3.0-video" | "happyhorse-1.0-t2v" | "happyhorse-1.0-i2v" | "happyhorse-1.0-r2v" | "happyhorse-1.0-video-edit" | "happyhorse-1.1-t2v" | "happyhorse-1.1-i2v" | "happyhorse-1.1-r2v";
             /** @description Video processing parameters */
             parameters?: {
                 /**
@@ -18773,6 +18821,9 @@ export interface components {
                  *     - wan2.6-r2v: 5 or 10 seconds only (no 15s support)
                  *     - wan2.7-i2v, wan2.7-t2v: integer in [2, 15]
                  *     - wan2.7-r2v, wan2.7-videoedit: integer in [2, 10]
+                 *     - wan3.0-video: integer in [2, 30] without video input; with video input the total
+                 *       input video duration + output video duration must not exceed 30 seconds; -1 enables
+                 *       smart duration mode where the model picks a suitable duration
                  * @default 5
                  */
                 duration?: number;
@@ -18782,16 +18833,21 @@ export interface components {
                  */
                 prompt_extend?: boolean;
                 /**
-                 * @description Aspect ratio of the generated video. For wan2.7 models only.
-                 *     If not provided, defaults based on the resolution tier.
+                 * @description Aspect ratio of the generated video. For wan2.7 and wan3.0 models only.
+                 *     For wan2.7 models, defaults based on the resolution tier if not provided.
+                 *     For wan3.0-video, adaptive (the default) automatically recommends a suitable
+                 *     aspect ratio based on the input media proportions and intent.
                  * @enum {string}
                  */
-                ratio?: "16:9" | "9:16" | "1:1" | "4:3" | "3:4";
+                ratio?: "adaptive" | "16:9" | "9:16" | "1:1" | "4:3" | "3:4";
                 /**
                  * @description Resolution level. Supported values vary by model:
                  *     - wan2.5-i2v-preview: 480P, 720P, 1080P
                  *     - wan2.6-i2v: 720P, 1080P only (no 480P support)
                  *     - wan2.7 models (i2v, t2v, r2v, videoedit): 720P, 1080P (default 1080P)
+                 *     - wan3.0-video: 480P, 720P, 1080P (upstream default 1080P)
+                 *     This proxy rejects video generation requests that provide neither resolution
+                 *     nor size, because the resolution tier selects the billing rate.
                  * @enum {string}
                  */
                 resolution?: "480P" | "720P" | "1080P";
@@ -19255,6 +19311,7 @@ export interface operations {
     ListAllComfyNodes: {
         parameters: {
             query?: {
+                /** @description The number of items to include per page. A value above the maximum is clamped down to it; 0 and negative values are accepted and select the default. (That is why no minimum is declared — sub-1 is meaningful here, not invalid.) The page size actually served is echoed back as page_size, so a clamp is always detectable. */
                 pageSize?: number;
                 /** @description Page number (1-based indexing) */
                 page?: number;
@@ -19279,6 +19336,8 @@ export interface operations {
                 content: {
                     "application/json": {
                         comfy_nodes?: components["schemas"]["ComfyNode"][];
+                        /** @description The page size actually served. The server clamps pageSize to the documented maximum, so this can be smaller than the requested value; paginate with this number rather than the one you asked for, or you will skip rows. */
+                        page_size?: number;
                         /** @description Total number of comfy nodes */
                         total?: number;
                     };
@@ -19539,6 +19598,15 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content?: never;
+            };
+            /** @description Invalid api_key_id (must be a UUID) */
+            400: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorResponse"];
+                };
             };
             /** @description Unauthorized */
             401: {
@@ -20286,13 +20354,13 @@ export interface operations {
             query?: {
                 /** @description Page number of the nodes list */
                 page?: number;
-                /** @description Number of nodes to return per page */
+                /** @description Number of nodes to return per page. Values above the declared maximum are outside the contract, but this service does not reject them: it serves the maximum instead, and the page size actually served is echoed back as limit (and drives totalPages), so a clamp is always detectable by the caller. Treat the maximum as the real page stride — a client that asks for more and assumes it received more will miss rows. 0 and negative values are also accepted and select the default, which is why no minimum is declared: sub-1 is meaningful here, not invalid. */
                 limit?: number;
                 /** @description Filter nodes by supported operating systems */
                 supported_os?: string;
                 /** @description Filter nodes by supported accelerator */
                 supported_accelerator?: string;
-                /** @description Number of nodes to return per page */
+                /** @description Whether to include banned nodes in the results. Defaults to including them; pass false to exclude. */
                 include_banned?: boolean;
                 /** @description Retrieve nodes created or updated after this timestamp (ISO 8601 format) */
                 timestamp?: string;
@@ -20587,7 +20655,7 @@ export interface operations {
             query?: {
                 /** @description The page number to retrieve. */
                 page?: number;
-                /** @description The number of items to include per page. */
+                /** @description The number of items to include per page. A value above the maximum is clamped down to it; 0 and negative values are accepted and select the default. (That is why no minimum is declared — sub-1 is meaningful here, not invalid.) totalNumberOfPages is computed from the page size actually served, so a clamp is always detectable. */
                 limit?: number;
             };
             header?: never;
@@ -20752,7 +20820,7 @@ export interface operations {
             query?: {
                 /** @description Page number of the nodes list */
                 page?: number;
-                /** @description Number of nodes to return per page */
+                /** @description Number of nodes to return per page. Values above the declared maximum are outside the contract, but this service does not reject them: it serves the maximum instead, and the page size actually served is echoed back as limit (and drives totalPages), so a clamp is always detectable by the caller. Treat the maximum as the real page stride — a client that asks for more and assumes it received more will miss rows. 0 and negative values are also accepted and select the default, which is why no minimum is declared: sub-1 is meaningful here, not invalid. */
                 limit?: number;
                 /** @description Keyword to search the nodes */
                 search?: string;
@@ -20764,7 +20832,7 @@ export interface operations {
                 supported_os?: string;
                 /** @description Filter nodes by supported accelerator */
                 supported_accelerator?: string;
-                /** @description Number of nodes to return per page */
+                /** @description Whether to include banned nodes in the results. Defaults to including them; pass false to exclude. */
                 include_banned?: boolean;
             };
             header?: never;
@@ -33918,7 +33986,7 @@ export interface operations {
             header?: never;
             path: {
                 /** @description Full resource name of the model. */
-                model: string;
+                model: "gemini-2.5-pro-preview-05-06" | "gemini-2.5-flash-preview-04-17" | "gemini-2.5-flash-image-preview" | "gemini-2.5-flash-image" | "gemini-2.5-flash" | "gemini-2.5-pro" | "gemini-3-pro-preview" | "gemini-3-pro-image-preview" | "gemini-3-pro-image" | "gemini-3.1-flash-image-preview" | "gemini-3.1-flash-image" | "gemini-3.1-pro-preview" | "gemini-3.1-flash-lite-preview" | "gemini-3.1-flash-lite" | "gemini-3.1-flash-lite-image" | "gemini-3.5-flash" | "gemini-3.7-flash";
             };
             cookie?: never;
         };
@@ -35248,7 +35316,7 @@ export interface operations {
     listNodesForPublisher: {
         parameters: {
             query?: {
-                /** @description Number of nodes to return per page */
+                /** @description Whether to include banned nodes in the results. Defaults to including them; pass false to exclude. */
                 include_banned?: boolean;
             };
             header?: never;
@@ -35769,11 +35837,11 @@ export interface operations {
     listNodesForPublisherV2: {
         parameters: {
             query?: {
-                /** @description Number of nodes to return per page */
+                /** @description Whether to include banned nodes in the results. Defaults to including them; pass false to exclude. */
                 include_banned?: boolean;
                 /** @description Page number of the nodes list */
                 page?: number;
-                /** @description Number of nodes to return per page */
+                /** @description Number of nodes to return per page. Values above the declared maximum are outside the contract, but this service does not reject them: it serves the maximum instead, and the page size actually served is echoed back as limit (and drives totalPages), so a clamp is always detectable by the caller. Treat the maximum as the real page stride — a client that asks for more and assumes it received more will miss rows. 0 and negative values are also accepted and select the default, which is why no minimum is declared: sub-1 is meaningful here, not invalid. */
                 limit?: number;
             };
             header?: never;
