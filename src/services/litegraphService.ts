@@ -6,6 +6,7 @@ import { useSubgraphOperations } from '@/composables/graph/useSubgraphOperations
 import { useNodeAnimatedImage } from '@/composables/node/useNodeAnimatedImage'
 import { useNodeCanvasImagePreview } from '@/composables/node/useNodeCanvasImagePreview'
 import { useNodeImage, useNodeVideo } from '@/composables/node/useNodeImage'
+import { uploadFile } from '@/composables/node/useNodeImageUpload'
 import {
   addWidgetPromotionOptions,
   isPreviewPseudoWidget
@@ -35,7 +36,10 @@ import type {
   ISerialisableNodeOutput,
   ISerialisedNode
 } from '@/lib/litegraph/src/types/serialisation'
-import type { IBaseWidget } from '@/lib/litegraph/src/types/widgets'
+import type {
+  IBaseWidget,
+  IComboWidget
+} from '@/lib/litegraph/src/types/widgets'
 import { useSettingStore } from '@/platform/settings/settingStore'
 import { useToastStore } from '@/platform/updates/common/toastStore'
 import { useWorkflowStore } from '@/platform/workflow/management/stores/workflowStore'
@@ -50,7 +54,11 @@ import type {
   InputSpec,
   OutputSpec
 } from '@/schemas/nodeDef/nodeDefSchemaV2'
-import type { ComfyNodeDef as ComfyNodeDefV1 } from '@/schemas/nodeDefSchema'
+import { isMediaUploadComboInput } from '@/schemas/nodeDefSchema'
+import type {
+  ComfyNodeDef as ComfyNodeDefV1,
+  InputSpec as InputSpecV1
+} from '@/schemas/nodeDefSchema'
 import { ComfyApp, app } from '@/scripts/app'
 import { $el } from '@/scripts/ui'
 import { useExecutionStore } from '@/stores/executionStore'
@@ -65,8 +73,10 @@ import { parseNodeId } from '@/types/nodeId'
 import type { SerializedNodeId } from '@/types/nodeId'
 import { isBlueprintType } from '@/utils/blueprintUtils'
 import type { WidgetId } from '@/types/widgetId'
+import { createAnnotatedPath } from '@/utils/createAnnotatedPath'
 import { normalizeI18nKey } from '@/utils/formatUtil'
 import {
+  addToComboValues,
   isAnimatedOutput,
   isImageNode,
   isVideoNode,
@@ -123,6 +133,101 @@ async function reencodeAsPngBlob(
 
 export const CONFIG = Symbol()
 export const GET_CONFIG = Symbol()
+
+/**
+ * Raw asset host for the ComfyUI workflow-templates source repo. Templates
+ * reference example input files by bare filename; every filename shipped in
+ * a template JSON lives here even though it isn't bundled in the
+ * comfyui-workflow-templates pip packages.
+ * @see https://github.com/Comfy-Org/workflow_templates/tree/main/input
+ */
+const TEMPLATE_ASSET_SOURCE_URL =
+  'https://raw.githubusercontent.com/Comfy-Org/workflow_templates/main/input/'
+
+/**
+ * @internal Returns the bare filename for a combo widget whose current
+ * value isn't one of its available options (i.e. the referenced file is
+ * missing), or `undefined` if the widget isn't in that state.
+ */
+function getMissingComboFilename(widget: IBaseWidget): string | undefined {
+  if (widget.type !== 'combo') return undefined
+
+  const value = widget.value
+  if (typeof value !== 'string' || !value) return undefined
+
+  const values = (widget as IComboWidget).options?.values
+  if (!Array.isArray(values) || values.includes(value)) return undefined
+
+  const filename = value
+    .replace(/\s*\[(input|output|temp)\]$/i, '')
+    .split('/')
+    .pop()
+  return filename || undefined
+}
+
+/**
+ * @internal Fetches `filename` from the workflow-templates source repo,
+ * uploads it to the local `input` folder, and updates `widget` to point at
+ * the newly uploaded file.
+ */
+async function downloadTemplateSourceAsset(
+  node: LGraphNode,
+  widget: IComboWidget,
+  filename: string
+) {
+  try {
+    const response = await fetch(
+      TEMPLATE_ASSET_SOURCE_URL + encodeURIComponent(filename)
+    )
+    if (!response.ok) {
+      throw new Error(`${response.status} ${response.statusText}`)
+    }
+    const blob = await response.blob()
+    const file = new File([blob], filename, { type: blob.type })
+    const path = await uploadFile(file, false, { type: 'input' })
+    if (!path) return
+
+    const annotatedPath = createAnnotatedPath(path)
+    addToComboValues(widget, annotatedPath)
+    const oldValue = widget.value
+    widget.value = annotatedPath
+    widget.callback?.(annotatedPath)
+    node.onWidgetChanged?.(widget.name, annotatedPath, oldValue, widget)
+    node.graph?.setDirtyCanvas(true)
+  } catch (error) {
+    useToastStore().addAlert(String(error))
+  }
+}
+
+/**
+ * @internal Returns a "Download from Template Source" menu entry when
+ * `widget` is a media-upload combo (LoadImage, LoadVideo, ...) whose value
+ * points at a file that isn't available locally, or `undefined` otherwise.
+ */
+export function getMissingTemplateAssetOption(
+  node: LGraphNode,
+  widget: IBaseWidget
+): IContextMenuValue | undefined {
+  const missingFilename = getMissingComboFilename(widget)
+  if (!missingFilename) return undefined
+
+  const input = node.inputs.find((inp) => inp.widget?.name === widget.name)
+  const config = (
+    input?.widget?.[GET_CONFIG] as (() => InputSpecV1) | undefined
+  )?.()
+  if (!config || !isMediaUploadComboInput(config)) return undefined
+
+  return {
+    content: 'Download from Template Source',
+    callback: () => {
+      void downloadTemplateSourceAsset(
+        node,
+        widget as IComboWidget,
+        missingFilename
+      )
+    }
+  }
+}
 
 export function getExtraOptionsForWidget(
   node: LGraphNode,
@@ -692,6 +797,14 @@ export const useLitegraphService = () => {
             }
           )
         }
+      }
+
+      // Offer to fetch any missing template example assets (e.g. a LoadImage
+      // node whose file isn't on disk yet), regardless of exactly where on
+      // the node the right-click landed.
+      for (const missingWidget of this.widgets ?? []) {
+        const option = getMissingTemplateAssetOption(this, missingWidget)
+        if (option) options.unshift(option)
       }
 
       options.push({

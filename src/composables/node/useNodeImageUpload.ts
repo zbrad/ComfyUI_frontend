@@ -19,7 +19,7 @@ interface ImageUploadFormFields {
   type: ResultItemType
 }
 
-const uploadFile = async (
+export const uploadFile = async (
   file: File,
   isPasted: boolean,
   formFields: Partial<ImageUploadFormFields> = {}
