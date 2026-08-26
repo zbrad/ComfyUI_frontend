@@ -16596,6 +16596,238 @@
       }
     }
   },
+  "PixverseV6ExtendVideoNode": {
+    "description": "ממשיך וידאו קיים באמצעות PixVerse, עם שמע מקורי לפי בחירה. המקור חייב להיות קצר מ-40 שניות ובגודל של עד 1920px בכל אחד מהצדדים. הפלט שומר על רזולוציית המקור, לכן האיכות קובעת עד כמה ההמשך מרונדר היטב ולא את גודל הפריים.",
+    "display_name": "PixVerse V6 הרחבת וידאו",
+    "inputs": {
+      "control_after_generate": {
+        "name": "control after generate"
+      },
+      "model": {
+        "name": "model",
+        "tooltip": "הגדרות המודל והיצירה."
+      },
+      "model_duration_seconds": {
+        "name": "duration_seconds"
+      },
+      "model_generate_audio": {
+        "name": "generate_audio"
+      },
+      "model_negative_prompt": {
+        "name": "negative_prompt"
+      },
+      "model_prompt": {
+        "name": "prompt"
+      },
+      "model_quality": {
+        "name": "quality"
+      },
+      "model_seed": {
+        "name": "seed"
+      },
+      "model_style": {
+        "name": "style"
+      },
+      "video": {
+        "name": "video",
+        "tooltip": "הווידאו להמשך."
+      }
+    },
+    "outputs": {
+      "0": {
+        "tooltip": null
+      }
+    }
+  },
+  "PixverseV6FirstLastFrameNode": {
+    "description": "יוצר וידאו העובר מפריים ראשון לפריים אחרון באמצעות PixVerse, עם שמע מקורי לפי בחירה. הפלט שומר על יחס הממדים של הפריים הראשון.",
+    "display_name": "PixVerse V6 פריים ראשון-אחרון לווידאו",
+    "inputs": {
+      "control_after_generate": {
+        "name": "control after generate"
+      },
+      "first_frame": {
+        "name": "first_frame"
+      },
+      "last_frame": {
+        "name": "last_frame"
+      },
+      "model": {
+        "name": "model",
+        "tooltip": "הגדרות המודל והיצירה."
+      },
+      "model_duration_seconds": {
+        "name": "duration_seconds"
+      },
+      "model_generate_audio": {
+        "name": "generate_audio"
+      },
+      "model_negative_prompt": {
+        "name": "negative_prompt"
+      },
+      "model_prompt": {
+        "name": "prompt"
+      },
+      "model_quality": {
+        "name": "quality"
+      },
+      "model_seed": {
+        "name": "seed"
+      },
+      "model_style": {
+        "name": "style"
+      }
+    },
+    "outputs": {
+      "0": {
+        "tooltip": null
+      }
+    }
+  },
+  "PixverseV6FusionVideoNode": {
+    "description": "מרכיב וידאו מנושאי הפניה, רקעים וסרטונים באמצעות PixVerse. הצב הפניה בסצנה באמצעות ציון שמה בפרומפט, לדוגמה: '{'@'}Subject1 walks through {'@'}Background1'. חיבור וידאו הפניה מעביר את המודל למצב Omni, שבו אורך הפלט תואם לווידאו ההפניה הארוך ביותר.",
+    "display_name": "PixVerse V6 מיזוג (הפניה לווידאו)",
+    "inputs": {
+      "backgrounds": {
+        "name": "backgrounds",
+        "tooltip": "תמונות הפניה של הסצנה שבה הנושאים מוצבים."
+      },
+      "control_after_generate": {
+        "name": "control after generate"
+      },
+      "model": {
+        "name": "model",
+        "tooltip": "הגדרות המודל והיצירה."
+      },
+      "model_aspect_ratio": {
+        "name": "aspect_ratio"
+      },
+      "model_duration_seconds": {
+        "name": "משך (שניות)"
+      },
+      "model_generate_audio": {
+        "name": "יצירת שמע"
+      },
+      "model_negative_prompt": {
+        "name": "פרומפט שלילי"
+      },
+      "model_prompt": {
+        "name": "פרומפט"
+      },
+      "model_quality": {
+        "name": "איכות"
+      },
+      "model_seed": {
+        "name": "זרע"
+      },
+      "model_style": {
+        "name": "סגנון"
+      },
+      "subjects": {
+        "name": "subjects",
+        "tooltip": "תמונות הפניה של הנושאים להצבה בסצנה."
+      },
+      "videos": {
+        "name": "videos",
+        "tooltip": "סרטוני הפניה שמהם ניתן לשאול נושאים, תנועה, מסגור או סגנון. עד שניים, ועד 15 שניות בסך הכול."
+      }
+    },
+    "outputs": {
+      "0": {
+        "tooltip": null
+      }
+    }
+  },
+  "PixverseV6ImageToVideoNode": {
+    "description": "הנפשת תמונה באמצעות PixVerse, עם שמע מובנה באופן אופציונלי. הפלט שומר על יחס הממדים של תמונת הקלט.",
+    "display_name": "PixVerse V6 מתמונה לווידאו",
+    "inputs": {
+      "control_after_generate": {
+        "name": "בקרה לאחר יצירה"
+      },
+      "image": {
+        "name": "תמונה"
+      },
+      "model": {
+        "name": "מודל",
+        "tooltip": "הגדרות מודל ויצירה."
+      },
+      "model_duration_seconds": {
+        "name": "משך (שניות)"
+      },
+      "model_generate_audio": {
+        "name": "יצירת שמע"
+      },
+      "model_multi_clip": {
+        "name": "מספר קליפים"
+      },
+      "model_negative_prompt": {
+        "name": "פרומפט שלילי"
+      },
+      "model_prompt": {
+        "name": "פרומפט"
+      },
+      "model_quality": {
+        "name": "איכות"
+      },
+      "model_seed": {
+        "name": "זרע"
+      },
+      "model_style": {
+        "name": "סגנון"
+      }
+    },
+    "outputs": {
+      "0": {
+        "tooltip": null
+      }
+    }
+  },
+  "PixverseV6TextToVideoNode": {
+    "description": "יצירת וידאו מפרומפט טקסט באמצעות PixVerse, עם שמע מובנה באופן אופציונלי.",
+    "display_name": "PixVerse V6 מטקסט לווידאו",
+    "inputs": {
+      "control_after_generate": {
+        "name": "בקרה לאחר יצירה"
+      },
+      "model": {
+        "name": "מודל",
+        "tooltip": "הגדרות מודל ויצירה."
+      },
+      "model_aspect_ratio": {
+        "name": "יחס ממדים"
+      },
+      "model_duration_seconds": {
+        "name": "משך (שניות)"
+      },
+      "model_generate_audio": {
+        "name": "יצירת שמע"
+      },
+      "model_multi_clip": {
+        "name": "מספר קליפים"
+      },
+      "model_negative_prompt": {
+        "name": "פרומפט שלילי"
+      },
+      "model_prompt": {
+        "name": "פרומפט"
+      },
+      "model_quality": {
+        "name": "איכות"
+      },
+      "model_seed": {
+        "name": "זרע"
+      },
+      "model_style": {
+        "name": "סגנון"
+      }
+    },
+    "outputs": {
+      "0": {
+        "tooltip": null
+      }
+    }
+  },
   "PolyexponentialScheduler": {
     "display_name": "PolyexponentialScheduler",
     "inputs": {
@@ -23435,30 +23667,6 @@
       "prompt": {
         "name": "פרומפט",
         "tooltip": "עד 1024 תווים."
-      }
-    },
-    "outputs": {
-      "0": {
-        "name": "קובץ מודל",
-        "tooltip": null
-      },
-      "1": {
-        "name": "model task_id",
-        "tooltip": null
-      },
-      "2": {
-        "name": "GLB",
-        "tooltip": null
-      }
-    }
-  },
-  "TripoRefineNode": {
-    "description": "שפר מודל טיוטה שנוצר רק על ידי מודלים Tripo v1.4.",
-    "display_name": "Tripo: שיפור מודל טיוטה",
-    "inputs": {
-      "model_task_id": {
-        "name": "model_task_id",
-        "tooltip": "חייב להיות מודל Tripo v1.4"
       }
     },
     "outputs": {
