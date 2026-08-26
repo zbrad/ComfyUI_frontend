@@ -493,7 +493,7 @@ export const useWorkflowStore = defineStore('workflow', () => {
       const wasBookmarked = bookmarkStore.isBookmarked(oldPath)
       const draftStore = useWorkflowDraftStoreV2()
 
-      await workflow.rename(newPath)
+      if (!(await workflow.rename(newPath))) return
 
       // Synchronously swap old path for new path in lookup and open paths
       // to avoid a tab flicker caused by an async gap between detach/attach.
@@ -522,7 +522,7 @@ export const useWorkflowStore = defineStore('workflow', () => {
   const deleteWorkflow = async (workflow: ComfyWorkflow) => {
     isBusy.value = true
     try {
-      await workflow.delete()
+      if (!(await workflow.delete())) return
       useWorkflowDraftStoreV2().removeDraft(workflow.path)
       if (bookmarkStore.isBookmarked(workflow.path)) {
         await bookmarkStore.setBookmarked(workflow.path, false)
