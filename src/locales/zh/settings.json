@@ -368,7 +368,11 @@
   },
   "Comfy_RightSidePanel_ShowErrorsTab": {
     "name": "在侧边栏中显示问题选项卡",
+<<<<<<< Updated upstream
     "tooltip": "启用后，右侧面板会显示“问题”选项卡，用于显示阻塞性错误和需要配置的缺失资源。"
+=======
+    "tooltip": "启用后，右侧面板中会显示“问题”选项卡，以显示阻塞性错误和需要配置的缺失资源。"
+>>>>>>> Stashed changes
   },
   "Comfy_Sidebar_Location": {
     "name": "侧边栏位置",

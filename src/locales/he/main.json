@@ -347,18 +347,31 @@
   },
   "billingOperation": {
     "authenticationFailedDetail": "לא הצלחנו להשלים את אימות התשלום. נא לנסות שוב.",
+<<<<<<< Updated upstream
     "authenticationManagerRequired": "אימות התשלום דורש התייחסות ממנהל החיוב של סביבת העבודה.",
+=======
+    "authenticationManagerRequired": "אימות התשלום דורש את טיפולו של מנהל חיובים בסביבת העבודה.",
+>>>>>>> Stashed changes
     "authenticationUnavailable": "אימות תשלום מאובטח אינו זמין. נא לרענן ולנסות שוב.",
     "cancelFailed": "ביטול המנוי נכשל",
     "cancelTimeout": "פג זמן ההמתנה לביטול המנוי",
     "expiredCardDetail": "תוקף כרטיס זה פג. השתמש באמצעי תשלום אחר.",
     "incorrectCvcDetail": "קוד האבטחה של הכרטיס שגוי. בדוק אותו ונסה שוב.",
+<<<<<<< Updated upstream
     "insufficientFundsDetail": "אין מספיק כספים באמצעי תשלום זה. נסה אמצעי תשלום אחר או צור קשר עם הבנק שלך.",
     "paymentDeclinedDetail": "הבנק שלך דחה תשלום זה. נסה אמצעי תשלום אחר או צור קשר עם הבנק שלך.",
     "processingErrorDetail": "לא ניתן היה לעבד את התשלום שלך. נסה שוב או השתמש באמצעי תשלום אחר.",
     "reconciliationDetail": "התשלום שלך התקבל, אך לא הצלחנו לסיים את עדכון סביבת העבודה שלך. צור קשר עם התמיכה וכלול מזהה פעולה זה:",
     "reconciliationTitle": "התשלום התקבל — אישור ממתין",
     "retryVerification": "נסה שוב את האימות",
+=======
+    "insufficientFundsDetail": "אין מספיק כספים באמצעי תשלום זה. נסה אמצעי תשלום אחר או פנה לבנק שלך.",
+    "paymentDeclinedDetail": "הבנק שלך דחה תשלום זה. נסה אמצעי תשלום אחר או פנה לבנק שלך.",
+    "processingErrorDetail": "לא ניתן היה לעבד את התשלום שלך. נסה שוב או השתמש באמצעי תשלום אחר.",
+    "reconciliationDetail": "התשלום שלך התקבל, אך לא הצלחנו לסיים את עדכון סביבת העבודה שלך. פנה לתמיכה וכלול את מזהה הפעולה הזה:",
+    "reconciliationTitle": "התשלום התקבל — ממתין לאישור",
+    "retryVerification": "נסה אימות מחדש",
+>>>>>>> Stashed changes
     "subscriptionActionRequired": "אמת את התשלום שלך כדי להשלים את הגדרת סביבת העבודה",
     "subscriptionFailed": "עדכון המנוי נכשל",
     "subscriptionFailedDetail": "לא הצלחנו לעדכן את המנוי שלכם. אנא נסו שוב.",
@@ -819,7 +832,11 @@
       "buy": "קנה",
       "buyCredits": "המשך לתשלום",
       "buyNow": "קנה עכשיו",
+<<<<<<< Updated upstream
       "chargedImmediatelyNote": "אמצעי התשלום השמור שלך יחויב באופן מיידי.",
+=======
+      "chargedImmediatelyNote": "אמצעי התשלום השמור שלך מחויב באופן מיידי.",
+>>>>>>> Stashed changes
       "confirmSubtitle": "קרדיטים מתווספים לסביבת עבודה זו מיד עם סיום התשלום.",
       "confirmTitle": "אישור",
       "contactUs": "צור קשר",
@@ -2756,7 +2773,11 @@
     "refresh": "רענון הגדרות הצמתים",
     "resetView": "איפוס תצוגת הקנבס",
     "run": "הרצה",
+<<<<<<< Updated upstream
     "runOptions": "אפשרויות הפעלה",
+=======
+    "runOptions": "אפשרויות הרצה",
+>>>>>>> Stashed changes
     "runWorkflow": "הרצת תהליך העבודה (Shift כדי להוסיף לראש התור)",
     "runWorkflowFront": "הרצת תהליך העבודה (הוספה לראש התור)",
     "runWorkflowMissingResources": "תהליך העבודה מכיל משאבים חסרים.",
@@ -3430,7 +3451,11 @@
     "errorsFilter": "{count} שגיאה | {count} שגיאות",
     "errorsFilterActive": "{count} שגיאה זוהתה | {count} שגיאות זוהו",
     "errorsSummary": "{count} שגיאה | {count} שגיאות",
+<<<<<<< Updated upstream
     "executionErrorOccurred": "אירעה שגיאה במהלך הביצוע. לפרטים, בדקו את לשונית הבעיות.",
+=======
+    "executionErrorOccurred": "אירעה שגיאה במהלך ההרצה. לפרטים, בדקו בלשונית 'בעיות'.",
+>>>>>>> Stashed changes
     "expand": "הרחב",
     "fallbackGroupTitle": "קבוצה",
     "fallbackNodeTitle": "צומת",
@@ -3533,12 +3558,20 @@
     "selectedNodeErrors": "{node} — {count} בעיה | {node} — {count} בעיות",
     "selectedNodesErrors": "{nodes} צמתים נבחרו — {count} בעיה | {nodes} צמתים נבחרו — {count} בעיות",
     "settings": "הגדרות",
+<<<<<<< Updated upstream
     "setupFilter": "נדרשת הגדרה עבור {count}",
+=======
+    "setupFilter": "{count} פריטים דורשים הגדרה",
+>>>>>>> Stashed changes
     "setupNodeSummary": "{nodes} צומת — {count} פריט | {nodes} צומת — {count} פריטים",
     "setupNodesSummary": "{nodes} צמתים — {count} פריט | {nodes} צמתים — {count} פריטים",
     "setupRequired": "נדרשת הגדרה",
     "setupSummary": "{count} פריט | {count} פריטים",
+<<<<<<< Updated upstream
     "severityCountsStatus": "{errors} חוסמות, {setup} דורשות הגדרה",
+=======
+    "severityCountsStatus": "{errors} שגיאות חוסמות, {setup} דורשים הגדרה",
+>>>>>>> Stashed changes
     "severityErrorLabel": "שגיאות חוסמות",
     "severitySetupLabel": "נדרשת הגדרה",
     "showAdvancedInputsButton": "הצגת קלטים מתקדמים",
@@ -4281,7 +4314,11 @@
       "alipay": "Alipay",
       "alipayRenewalNote": "ההרשאה של Alipay תשמש גם לחידושים אוטומטיים ולרכישות עתידיות.",
       "applyPromoCode": "החל",
+<<<<<<< Updated upstream
       "applyQuoteBeforeContinuing": "החל את קוד המבצע כדי לרענן את הצעת המחיר שלך לפני ההמשך.",
+=======
+      "applyQuoteBeforeContinuing": "החל את קוד הקידום כדי לרענן את הצעת המחיר לפני ההמשך.",
+>>>>>>> Stashed changes
       "backToAllPlans": "חזרה לכל המסלולים",
       "billedEachMonth": "{amount} מחויב כל חודש. ניתן לבטל בכל עת.",
       "changePaymentMethod": "שנה",
@@ -4301,7 +4338,11 @@
       "currentMonthly": "תוכנית חודשית",
       "discount": {
         "plan": "הנחת תוכנית",
+<<<<<<< Updated upstream
         "promotion": "קוד מבצע"
+=======
+        "promotion": "קוד קידום"
+>>>>>>> Stashed changes
       },
       "discountComposition": "הנחות",
       "eachMonthCreditsRefill": "בכל חודש הקרדיטים מתמלאים ל",
@@ -4311,12 +4352,20 @@
       "hideFeatures": "הסתרת תכונות",
       "newMonthlySubscription": "מנוי חודשי חדש",
       "nextPaymentDue": "התשלום הבא ב-{date}. ניתן לבטל בכל עת.",
+<<<<<<< Updated upstream
       "payAndSubscribe": "שלם והירשם",
+=======
+      "payAndSubscribe": "שלם והירשם כמנוי",
+>>>>>>> Stashed changes
       "paymentMethod": "אמצעי תשלום",
       "paymentPopupBlocked": "לא ניתן היה לפתוח את דף התשלום — אפשר חלונות קופצים ונסה שוב.",
       "perMember": "/ חבר",
       "privacyPolicy": "מדיניות הפרטיות",
+<<<<<<< Updated upstream
       "promoCodePlaceholder": "קוד מבצע",
+=======
+      "promoCodePlaceholder": "קוד קידום",
+>>>>>>> Stashed changes
       "proratedCharge": "חיוב יחסי עבור {plan}",
       "proratedRefund": "החזר יחסי עבור {plan}",
       "quoteRefreshFailed": "תוקף הצעת המחיר שלך פג ולא ניתן היה לרענן אותה. בחר שוב את התוכנית שלך.",
@@ -4337,7 +4386,11 @@
         "upgradeBody": "המנוי שלך ({plan}) היה אמור להסתיים בתאריך {date}. שדרוג כעת מחדש אותו — תחויב {amount} היום, והוא יתחדש אוטומטית בתאריך {nextDate} במקום להסתיים."
       },
       "refillReplacesNote": "מחליף את המילוי החודשי שלך. היתרה הקיימת נשמרת.",
+<<<<<<< Updated upstream
       "renewsAt": "החידוש יתבצע בסך {amount} בתאריך {date}. ניתן לבטל בכל עת.",
+=======
+      "renewsAt": "מתחדש ב-{amount} בתאריך {date}. ניתן לבטל בכל עת.",
+>>>>>>> Stashed changes
       "savedPaymentMethod": "אמצעי תשלום",
       "showMoreFeatures": "הצגת תכונות נוספות",
       "starting": "החל מ-{date}",
@@ -4350,7 +4403,11 @@
       "switchToPlan": "עבור לתוכנית {plan}",
       "switchesToday": "מתחלף היום",
       "terms": "תנאים",
+<<<<<<< Updated upstream
       "termsAgreement": "בהמשך, אתה מסכים ל{terms} ול{privacy} של Comfy Org, ומאשר ל-Comfy Org לחייב את אמצעי התשלום שלך בכל תקופת חיוב עד לביטול.",
+=======
+      "termsAgreement": "בהמשך, אתה מסכים ל-{terms} ול-{privacy} של Comfy Org, ומאשר ל-Comfy Org לחייב את אמצעי התשלום שלך בכל תקופת חיוב עד לביטול.",
+>>>>>>> Stashed changes
       "totalDueToday": "סך לתשלום היום",
       "yearlySubscription": "מנוי שנתי",
       "youllBeCharged": "תחויב"
@@ -4398,8 +4455,13 @@
       "inviteSubtext": "תוכל גם להזמין אנשים מאוחר יותר מהגדרות",
       "inviteTitle": "הזמן את הצוות שלך",
       "planUpdated": "התוכנית שלך עודכנה בהצלחה.",
+<<<<<<< Updated upstream
       "promoApplied": "{code} הוחל.",
       "promoRenews": "החידוש יתבצע בסך {amount} בתאריך {date}",
+=======
+      "promoApplied": "הקוד {code} הוחל.",
+      "promoRenews": "מתחדש ב-{amount} בתאריך {date}",
+>>>>>>> Stashed changes
       "receiptEmailed": "קבלה נשלחה אליך בדוא\"ל.",
       "sendInvites": "שלח הזמנות"
     },
@@ -4575,7 +4637,11 @@
   },
   "toastMessages": {
     "a1111CoreNodesUnavailable": "לא ניתן לטעון את תהליך העבודה כי התקנת ComfyUI זו חסרה צמתים חיוניים. בדוק שהשרת האחורי הופעל כראוי.",
+<<<<<<< Updated upstream
     "a1111EmbeddingsUnavailable": "לא ניתן היה לטעון אמבדינגים מהשרת. תהליך העבודה יובא, אך שמות האמבדינגים נותרו כטקסט רגיל.",
+=======
+    "a1111EmbeddingsUnavailable": "לא ניתן היה לטעון Embeddings מהשרת. תהליך העבודה יובא, אך שמות ה-embedding נותרו כטקסט רגיל.",
+>>>>>>> Stashed changes
     "cannotCreateSubgraph": "לא ניתן ליצור תת-גרף",
     "couldNotDetermineFileType": "לא ניתן היה לקבוע את סוג הקובץ",
     "dropFileError": "לא ניתן לעבד את הפריט שנגרר: {error}",
@@ -4626,8 +4692,13 @@
     "invalidTemplateData": "טעינת תבנית הצומת נכשלה: נתונים לא תקינים",
     "legacyMaskEditorDeprecated": "עורך המסכות הישן מיושן ויוסר בקרוב.",
     "migrateToLitegraphReroute": "צמתי ניתוב (Reroute) יוסרו בגרסאות עתידיות. לחץ כדי לעבור לניתוב המקורי של litegraph.",
+<<<<<<< Updated upstream
     "missingMediaVerificationFailed": "אימות המדיה החסרה נכשל. ייתכן שחלק מהקלטים לא יוצגו בלשונית בעיות.",
     "missingModelVerificationFailed": "אימות המודלים החסרים נכשל. ייתכן שחלק מהמודלים לא יוצגו בלשונית בעיות.",
+=======
+    "missingMediaVerificationFailed": "אימות המדיה החסרה נכשל. ייתכן שחלק מהקלטים לא יוצגו בלשונית הבעיות.",
+    "missingModelVerificationFailed": "אימות המודלים החסרים נכשל. ייתכן שחלק מהמודלים לא יוצגו בלשונית הבעיות.",
+>>>>>>> Stashed changes
     "modelLoadedSuccessfully": "מודל התלת-ממד נטען בהצלחה",
     "no3dScene": "אין סצנת תלת-ממד להחלת המרקם",
     "no3dSceneToExport": "אין סצנת תלת-ממד לייצוא",

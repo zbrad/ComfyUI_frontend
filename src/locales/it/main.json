@@ -3430,7 +3430,11 @@
     "errorsFilter": "{count} errore | {count} errori",
     "errorsFilterActive": "{count} errore rilevato | {count} errori rilevati",
     "errorsSummary": "{count} errore | {count} errori",
+<<<<<<< Updated upstream
     "executionErrorOccurred": "Si è verificato un errore durante l'esecuzione. Consulta la scheda Problemi per i dettagli.",
+=======
+    "executionErrorOccurred": "Si è verificato un errore durante l'esecuzione. Controlla la scheda Problemi per i dettagli.",
+>>>>>>> Stashed changes
     "expand": "Espandi",
     "fallbackGroupTitle": "Gruppo",
     "fallbackNodeTitle": "Nodo",
@@ -3533,6 +3537,7 @@
     "selectedNodeErrors": "{node} — {count} problema | {node} — {count} problemi",
     "selectedNodesErrors": "{nodes} nodi selezionati — {count} problema | {nodes} nodi selezionati — {count} problemi",
     "settings": "Impostazioni",
+<<<<<<< Updated upstream
     "setupFilter": "{count} configurazione richiesta",
     "setupNodeSummary": "{nodes} nodo — {count} elemento | {nodes} nodo — {count} elementi",
     "setupNodesSummary": "{nodes} nodi — {count} elemento | {nodes} nodi — {count} elementi",
@@ -3541,6 +3546,16 @@
     "severityCountsStatus": "{errors} errori bloccanti, {setup} configurazioni richieste",
     "severityErrorLabel": "Errori bloccanti",
     "severitySetupLabel": "Configurazione richiesta",
+=======
+    "setupFilter": "{count} configurazioni necessarie",
+    "setupNodeSummary": "{nodes} nodo — {count} elemento | {nodes} nodo — {count} elementi",
+    "setupNodesSummary": "{nodes} nodi — {count} elemento | {nodes} nodi — {count} elementi",
+    "setupRequired": "Configurazione necessaria",
+    "setupSummary": "{count} elemento | {count} elementi",
+    "severityCountsStatus": "{errors} errori bloccanti, {setup} configurazioni necessarie",
+    "severityErrorLabel": "Errori bloccanti",
+    "severitySetupLabel": "Configurazione necessaria",
+>>>>>>> Stashed changes
     "showAdvancedInputsButton": "Mostra input avanzati",
     "showAdvancedShort": "Mostra avanzati",
     "showInput": "Mostra input",
@@ -4319,7 +4334,11 @@
       "promoCodePlaceholder": "Codice promozionale",
       "proratedCharge": "Addebito proporzionale per {plan}",
       "proratedRefund": "Rimborso proporzionale per {plan}",
+<<<<<<< Updated upstream
       "quoteRefreshFailed": "Il tuo preventivo è scaduto e non è stato possibile aggiornarlo. Scegli nuovamente il tuo piano.",
+=======
+      "quoteRefreshFailed": "Il tuo preventivo è scaduto e non è stato possibile aggiornarlo. Scegli nuovamente il piano.",
+>>>>>>> Stashed changes
       "quoteStale": "Il tuo preventivo è cambiato. Controlla l'importo aggiornato e riprova.",
       "quoteUnavailable": "Non disponibile",
       "reactivation": {
@@ -4337,7 +4356,11 @@
         "upgradeBody": "Il tuo {plan} era previsto per terminare il {date}. L'upgrade ora lo riattiva — ti verrà addebitato {amount} oggi e si rinnoverà automaticamente il {nextDate} invece di terminare."
       },
       "refillReplacesNote": "Sostituisce la tua ricarica mensile. Il saldo esistente viene mantenuto.",
+<<<<<<< Updated upstream
       "renewsAt": "Rinnovo a {amount} il {date}. Annulla in qualsiasi momento.",
+=======
+      "renewsAt": "Si rinnova a {amount} il {date}. Annulla in qualsiasi momento.",
+>>>>>>> Stashed changes
       "savedPaymentMethod": "Metodo di pagamento",
       "showMoreFeatures": "Mostra più funzionalità",
       "starting": "Inizio {date}",
@@ -4350,7 +4373,11 @@
       "switchToPlan": "Passa a {plan}",
       "switchesToday": "Cambia oggi",
       "terms": "Termini",
+<<<<<<< Updated upstream
       "termsAgreement": "Continuando, accetti i {terms} e l'{privacy} di Comfy Org e autorizzi Comfy Org ad addebitare il tuo metodo di pagamento a ogni periodo di fatturazione fino all'annullamento.",
+=======
+      "termsAgreement": "Continuando, accetti {terms} e {privacy} di Comfy Org e autorizzi Comfy Org ad addebitare il tuo metodo di pagamento a ogni periodo di fatturazione fino all'annullamento.",
+>>>>>>> Stashed changes
       "totalDueToday": "Totale dovuto oggi",
       "yearlySubscription": "Abbonamento annuale",
       "youllBeCharged": "Ti verrà addebitato"
@@ -4399,7 +4426,11 @@
       "inviteTitle": "Invita il tuo team",
       "planUpdated": "Il tuo piano è stato aggiornato con successo.",
       "promoApplied": "{code} applicato.",
+<<<<<<< Updated upstream
       "promoRenews": "Rinnovo a {amount} il {date}",
+=======
+      "promoRenews": "Si rinnova a {amount} il {date}",
+>>>>>>> Stashed changes
       "receiptEmailed": "Ricevuta inviata via email.",
       "sendInvites": "Invia inviti"
     },
@@ -4575,7 +4606,11 @@
   },
   "toastMessages": {
     "a1111CoreNodesUnavailable": "Impossibile caricare il workflow perché questa installazione di ComfyUI non ha i nodi core. Verifica che il backend sia stato avviato correttamente.",
+<<<<<<< Updated upstream
     "a1111EmbeddingsUnavailable": "Non è stato possibile caricare gli embedding dal server. Il workflow è stato importato, ma i nomi degli embedding sono stati lasciati come testo normale.",
+=======
+    "a1111EmbeddingsUnavailable": "Non è stato possibile caricare gli embedding dal server. Il workflow è stato importato, ma i nomi degli embedding sono stati lasciati come testo semplice.",
+>>>>>>> Stashed changes
     "cannotCreateSubgraph": "Impossibile creare il subgraph",
     "couldNotDetermineFileType": "Impossibile determinare il tipo di file",
     "dropFileError": "Impossibile elaborare l'elemento trascinato: {error}",

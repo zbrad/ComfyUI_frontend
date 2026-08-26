@@ -16597,11 +16597,19 @@
     }
   },
   "PixverseV6ExtendVideoNode": {
+<<<<<<< Updated upstream
     "description": "使用 PixVerse 延續既有影片，亦可選擇加入原生音訊。來源影片必須少於 40 秒，且任一邊長不得超過 1920px。輸出會保留來源解析度，因此品質設定影響的是續接內容的算圖品質，而非影格大小。",
     "display_name": "PixVerse V6 延長影片",
     "inputs": {
       "control_after_generate": {
         "name": "control after generate"
+=======
+    "description": "使用 PixVerse 延續既有影片，可選擇加入原生音訊。來源影片必須短於 40 秒，且任一邊長不得超過 1920px。輸出會保留來源解析度，因此品質設定影響的是續接內容的渲染品質，而非影格尺寸。",
+    "display_name": "PixVerse V6 延長影片",
+    "inputs": {
+      "control_after_generate": {
+        "name": "生成後控制"
+>>>>>>> Stashed changes
       },
       "model": {
         "name": "model",
@@ -16640,11 +16648,19 @@
     }
   },
   "PixverseV6FirstLastFrameNode": {
+<<<<<<< Updated upstream
     "description": "使用 PixVerse 生成從首影格轉換至尾影格的影片，亦可選擇加入原生音訊。輸出會保留首影格的長寬比。",
     "display_name": "PixVerse V6 首尾影格轉影片",
     "inputs": {
       "control_after_generate": {
         "name": "control after generate"
+=======
+    "description": "使用 PixVerse 生成從首影格過渡至尾影格的影片，可選擇加入原生音訊。輸出會保留首影格的長寬比。",
+    "display_name": "PixVerse V6 首尾影格轉影片",
+    "inputs": {
+      "control_after_generate": {
+        "name": "生成後控制"
+>>>>>>> Stashed changes
       },
       "first_frame": {
         "name": "first_frame"
@@ -16685,6 +16701,7 @@
     }
   },
   "PixverseV6FusionVideoNode": {
+<<<<<<< Updated upstream
     "description": "使用 PixVerse，依據參考主體、背景與影片合成影片。在提示詞中以名稱指定參考項目，即可將其放入場景，例如「{'@'}Subject1 穿越 {'@'}Background1」。連接參考影片後，模型會切換至 Omni 模式，輸出長度將與最長的參考影片相同。",
     "display_name": "PixVerse V6 融合（參考轉影片）",
     "inputs": {
@@ -16694,6 +16711,17 @@
       },
       "control_after_generate": {
         "name": "control after generate"
+=======
+    "description": "使用 PixVerse 將參考主體、背景與影片合成為影片。在提示詞中以名稱指定參考資料，即可將其置入場景，例如「{'@'}Subject1 穿越 {'@'}Background1」。連接參考影片會將模型切換為 Omni 模式，此時輸出長度會與最長的參考影片相同。",
+    "display_name": "PixVerse V6 融合（參考資料轉影片）",
+    "inputs": {
+      "backgrounds": {
+        "name": "backgrounds",
+        "tooltip": "主體將置入其中的場景參考影像。"
+      },
+      "control_after_generate": {
+        "name": "生成後控制"
+>>>>>>> Stashed changes
       },
       "model": {
         "name": "model",
@@ -16706,7 +16734,11 @@
         "name": "持續時間（秒）"
       },
       "model_generate_audio": {
+<<<<<<< Updated upstream
         "name": "產生音訊"
+=======
+        "name": "生成音訊"
+>>>>>>> Stashed changes
       },
       "model_negative_prompt": {
         "name": "負面提示詞"
@@ -16725,7 +16757,11 @@
       },
       "subjects": {
         "name": "subjects",
+<<<<<<< Updated upstream
         "tooltip": "要放入場景中的主體參考影像。"
+=======
+        "tooltip": "要置入場景中的主體參考影像。"
+>>>>>>> Stashed changes
       },
       "videos": {
         "name": "videos",
@@ -16739,14 +16775,23 @@
     }
   },
   "PixverseV6ImageToVideoNode": {
+<<<<<<< Updated upstream
     "description": "使用 PixVerse 為圖片製作動畫，亦可選擇加入原生音訊。輸出會保留輸入圖片的長寬比。",
     "display_name": "PixVerse V6 圖片轉影片",
+=======
+    "description": "使用 PixVerse 將影像製作成動畫，可選擇加入原生音訊。輸出會保留輸入影像的長寬比。",
+    "display_name": "PixVerse V6 影像轉影片",
+>>>>>>> Stashed changes
     "inputs": {
       "control_after_generate": {
         "name": "生成後控制"
       },
       "image": {
+<<<<<<< Updated upstream
         "name": "圖片"
+=======
+        "name": "影像"
+>>>>>>> Stashed changes
       },
       "model": {
         "name": "模型",
@@ -16756,7 +16801,11 @@
         "name": "持續時間（秒）"
       },
       "model_generate_audio": {
+<<<<<<< Updated upstream
         "name": "產生音訊"
+=======
+        "name": "生成音訊"
+>>>>>>> Stashed changes
       },
       "model_multi_clip": {
         "name": "多片段"
@@ -16784,7 +16833,11 @@
     }
   },
   "PixverseV6TextToVideoNode": {
+<<<<<<< Updated upstream
     "description": "使用 PixVerse 根據文字提示詞產生影片，亦可選擇加入原生音訊。",
+=======
+    "description": "使用 PixVerse 根據文字提示詞生成影片，可選擇加入原生音訊。",
+>>>>>>> Stashed changes
     "display_name": "PixVerse V6 文字轉影片",
     "inputs": {
       "control_after_generate": {
@@ -16801,7 +16854,11 @@
         "name": "持續時間（秒）"
       },
       "model_generate_audio": {
+<<<<<<< Updated upstream
         "name": "產生音訊"
+=======
+        "name": "生成音訊"
+>>>>>>> Stashed changes
       },
       "model_multi_clip": {
         "name": "多片段"

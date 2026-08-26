@@ -368,7 +368,11 @@
   },
   "Comfy_RightSidePanel_ShowErrorsTab": {
     "name": "Yan panelde sorunlar sekmesini göster",
+<<<<<<< Updated upstream
     "tooltip": "Etkinleştirildiğinde, kurulum gerektiren engelleyici hataları ve eksik kaynakları göstermek için sağ yan panelde Sorunlar sekmesi görüntülenir."
+=======
+    "tooltip": "Etkinleştirildiğinde, kurulması gereken engelleyici hataları ve eksik kaynakları göstermek için Sorunlar sekmesi sağ yan panelde görüntülenir."
+>>>>>>> Stashed changes
   },
   "Comfy_Sidebar_Location": {
     "name": "Kenar çubuğu konumu",

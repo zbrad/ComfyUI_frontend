@@ -347,16 +347,27 @@
   },
   "billingOperation": {
     "authenticationFailedDetail": "نتوانستیم تأیید پرداخت را تکمیل کنیم. لطفاً دوباره تلاش کنید.",
+<<<<<<< Updated upstream
     "authenticationManagerRequired": "تأیید پرداخت به رسیدگی مدیر صورت‌حساب workspace نیاز دارد.",
+=======
+    "authenticationManagerRequired": "تأیید پرداخت نیازمند رسیدگی مدیر صورتحساب workspace است.",
+>>>>>>> Stashed changes
     "authenticationUnavailable": "احراز هویت امن پرداخت در دسترس نیست. لطفاً صفحه را تازه‌سازی کرده و دوباره تلاش کنید.",
     "cancelFailed": "لغو اشتراک ناموفق بود",
     "cancelTimeout": "مهلت لغو اشتراک به پایان رسید",
     "expiredCardDetail": "این کارت منقضی شده است. از روش پرداخت دیگری استفاده کنید.",
     "incorrectCvcDetail": "کد امنیتی کارت نادرست است. آن را بررسی کرده و دوباره تلاش کنید.",
+<<<<<<< Updated upstream
     "insufficientFundsDetail": "این روش پرداخت موجودی کافی ندارد. روش پرداخت دیگری را امتحان کنید یا با بانک خود تماس بگیرید.",
     "paymentDeclinedDetail": "بانک شما این پرداخت را رد کرد. روش پرداخت دیگری را امتحان کنید یا با بانک خود تماس بگیرید.",
     "processingErrorDetail": "پرداخت شما پردازش نشد. دوباره تلاش کنید یا از روش پرداخت دیگری استفاده کنید.",
     "reconciliationDetail": "پرداخت شما دریافت شد، اما نتوانستیم به‌روزرسانی workspace شما را تکمیل کنیم. با پشتیبانی تماس بگیرید و این شناسه عملیات را ارائه کنید:",
+=======
+    "insufficientFundsDetail": "موجودی این روش پرداخت کافی نیست. روش پرداخت دیگری را امتحان کنید یا با بانک خود تماس بگیرید.",
+    "paymentDeclinedDetail": "بانک شما این پرداخت را رد کرد. روش پرداخت دیگری را امتحان کنید یا با بانک خود تماس بگیرید.",
+    "processingErrorDetail": "پرداخت شما پردازش نشد. دوباره تلاش کنید یا از روش پرداخت دیگری استفاده کنید.",
+    "reconciliationDetail": "پرداخت شما دریافت شد، اما نتوانستیم به‌روزرسانی workspace شما را تکمیل کنیم. با پشتیبانی تماس بگیرید و این شناسهٔ عملیات را ارائه کنید:",
+>>>>>>> Stashed changes
     "reconciliationTitle": "پرداخت دریافت شد — در انتظار تأیید",
     "retryVerification": "تلاش مجدد برای تأیید",
     "subscriptionActionRequired": "برای تکمیل راه‌اندازی فضای کاری، پرداخت خود را تأیید کنید",
@@ -819,7 +830,11 @@
       "buy": "خرید",
       "buyCredits": "ادامه به پرداخت",
       "buyNow": "هم‌اکنون خرید کنید",
+<<<<<<< Updated upstream
       "chargedImmediatelyNote": "روش پرداخت ذخیره‌شده شما فوراً شارژ می‌شود.",
+=======
+      "chargedImmediatelyNote": "روش پرداخت ذخیره‌شدهٔ شما فوراً شارژ می‌شود.",
+>>>>>>> Stashed changes
       "confirmSubtitle": "اعتبارها به محض تکمیل پرداخت به این ورک‌اسپیس افزوده می‌شوند.",
       "confirmTitle": "تأیید",
       "contactUs": "با ما تماس بگیرید",
@@ -3430,7 +3445,11 @@
     "errorsFilter": "{count} خطا | {count} خطا",
     "errorsFilterActive": "{count} خطا شناسایی شد | {count} خطا شناسایی شدند",
     "errorsSummary": "{count} خطا | {count} خطا",
+<<<<<<< Updated upstream
     "executionErrorOccurred": "هنگام اجرا خطایی رخ داد. برای جزئیات، زبانهٔ مشکلات را بررسی کنید.",
+=======
+    "executionErrorOccurred": "در حین اجرا خطایی رخ داد. برای جزئیات، زبانهٔ مشکلات را بررسی کنید.",
+>>>>>>> Stashed changes
     "expand": "باز کردن",
     "fallbackGroupTitle": "گروه",
     "fallbackNodeTitle": "node",
@@ -3440,7 +3459,11 @@
     "favoritesNoneHint": "در تب پارامترها، روی {moreIcon} هر ورودی کلیک کنید تا اینجا اضافه شود",
     "favoritesNoneTooltip": "برای دسترسی سریع، ویجت‌ها را ستاره‌دار کنید تا بدون انتخاب nodeها به آن‌ها دسترسی داشته باشید",
     "findOnGithubTooltip": "جستجوی مشکلات مرتبط در GitHub",
+<<<<<<< Updated upstream
     "finishSetupBeforeRun": "پیش از اجرای workflow، پیکربندی را کامل کنید",
+=======
+    "finishSetupBeforeRun": "پیش از اجرای workflow، راه‌اندازی را تکمیل کنید",
+>>>>>>> Stashed changes
     "getHelpTooltip": "گزارش این خطا و دریافت راهنمایی برای رفع آن",
     "globalSettings": {
       "canvas": "canvas",
@@ -3513,11 +3536,19 @@
       "viewInManager": "مشاهده در Manager"
     },
     "mute": "بی‌صدا",
+<<<<<<< Updated upstream
     "noErrors": "مشکلی نیست",
     "noSelection": "یک نود را انتخاب کنید تا ویژگی‌ها و اطلاعات آن نمایش داده شود.",
     "nodeState": "وضعیت نود",
     "nodes": "nodeها",
     "nodesAffected": "{count} node تحت‌تأثیر قرار گرفته | {count} node تحت‌تأثیر قرار گرفته‌اند",
+=======
+    "noErrors": "بدون مشکل",
+    "noSelection": "یک نود را انتخاب کنید تا ویژگی‌ها و اطلاعات آن نمایش داده شود.",
+    "nodeState": "وضعیت نود",
+    "nodes": "nodeها",
+    "nodesAffected": "{count} node تحت‌تأثیر قرار گرفته است | {count} node تحت‌تأثیر قرار گرفته‌اند",
+>>>>>>> Stashed changes
     "nodesNoneDesc": "هیچ nodeی وجود ندارد",
     "noneSearchDesc": "هیچ موردی با جستجوی شما مطابقت ندارد",
     "normal": "عادی",
@@ -3531,6 +3562,7 @@
     "resolveErrorsBeforeRun": "پیش از اجرای workflow، خطاها را برطرف کنید",
     "seeError": "مشاهده خطا",
     "selectedNodeErrors": "{node} — {count} مشکل | {node} — {count} مشکل",
+<<<<<<< Updated upstream
     "selectedNodesErrors": "{nodes} node انتخاب شده‌اند — {count} مشکل | {nodes} node انتخاب شده‌اند — {count} مشکل",
     "settings": "تنظیمات",
     "setupFilter": "{count} مورد نیازمند پیکربندی",
@@ -3541,6 +3573,18 @@
     "severityCountsStatus": "{errors} خطای مسدودکننده، {setup} مورد نیازمند پیکربندی",
     "severityErrorLabel": "خطاهای مسدودکننده",
     "severitySetupLabel": "پیکربندی لازم است",
+=======
+    "selectedNodesErrors": "{nodes} node انتخاب شده — {count} مشکل | {nodes} node انتخاب شده — {count} مشکل",
+    "settings": "تنظیمات",
+    "setupFilter": "{count} مورد نیازمند راه‌اندازی",
+    "setupNodeSummary": "{nodes} node — {count} مورد | {nodes} node — {count} مورد",
+    "setupNodesSummary": "{nodes} node — {count} مورد | {nodes} node — {count} مورد",
+    "setupRequired": "راه‌اندازی لازم است",
+    "setupSummary": "{count} مورد | {count} مورد",
+    "severityCountsStatus": "{errors} خطای مسدودکننده، {setup} مورد نیازمند راه‌اندازی",
+    "severityErrorLabel": "خطاهای مسدودکننده",
+    "severitySetupLabel": "راه‌اندازی لازم است",
+>>>>>>> Stashed changes
     "showAdvancedInputsButton": "نمایش ورودی‌های پیشرفته",
     "showAdvancedShort": "نمایش پیشرفته",
     "showInput": "نمایش ورودی",
@@ -4281,7 +4325,11 @@
       "alipay": "Alipay",
       "alipayRenewalNote": "مجوز Alipay برای تمدیدهای خودکار و خریدهای آینده نیز استفاده خواهد شد.",
       "applyPromoCode": "اعمال",
+<<<<<<< Updated upstream
       "applyQuoteBeforeContinuing": "پیش از ادامه، کد تبلیغاتی را اعمال کنید تا قیمت پیشنهادی شما تازه‌سازی شود.",
+=======
+      "applyQuoteBeforeContinuing": "پیش از ادامه، کد تخفیف را اعمال کنید تا قیمت پیشنهادی شما به‌روزرسانی شود.",
+>>>>>>> Stashed changes
       "backToAllPlans": "بازگشت به همه طرح‌ها",
       "billedEachMonth": "{amount} هر ماه صورتحساب می‌شود. در هر زمان قابل لغو است.",
       "changePaymentMethod": "تغییر",
@@ -4301,7 +4349,11 @@
       "currentMonthly": "طرح ماهانه",
       "discount": {
         "plan": "تخفیف طرح",
+<<<<<<< Updated upstream
         "promotion": "کد تبلیغاتی"
+=======
+        "promotion": "کد تخفیف"
+>>>>>>> Stashed changes
       },
       "discountComposition": "تخفیف‌ها",
       "eachMonthCreditsRefill": "هر ماه اعتبار به این مقدار بازنشانی می‌شود",
@@ -4316,11 +4368,19 @@
       "paymentPopupBlocked": "امکان باز کردن صفحه پرداخت وجود ندارد — لطفاً پاپ‌آپ‌ها را فعال کنید و دوباره تلاش کنید.",
       "perMember": "/ هر عضو",
       "privacyPolicy": "سیاست حفظ حریم خصوصی",
+<<<<<<< Updated upstream
       "promoCodePlaceholder": "کد تبلیغاتی",
       "proratedCharge": "هزینه متناسب برای {plan}",
       "proratedRefund": "بازپرداخت متناسب برای {plan}",
       "quoteRefreshFailed": "قیمت پیشنهادی شما منقضی شد و تازه‌سازی آن ممکن نشد. طرح خود را دوباره انتخاب کنید.",
       "quoteStale": "قیمت پیشنهادی شما تغییر کرده است. مبلغ به‌روزشده را بررسی کرده و دوباره تلاش کنید.",
+=======
+      "promoCodePlaceholder": "کد تخفیف",
+      "proratedCharge": "هزینه متناسب برای {plan}",
+      "proratedRefund": "بازپرداخت متناسب برای {plan}",
+      "quoteRefreshFailed": "قیمت پیشنهادی شما منقضی شد و نتوانست به‌روزرسانی شود. دوباره طرح خود را انتخاب کنید.",
+      "quoteStale": "قیمت پیشنهادی شما تغییر کرد. مبلغ به‌روزشده را بررسی کرده و دوباره تلاش کنید.",
+>>>>>>> Stashed changes
       "quoteUnavailable": "در دسترس نیست",
       "reactivation": {
         "amountChanged": "مبلغ پرداختی از زمان تأیید شما تغییر کرده است — لطفاً بررسی و دوباره تلاش کنید",
@@ -4337,20 +4397,32 @@
         "upgradeBody": "اشتراک {plan} شما قرار بود در تاریخ {date} به پایان برسد. با ارتقاء اکنون، اشتراک شما مجدداً فعال می‌شود — امروز مبلغ {amount} از شما دریافت می‌شود و به جای پایان یافتن، در تاریخ {nextDate} به صورت خودکار تمدید خواهد شد."
       },
       "refillReplacesNote": "جایگزین شارژ ماهانه شما می‌شود. موجودی فعلی حفظ می‌شود.",
+<<<<<<< Updated upstream
       "renewsAt": "در {date} با مبلغ {amount} تمدید می‌شود. هر زمان می‌توانید لغو کنید.",
+=======
+      "renewsAt": "در {date} با مبلغ {amount} تمدید می‌شود. هر زمان بخواهید لغو کنید.",
+>>>>>>> Stashed changes
       "savedPaymentMethod": "روش پرداخت",
       "showMoreFeatures": "نمایش امکانات بیشتر",
       "starting": "شروع از {date}",
       "startingToday": "شروع از امروز",
       "startsOn": "شروع از {date}",
       "stayOnUntil": "تا {date} در {plan} باقی خواهید ماند.",
+<<<<<<< Updated upstream
       "stripeMethodChoice": "جزئیات پرداخت شما به‌صورت امن توسط Stripe پردازش می‌شود.",
+=======
+      "stripeMethodChoice": "جزئیات پرداخت شما به‌صورت امن توسط Stripe مدیریت می‌شود.",
+>>>>>>> Stashed changes
       "stripeUnavailable": "گزینه‌های پرداخت در دسترس نیستند. لطفاً صفحه را تازه‌سازی کرده و دوباره تلاش کنید.",
       "subscribeToPlan": "اشتراک پلن {plan}",
       "switchToPlan": "تغییر به پلن {plan}",
       "switchesToday": "تغییرات امروز",
       "terms": "شرایط",
+<<<<<<< Updated upstream
       "termsAgreement": "با ادامه‌دادن، با {terms} و {privacy} ‏Comfy Org موافقت می‌کنید و به Comfy Org اجازه می‌دهید تا زمان لغو شما، در هر دوره صورت‌حساب از روش پرداختتان مبلغ را برداشت کند.",
+=======
+      "termsAgreement": "با ادامه، با {terms} و {privacy} متعلق به Comfy Org موافقت می‌کنید و به Comfy Org اجازه می‌دهید تا زمان لغو شما، در هر دورهٔ صورتحساب از روش پرداختتان هزینه کسر کند.",
+>>>>>>> Stashed changes
       "totalDueToday": "مبلغ قابل پرداخت امروز",
       "yearlySubscription": "اشتراک سالانه",
       "youllBeCharged": "شما مبلغ زیر را پرداخت خواهید کرد"
@@ -4626,8 +4698,13 @@
     "invalidTemplateData": "بارگذاری قالب نود ناموفق بود: داده نامعتبر",
     "legacyMaskEditorDeprecated": "ویرایشگر mask قدیمی منسوخ شده و به‌زودی حذف خواهد شد.",
     "migrateToLitegraphReroute": "nodeهای reroute در نسخه‌های آینده حذف خواهند شد. برای مهاجرت به reroute بومی litegraph کلیک کنید.",
+<<<<<<< Updated upstream
     "missingMediaVerificationFailed": "تأیید رسانه‌های مفقود ناموفق بود. ممکن است برخی ورودی‌ها در زبانه «مشکلات» نمایش داده نشوند.",
     "missingModelVerificationFailed": "تأیید مدل‌های مفقود ناموفق بود. ممکن است برخی مدل‌ها در زبانه «مشکلات» نمایش داده نشوند.",
+=======
+    "missingMediaVerificationFailed": "تأیید رسانه‌های مفقود ناموفق بود. ممکن است برخی ورودی‌ها در زبانهٔ مشکلات نمایش داده نشوند.",
+    "missingModelVerificationFailed": "تأیید مدل‌های مفقود ناموفق بود. ممکن است برخی مدل‌ها در زبانهٔ مشکلات نمایش داده نشوند.",
+>>>>>>> Stashed changes
     "modelLoadedSuccessfully": "مدل سه‌بعدی با موفقیت بارگذاری شد",
     "no3dScene": "صحنه سه‌بعدی برای اعمال بافت وجود ندارد",
     "no3dSceneToExport": "صحنه سه‌بعدی برای صادرات وجود ندارد",

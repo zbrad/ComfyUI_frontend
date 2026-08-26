@@ -16597,6 +16597,7 @@
     }
   },
   "PixverseV6ExtendVideoNode": {
+<<<<<<< Updated upstream
     "description": "Continua un video esistente con PixVerse, facoltativamente con audio nativo. La sorgente deve durare meno di 40 secondi e avere ciascun lato al massimo di 1920 px. L'output mantiene la risoluzione della sorgente, quindi la qualità determina quanto bene viene resa la continuazione anziché la dimensione del fotogramma.",
     "display_name": "PixVerse V6 Estendi video",
     "inputs": {
@@ -16605,6 +16606,16 @@
       },
       "model": {
         "name": "modello",
+=======
+    "description": "Prosegue un video esistente con PixVerse, facoltativamente con audio nativo. La sorgente deve durare meno di 40 secondi e avere al massimo 1920 px su entrambi i lati. L'output mantiene la risoluzione della sorgente, quindi la qualità determina quanto bene viene resa la continuazione anziché la dimensione dei fotogrammi.",
+    "display_name": "PixVerse V6 Estendi video",
+    "inputs": {
+      "control_after_generate": {
+        "name": "control after generate"
+      },
+      "model": {
+        "name": "model",
+>>>>>>> Stashed changes
         "tooltip": "Modello e impostazioni di generazione."
       },
       "model_duration_seconds": {
@@ -16620,17 +16631,29 @@
         "name": "prompt"
       },
       "model_quality": {
+<<<<<<< Updated upstream
         "name": "qualità"
+=======
+        "name": "quality"
+>>>>>>> Stashed changes
       },
       "model_seed": {
         "name": "seed"
       },
       "model_style": {
+<<<<<<< Updated upstream
         "name": "stile"
       },
       "video": {
         "name": "video",
         "tooltip": "Video da continuare."
+=======
+        "name": "style"
+      },
+      "video": {
+        "name": "video",
+        "tooltip": "Video da proseguire."
+>>>>>>> Stashed changes
       }
     },
     "outputs": {
@@ -16640,11 +16663,19 @@
     }
   },
   "PixverseV6FirstLastFrameNode": {
+<<<<<<< Updated upstream
     "description": "Genera un video che passa da un primo fotogramma a un ultimo fotogramma con PixVerse, facoltativamente con audio nativo. L'output mantiene il rapporto d'aspetto del primo fotogramma.",
     "display_name": "PixVerse V6 da primo-ultimo fotogramma a video",
     "inputs": {
       "control_after_generate": {
         "name": "controllo dopo la generazione"
+=======
+    "description": "Genera un video che passa da un primo fotogramma a un ultimo fotogramma con PixVerse, facoltativamente con audio nativo. L'output mantiene le proporzioni del primo fotogramma.",
+    "display_name": "PixVerse V6 dal primo all'ultimo fotogramma a video",
+    "inputs": {
+      "control_after_generate": {
+        "name": "control after generate"
+>>>>>>> Stashed changes
       },
       "first_frame": {
         "name": "first_frame"
@@ -16653,7 +16684,11 @@
         "name": "last_frame"
       },
       "model": {
+<<<<<<< Updated upstream
         "name": "modello",
+=======
+        "name": "model",
+>>>>>>> Stashed changes
         "tooltip": "Modello e impostazioni di generazione."
       },
       "model_duration_seconds": {
@@ -16669,13 +16704,21 @@
         "name": "prompt"
       },
       "model_quality": {
+<<<<<<< Updated upstream
         "name": "qualità"
+=======
+        "name": "quality"
+>>>>>>> Stashed changes
       },
       "model_seed": {
         "name": "seed"
       },
       "model_style": {
+<<<<<<< Updated upstream
         "name": "stile"
+=======
+        "name": "style"
+>>>>>>> Stashed changes
       }
     },
     "outputs": {
@@ -16685,6 +16728,7 @@
     }
   },
   "PixverseV6FusionVideoNode": {
+<<<<<<< Updated upstream
     "description": "Compone un video da soggetti, sfondi e video di riferimento con PixVerse. Inserisci un riferimento nella scena nominandolo nel prompt, ad esempio '{'@'}Subject1 cammina attraverso {'@'}Background1'. Il collegamento di un video di riferimento imposta il modello in modalità Omni, in cui la durata dell'output corrisponde al video di riferimento più lungo.",
     "display_name": "PixVerse V6 Fusion (Da riferimenti a video)",
     "inputs": {
@@ -16697,12 +16741,27 @@
       },
       "model": {
         "name": "modello",
+=======
+    "description": "Compone un video da soggetti, sfondi e video di riferimento con PixVerse. Inserisci un riferimento nella scena nominandolo nel prompt, ad esempio '{'@'}Subject1 cammina attraverso {'@'}Background1'. Il collegamento di un video di riferimento passa il modello alla modalità Omni, in cui la durata dell'output corrisponde al video di riferimento più lungo.",
+    "display_name": "PixVerse V6 Fusion (Riferimento a video)",
+    "inputs": {
+      "backgrounds": {
+        "name": "backgrounds",
+        "tooltip": "Immagini di riferimento della scena in cui vengono inseriti i soggetti."
+      },
+      "control_after_generate": {
+        "name": "control after generate"
+      },
+      "model": {
+        "name": "model",
+>>>>>>> Stashed changes
         "tooltip": "Modello e impostazioni di generazione."
       },
       "model_aspect_ratio": {
         "name": "aspect_ratio"
       },
       "model_duration_seconds": {
+<<<<<<< Updated upstream
         "name": "durata (secondi)"
       },
       "model_generate_audio": {
@@ -16710,6 +16769,15 @@
       },
       "model_negative_prompt": {
         "name": "prompt negativo"
+=======
+        "name": "durata_secondi"
+      },
+      "model_generate_audio": {
+        "name": "genera_audio"
+      },
+      "model_negative_prompt": {
+        "name": "prompt_negativo"
+>>>>>>> Stashed changes
       },
       "model_prompt": {
         "name": "prompt"
@@ -16718,17 +16786,29 @@
         "name": "qualità"
       },
       "model_seed": {
+<<<<<<< Updated upstream
         "name": "seed"
+=======
+        "name": "seme"
+>>>>>>> Stashed changes
       },
       "model_style": {
         "name": "stile"
       },
       "subjects": {
+<<<<<<< Updated upstream
         "name": "soggetti",
         "tooltip": "Immagini di riferimento dei soggetti da inserire nella scena."
       },
       "videos": {
         "name": "video",
+=======
+        "name": "subjects",
+        "tooltip": "Immagini di riferimento dei soggetti da inserire nella scena."
+      },
+      "videos": {
+        "name": "videos",
+>>>>>>> Stashed changes
         "tooltip": "Video di riferimento da cui prendere soggetti, movimento, inquadratura o stile. Al massimo due, per un totale massimo di 15 secondi."
       }
     },
@@ -16740,7 +16820,11 @@
   },
   "PixverseV6ImageToVideoNode": {
     "description": "Anima un'immagine con PixVerse, facoltativamente con audio nativo. L'output mantiene le proporzioni dell'immagine di input.",
+<<<<<<< Updated upstream
     "display_name": "Da immagine a video PixVerse V6",
+=======
+    "display_name": "PixVerse V6 da immagine a video",
+>>>>>>> Stashed changes
     "inputs": {
       "control_after_generate": {
         "name": "controllo dopo la generazione"
@@ -16753,6 +16837,7 @@
         "tooltip": "Impostazioni del modello e della generazione."
       },
       "model_duration_seconds": {
+<<<<<<< Updated upstream
         "name": "durata (secondi)"
       },
       "model_generate_audio": {
@@ -16763,6 +16848,18 @@
       },
       "model_negative_prompt": {
         "name": "prompt negativo"
+=======
+        "name": "durata_secondi"
+      },
+      "model_generate_audio": {
+        "name": "genera_audio"
+      },
+      "model_multi_clip": {
+        "name": "multi_clip"
+      },
+      "model_negative_prompt": {
+        "name": "prompt_negativo"
+>>>>>>> Stashed changes
       },
       "model_prompt": {
         "name": "prompt"
@@ -16771,7 +16868,11 @@
         "name": "qualità"
       },
       "model_seed": {
+<<<<<<< Updated upstream
         "name": "seed"
+=======
+        "name": "seme"
+>>>>>>> Stashed changes
       },
       "model_style": {
         "name": "stile"
@@ -16784,8 +16885,13 @@
     }
   },
   "PixverseV6TextToVideoNode": {
+<<<<<<< Updated upstream
     "description": "Genera un video da un prompt di testo con PixVerse, facoltativamente con audio nativo.",
     "display_name": "Da testo a video PixVerse V6",
+=======
+    "description": "Genera un video da un prompt testuale con PixVerse, facoltativamente con audio nativo.",
+    "display_name": "PixVerse V6 da testo a video",
+>>>>>>> Stashed changes
     "inputs": {
       "control_after_generate": {
         "name": "controllo dopo la generazione"
@@ -16795,6 +16901,7 @@
         "tooltip": "Impostazioni del modello e della generazione."
       },
       "model_aspect_ratio": {
+<<<<<<< Updated upstream
         "name": "rapporto d'aspetto"
       },
       "model_duration_seconds": {
@@ -16808,6 +16915,21 @@
       },
       "model_negative_prompt": {
         "name": "prompt negativo"
+=======
+        "name": "rapporto_aspetto"
+      },
+      "model_duration_seconds": {
+        "name": "durata_secondi"
+      },
+      "model_generate_audio": {
+        "name": "genera_audio"
+      },
+      "model_multi_clip": {
+        "name": "multi_clip"
+      },
+      "model_negative_prompt": {
+        "name": "prompt_negativo"
+>>>>>>> Stashed changes
       },
       "model_prompt": {
         "name": "prompt"
@@ -16816,7 +16938,11 @@
         "name": "qualità"
       },
       "model_seed": {
+<<<<<<< Updated upstream
         "name": "seed"
+=======
+        "name": "seme"
+>>>>>>> Stashed changes
       },
       "model_style": {
         "name": "stile"

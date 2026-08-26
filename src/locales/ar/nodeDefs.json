@@ -16597,7 +16597,11 @@
     }
   },
   "PixverseV6ExtendVideoNode": {
+<<<<<<< Updated upstream
     "description": "يتابع مقطع فيديو موجودًا باستخدام PixVerse، مع صوت أصلي اختياري. يجب أن تكون مدة المصدر أقل من 40 ثانية وألا يتجاوز أي من أبعاده 1920px. يحافظ الإخراج على دقة المصدر، لذا تحدد الجودة مدى جودة تصيير المتابعة بدلًا من حجم الإطار.",
+=======
+    "description": "يواصل فيديو موجودًا باستخدام PixVerse، مع إمكانية تضمين صوت أصلي. يجب أن يكون المصدر أقل من 40 ثانية وألا يتجاوز 1920px في أي من جانبيه. يحتفظ الإخراج بدقة المصدر، لذا تحدد الجودة مدى جودة عرض الاستمرار بدلًا من حجم الإطار.",
+>>>>>>> Stashed changes
     "display_name": "PixVerse V6 تمديد الفيديو",
     "inputs": {
       "control_after_generate": {
@@ -16617,7 +16621,11 @@
         "name": "negative_prompt"
       },
       "model_prompt": {
+<<<<<<< Updated upstream
         "name": "الموجّه"
+=======
+        "name": "المطالبة"
+>>>>>>> Stashed changes
       },
       "model_quality": {
         "name": "الجودة"
@@ -16630,7 +16638,11 @@
       },
       "video": {
         "name": "فيديو",
+<<<<<<< Updated upstream
         "tooltip": "مقطع الفيديو المراد متابعته."
+=======
+        "tooltip": "الفيديو المراد متابعته."
+>>>>>>> Stashed changes
       }
     },
     "outputs": {
@@ -16640,8 +16652,13 @@
     }
   },
   "PixverseV6FirstLastFrameNode": {
+<<<<<<< Updated upstream
     "description": "ينشئ مقطع فيديو ينتقل من إطار أول إلى إطار أخير باستخدام PixVerse، مع صوت أصلي اختياري. يحافظ الإخراج على نسبة العرض إلى الارتفاع للإطار الأول.",
     "display_name": "PixVerse V6 من الإطار الأول-الأخير إلى فيديو",
+=======
+    "description": "يولّد فيديو ينتقل من إطار أول إلى إطار أخير باستخدام PixVerse، مع إمكانية تضمين صوت أصلي. يحتفظ الإخراج بنسبة أبعاد الإطار الأول.",
+    "display_name": "PixVerse V6 تحويل الإطار الأول-الأخير إلى فيديو",
+>>>>>>> Stashed changes
     "inputs": {
       "control_after_generate": {
         "name": "التحكم بعد التوليد"
@@ -16666,7 +16683,11 @@
         "name": "negative_prompt"
       },
       "model_prompt": {
+<<<<<<< Updated upstream
         "name": "الموجّه"
+=======
+        "name": "المطالبة"
+>>>>>>> Stashed changes
       },
       "model_quality": {
         "name": "الجودة"
@@ -16685,12 +16706,21 @@
     }
   },
   "PixverseV6FusionVideoNode": {
+<<<<<<< Updated upstream
     "description": "يؤلف مقطع فيديو من الأشخاص والخلفيات ومقاطع الفيديو المرجعية باستخدام PixVerse. ضع مرجعًا في المشهد عبر تسميته في الموجّه، مثلًا: «{'@'}Subject1 يمشي عبر {'@'}Background1». يؤدي توصيل فيديو مرجعي إلى تحويل النموذج إلى وضع Omni، حيث يطابق طول الإخراج أطول فيديو مرجعي.",
     "display_name": "PixVerse V6 الدمج (مرجع إلى فيديو)",
     "inputs": {
       "backgrounds": {
         "name": "الخلفيات",
         "tooltip": "صور مرجعية للمشهد الذي يوضع فيه الأشخاص."
+=======
+    "description": "يؤلف فيديو من مواضيع وخلفيات ومقاطع فيديو مرجعية باستخدام PixVerse. ضع مرجعًا في المشهد بتسميته في المطالبة، مثلًا: '{'@'}Subject1 يمشي عبر {'@'}Background1'. يؤدي توصيل فيديو مرجعي إلى تحويل النموذج إلى وضع Omni، حيث يطابق طول الإخراج أطول فيديو مرجعي.",
+    "display_name": "PixVerse V6 دمج (مرجع إلى فيديو)",
+    "inputs": {
+      "backgrounds": {
+        "name": "الخلفيات",
+        "tooltip": "صور مرجعية للمشهد الذي توضع فيه المواضيع."
+>>>>>>> Stashed changes
       },
       "control_after_generate": {
         "name": "التحكم بعد التوليد"
@@ -16703,6 +16733,7 @@
         "name": "aspect_ratio"
       },
       "model_duration_seconds": {
+<<<<<<< Updated upstream
         "name": "المدة_بالثواني"
       },
       "model_generate_audio": {
@@ -16710,6 +16741,15 @@
       },
       "model_negative_prompt": {
         "name": "الموجّه_السلبي"
+=======
+        "name": "المدة (بالثواني)"
+      },
+      "model_generate_audio": {
+        "name": "إنشاء الصوت"
+      },
+      "model_negative_prompt": {
+        "name": "الموجّه السلبي"
+>>>>>>> Stashed changes
       },
       "model_prompt": {
         "name": "الموجّه"
@@ -16724,12 +16764,21 @@
         "name": "النمط"
       },
       "subjects": {
+<<<<<<< Updated upstream
         "name": "الأشخاص",
         "tooltip": "صور مرجعية للأشخاص المراد وضعهم في المشهد."
       },
       "videos": {
         "name": "مقاطع الفيديو",
         "tooltip": "مقاطع فيديو مرجعية لاستعارة الأشخاص أو الحركة أو التأطير أو النمط منها. بحد أقصى مقطعا فيديو وبإجمالي لا يتجاوز 15 ثانية."
+=======
+        "name": "المواضيع",
+        "tooltip": "صور مرجعية للمواضيع المراد وضعها في المشهد."
+      },
+      "videos": {
+        "name": "مقاطع الفيديو",
+        "tooltip": "مقاطع فيديو مرجعية لاستعارة المواضيع أو الحركة أو التأطير أو النمط منها. بحد أقصى مقطعين، وبإجمالي لا يتجاوز 15 ثانية."
+>>>>>>> Stashed changes
       }
     },
     "outputs": {
@@ -16739,6 +16788,7 @@
     }
   },
   "PixverseV6ImageToVideoNode": {
+<<<<<<< Updated upstream
     "description": "يُحرّك صورة باستخدام PixVerse، مع صوت أصلي اختياريًا. يحافظ الإخراج على نسبة أبعاد الصورة المُدخلة.",
     "display_name": "PixVerse V6 من صورة إلى فيديو",
     "inputs": {
@@ -16763,6 +16813,32 @@
       },
       "model_negative_prompt": {
         "name": "الموجّه_السلبي"
+=======
+    "description": "يحرّك صورة باستخدام PixVerse، مع صوت أصلي اختياريًا. يحافظ الناتج على نسبة العرض إلى الارتفاع للصورة المُدخلة.",
+    "display_name": "PixVerse V6 من صورة إلى فيديو",
+    "inputs": {
+      "control_after_generate": {
+        "name": "التحكم بعد الإنشاء"
+      },
+      "image": {
+        "name": "الصورة"
+      },
+      "model": {
+        "name": "النموذج",
+        "tooltip": "إعدادات النموذج والإنشاء."
+      },
+      "model_duration_seconds": {
+        "name": "المدة (بالثواني)"
+      },
+      "model_generate_audio": {
+        "name": "إنشاء الصوت"
+      },
+      "model_multi_clip": {
+        "name": "مقاطع متعددة"
+      },
+      "model_negative_prompt": {
+        "name": "الموجّه السلبي"
+>>>>>>> Stashed changes
       },
       "model_prompt": {
         "name": "الموجّه"
@@ -16784,6 +16860,7 @@
     }
   },
   "PixverseV6TextToVideoNode": {
+<<<<<<< Updated upstream
     "description": "يُنشئ فيديو من موجّه نصي باستخدام PixVerse، مع صوت أصلي اختياريًا.",
     "display_name": "PixVerse V6 من نص إلى فيديو",
     "inputs": {
@@ -16808,6 +16885,32 @@
       },
       "model_negative_prompt": {
         "name": "الموجّه_السلبي"
+=======
+    "description": "ينشئ فيديو من موجّه نصي باستخدام PixVerse، مع صوت أصلي اختياريًا.",
+    "display_name": "PixVerse V6 من نص إلى فيديو",
+    "inputs": {
+      "control_after_generate": {
+        "name": "التحكم بعد الإنشاء"
+      },
+      "model": {
+        "name": "النموذج",
+        "tooltip": "إعدادات النموذج والإنشاء."
+      },
+      "model_aspect_ratio": {
+        "name": "نسبة العرض إلى الارتفاع"
+      },
+      "model_duration_seconds": {
+        "name": "المدة (بالثواني)"
+      },
+      "model_generate_audio": {
+        "name": "إنشاء الصوت"
+      },
+      "model_multi_clip": {
+        "name": "مقاطع متعددة"
+      },
+      "model_negative_prompt": {
+        "name": "الموجّه السلبي"
+>>>>>>> Stashed changes
       },
       "model_prompt": {
         "name": "الموجّه"

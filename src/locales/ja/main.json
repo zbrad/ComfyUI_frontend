@@ -348,15 +348,26 @@
   "billingOperation": {
     "authenticationFailedDetail": "支払いの確認を完了できませんでした。もう一度お試しください。",
     "authenticationManagerRequired": "支払いの確認には、ワークスペースの請求管理者による対応が必要です。",
+<<<<<<< Updated upstream
     "authenticationUnavailable": "安全な支払い認証を利用できません。ページを更新してもう一度お試しください。",
+=======
+    "authenticationUnavailable": "安全な支払い認証を利用できません。更新してもう一度お試しください。",
+>>>>>>> Stashed changes
     "cancelFailed": "サブスクリプションのキャンセルに失敗しました",
     "cancelTimeout": "サブスクリプションのキャンセルがタイムアウトしました",
     "expiredCardDetail": "このカードの有効期限が切れています。別のお支払い方法を使用してください。",
     "incorrectCvcDetail": "カードのセキュリティコードが正しくありません。確認してもう一度お試しください。",
+<<<<<<< Updated upstream
     "insufficientFundsDetail": "このお支払い方法には残高が不足しています。別のお支払い方法を試すか、銀行にお問い合わせください。",
     "paymentDeclinedDetail": "銀行によりこの支払いが拒否されました。別のお支払い方法を試すか、銀行にお問い合わせください。",
     "processingErrorDetail": "お支払いを処理できませんでした。もう一度試すか、別のお支払い方法を使用してください。",
     "reconciliationDetail": "お支払いは受領しましたが、ワークスペースの更新を完了できませんでした。サポートにお問い合わせのうえ、この操作IDを記載してください:",
+=======
+    "insufficientFundsDetail": "このお支払い方法の残高が不足しています。別のお支払い方法を試すか、銀行にお問い合わせください。",
+    "paymentDeclinedDetail": "銀行によりこの支払いが拒否されました。別のお支払い方法を試すか、銀行にお問い合わせください。",
+    "processingErrorDetail": "お支払いを処理できませんでした。もう一度試すか、別のお支払い方法を使用してください。",
+    "reconciliationDetail": "お支払いを受領しましたが、ワークスペースの更新を完了できませんでした。サポートに連絡し、この操作IDをお伝えください：",
+>>>>>>> Stashed changes
     "reconciliationTitle": "支払いを受領しました — 確認待ち",
     "retryVerification": "確認を再試行",
     "subscriptionActionRequired": "ワークスペースの設定を完了するにはお支払いを確認してください",
@@ -819,7 +830,11 @@
       "buy": "購入",
       "buyCredits": "支払いに進む",
       "buyNow": "今すぐ購入",
+<<<<<<< Updated upstream
       "chargedImmediatelyNote": "保存済みのお支払い方法には即時に請求されます。",
+=======
+      "chargedImmediatelyNote": "保存済みのお支払い方法には直ちに請求されます。",
+>>>>>>> Stashed changes
       "confirmSubtitle": "お支払いが完了すると、クレジットがこのワークスペースに追加されます。",
       "confirmTitle": "確認",
       "contactUs": "お問い合わせ",
@@ -3427,8 +3442,13 @@
     "errorNodesSummary": "{nodes}ノード — {count}件のエラー",
     "errors": "問題",
     "errorsDetected": "エラーが検出されました | 複数のエラーが検出されました",
+<<<<<<< Updated upstream
     "errorsFilter": "{count} 件のエラー | {count} 件のエラー",
     "errorsFilterActive": "{count} 件のエラーを検出 | {count} 件のエラーを検出",
+=======
+    "errorsFilter": "エラー {count}件 | エラー {count}件",
+    "errorsFilterActive": "エラー {count}件を検出 | エラー {count}件を検出",
+>>>>>>> Stashed changes
     "errorsSummary": "{count}件のエラー",
     "executionErrorOccurred": "実行中にエラーが発生しました。詳細は「問題」タブを確認してください。",
     "expand": "展開",
@@ -3517,7 +3537,11 @@
     "noSelection": "ノードを選択すると、そのプロパティと情報が表示されます。",
     "nodeState": "ノードの状態",
     "nodes": "ノード",
+<<<<<<< Updated upstream
     "nodesAffected": "影響を受けたノード: {count} 個 | 影響を受けたノード: {count} 個",
+=======
+    "nodesAffected": "影響を受けるノード {count}個 | 影響を受けるノード {count}個",
+>>>>>>> Stashed changes
     "nodesNoneDesc": "ノードなし",
     "noneSearchDesc": "検索条件に一致する項目がありません",
     "normal": "ノーマル",
@@ -3530,6 +3554,7 @@
     "resolveBeforeRun": "ワークフローを実行する前に解決してください",
     "resolveErrorsBeforeRun": "ワークフローを実行する前にエラーを解決してください",
     "seeError": "エラーを見る",
+<<<<<<< Updated upstream
     "selectedNodeErrors": "{node} — {count} 件の問題 | {node} — {count} 件の問題",
     "selectedNodesErrors": "{nodes} 個のノードを選択中 — {count} 件の問題 | {nodes} 個のノードを選択中 — {count} 件の問題",
     "settings": "設定",
@@ -3541,6 +3566,19 @@
     "severityCountsStatus": "{errors} 件のブロッキングエラー、{setup} 件はセットアップが必要",
     "severityErrorLabel": "ブロッキングエラー",
     "severitySetupLabel": "セットアップが必要",
+=======
+    "selectedNodeErrors": "{node} — 問題 {count}件 | {node} — 問題 {count}件",
+    "selectedNodesErrors": "{nodes} 個のノードを選択中 — 問題 {count}件 | {nodes} 個のノードを選択中 — 問題 {count}件",
+    "settings": "設定",
+    "setupFilter": "セットアップが必要 {count}件",
+    "setupNodeSummary": "{nodes} 個のノード — 項目 {count}件 | {nodes} 個のノード — 項目 {count}件",
+    "setupNodesSummary": "{nodes} 個のノード — 項目 {count}件 | {nodes} 個のノード — 項目 {count}件",
+    "setupRequired": "セットアップが必要です",
+    "setupSummary": "項目 {count}件 | 項目 {count}件",
+    "severityCountsStatus": "ブロッキングエラー {errors}件、セットアップが必要 {setup}件",
+    "severityErrorLabel": "ブロッキングエラー",
+    "severitySetupLabel": "セットアップが必要です",
+>>>>>>> Stashed changes
     "showAdvancedInputsButton": "詳細入力を表示",
     "showAdvancedShort": "詳細を表示",
     "showInput": "入力を表示",
@@ -4281,7 +4319,11 @@
       "alipay": "Alipay",
       "alipayRenewalNote": "Alipayの認証は、自動更新および今後の購入にも使用されます。",
       "applyPromoCode": "適用",
+<<<<<<< Updated upstream
       "applyQuoteBeforeContinuing": "続行する前にプロモーションコードを適用して見積もりを更新してください。",
+=======
+      "applyQuoteBeforeContinuing": "続行する前にプロモコードを適用して見積もりを更新してください。",
+>>>>>>> Stashed changes
       "backToAllPlans": "すべてのプランに戻る",
       "billedEachMonth": "毎月{amount}請求されます。いつでもキャンセル可能です。",
       "changePaymentMethod": "変更",
@@ -4301,7 +4343,11 @@
       "currentMonthly": "月間プラン",
       "discount": {
         "plan": "プラン割引",
+<<<<<<< Updated upstream
         "promotion": "プロモーションコード"
+=======
+        "promotion": "プロモコード"
+>>>>>>> Stashed changes
       },
       "discountComposition": "割引",
       "eachMonthCreditsRefill": "毎月クレジットが補充されます",
@@ -4311,12 +4357,20 @@
       "hideFeatures": "機能を隠す",
       "newMonthlySubscription": "新しい月間サブスクリプション",
       "nextPaymentDue": "次回のお支払いは{date}です。いつでもキャンセルできます。",
+<<<<<<< Updated upstream
       "payAndSubscribe": "支払いして登録",
+=======
+      "payAndSubscribe": "支払って購読",
+>>>>>>> Stashed changes
       "paymentMethod": "お支払い方法",
       "paymentPopupBlocked": "支払いページを開けませんでした。ポップアップを許可して再試行してください。",
       "perMember": "/ メンバー",
       "privacyPolicy": "プライバシーポリシー",
+<<<<<<< Updated upstream
       "promoCodePlaceholder": "プロモーションコード",
+=======
+      "promoCodePlaceholder": "プロモコード",
+>>>>>>> Stashed changes
       "proratedCharge": "{plan}の按分請求",
       "proratedRefund": "{plan}の按分返金",
       "quoteRefreshFailed": "見積もりの有効期限が切れ、更新できませんでした。もう一度プランを選択してください。",
@@ -4344,13 +4398,22 @@
       "startingToday": "本日から開始",
       "startsOn": "{date}に開始",
       "stayOnUntil": "{date}まで{plan}が継続されます。",
+<<<<<<< Updated upstream
       "stripeMethodChoice": "お支払い情報はStripeによって安全に処理されます。",
       "stripeUnavailable": "お支払いオプションを利用できません。ページを更新してもう一度お試しください。",
+=======
+      "stripeMethodChoice": "お支払い情報はStripeにより安全に処理されます。",
+      "stripeUnavailable": "お支払いオプションを利用できません。更新してもう一度お試しください。",
+>>>>>>> Stashed changes
       "subscribeToPlan": "{plan}に加入",
       "switchToPlan": "{plan}に切り替え",
       "switchesToday": "本日の切り替え",
       "terms": "利用規約",
+<<<<<<< Updated upstream
       "termsAgreement": "続行すると、Comfy Orgの{terms}および{privacy}に同意し、キャンセルするまで各請求期間にComfy Orgがお支払い方法に請求することを承認したものとみなされます。",
+=======
+      "termsAgreement": "続行すると、Comfy Orgの{terms}および{privacy}に同意し、キャンセルするまで各請求期間にComfy Orgがお客様のお支払い方法に請求することを承認したものとみなされます。",
+>>>>>>> Stashed changes
       "totalDueToday": "本日のお支払い合計",
       "yearlySubscription": "年間サブスクリプション",
       "youllBeCharged": "ご請求額："
@@ -4575,7 +4638,11 @@
   },
   "toastMessages": {
     "a1111CoreNodesUnavailable": "このComfyUIインストールにはコアノードが不足しているため、ワークフローを読み込めませんでした。バックエンドが正しく起動しているか確認してください。",
+<<<<<<< Updated upstream
     "a1111EmbeddingsUnavailable": "サーバーからEmbeddingを読み込めませんでした。ワークフローはインポートされましたが、Embedding名はプレーンテキストのままです。",
+=======
+    "a1111EmbeddingsUnavailable": "サーバーから埋め込みを読み込めませんでした。ワークフローはインポートされましたが、埋め込み名はプレーンテキストのままです。",
+>>>>>>> Stashed changes
     "cannotCreateSubgraph": "サブグラフを作成できません",
     "couldNotDetermineFileType": "ファイルタイプを判断できませんでした",
     "dropFileError": "ドロップされたアイテムを処理できません: {error}",
@@ -4852,7 +4919,11 @@
         "dismiss": "閉じる",
         "memberBody": "チームのクレジットがすべて使用されました。ワークスペース管理者がクレジットを追加する必要があります。",
         "title": "クレジットが不足しています",
+<<<<<<< Updated upstream
         "upgradeBody": "クレジットを追加して生成を続けるには、プランをアップグレードしてください。"
+=======
+        "upgradeBody": "プランをアップグレードしてクレジットを追加し、生成を続行してください。"
+>>>>>>> Stashed changes
       },
       "paused": {
         "body": "このワークスペースのサブスクリプションは一時停止されています。お支払い方法を更新して再開してください。",

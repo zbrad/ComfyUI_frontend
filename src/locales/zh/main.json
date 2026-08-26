@@ -352,9 +352,15 @@
     "cancelFailed": "取消订阅失败",
     "cancelTimeout": "订阅取消超时",
     "expiredCardDetail": "此卡已过期。请使用其他付款方式。",
+<<<<<<< Updated upstream
     "incorrectCvcDetail": "银行卡安全码不正确。请检查后重试。",
     "insufficientFundsDetail": "此付款方式余额不足。请尝试其他付款方式或联系您的银行。",
     "paymentDeclinedDetail": "您的银行拒绝了这笔付款。请尝试其他付款方式或联系您的银行。",
+=======
+    "incorrectCvcDetail": "卡片安全码不正确。请检查后重试。",
+    "insufficientFundsDetail": "此付款方式余额不足。请尝试其他付款方式或联系您的银行。",
+    "paymentDeclinedDetail": "您的银行拒绝了此付款。请尝试其他付款方式或联系您的银行。",
+>>>>>>> Stashed changes
     "processingErrorDetail": "无法处理您的付款。请重试或使用其他付款方式。",
     "reconciliationDetail": "已收到您的付款，但无法完成工作区更新。请联系支持团队，并提供此操作 ID：",
     "reconciliationTitle": "已收到付款——等待确认",
@@ -3430,7 +3436,11 @@
     "errorsFilter": "{count} 个错误 | {count} 个错误",
     "errorsFilterActive": "检测到 {count} 个错误 | 检测到 {count} 个错误",
     "errorsSummary": "{count} 个错误 | {count} 个错误",
+<<<<<<< Updated upstream
     "executionErrorOccurred": "执行期间发生错误。请查看“问题”选项卡了解详情。",
+=======
+    "executionErrorOccurred": "执行期间发生错误。请查看“问题”选项卡以了解详情。",
+>>>>>>> Stashed changes
     "expand": "展开",
     "fallbackGroupTitle": "分组",
     "fallbackNodeTitle": "节点",
@@ -3440,7 +3450,11 @@
     "favoritesNoneHint": "在参数标签页，点击任意输入项的 {moreIcon} 可将其添加到这里",
     "favoritesNoneTooltip": "星标组件后可快速访问，无需选择节点",
     "findOnGithubTooltip": "在 GitHub 问题中搜索相关问题",
+<<<<<<< Updated upstream
     "finishSetupBeforeRun": "运行工作流前请完成设置",
+=======
+    "finishSetupBeforeRun": "请先完成设置，再运行工作流",
+>>>>>>> Stashed changes
     "getHelpTooltip": "报告此错误，我们将协助您解决",
     "globalSettings": {
       "canvas": "画布",
@@ -3513,11 +3527,19 @@
       "viewInManager": "在管理器中查看"
     },
     "mute": "禁用",
+<<<<<<< Updated upstream
     "noErrors": "无问题",
     "noSelection": "选择一个节点查看其属性信息。",
     "nodeState": "节点状态",
     "nodes": "节点",
     "nodesAffected": "{count} 个受影响节点 | {count} 个受影响节点",
+=======
+    "noErrors": "没有问题",
+    "noSelection": "选择一个节点查看其属性信息。",
+    "nodeState": "节点状态",
+    "nodes": "节点",
+    "nodesAffected": "影响 {count} 个节点 | 影响 {count} 个节点",
+>>>>>>> Stashed changes
     "nodesNoneDesc": "暂无节点",
     "noneSearchDesc": "没有符合搜索条件的项目",
     "normal": "正常",
@@ -3528,17 +3550,29 @@
     "resetAllParameters": "重置所有参数",
     "resetToDefault": "重置为默认值",
     "resolveBeforeRun": "请在运行工作流前解决",
+<<<<<<< Updated upstream
     "resolveErrorsBeforeRun": "运行工作流前请解决错误",
+=======
+    "resolveErrorsBeforeRun": "请先解决错误，再运行工作流",
+>>>>>>> Stashed changes
     "seeError": "查看错误",
     "selectedNodeErrors": "{node} — {count} 个问题 | {node} — {count} 个问题",
     "selectedNodesErrors": "已选择 {nodes} 个节点 — {count} 个问题 | 已选择 {nodes} 个节点 — {count} 个问题",
     "settings": "设置",
     "setupFilter": "{count} 项需要设置",
+<<<<<<< Updated upstream
     "setupNodeSummary": "{nodes} 个节点 — {count} 项 | {nodes} 个节点 — {count} 项",
     "setupNodesSummary": "{nodes} 个节点 — {count} 项 | {nodes} 个节点 — {count} 项",
     "setupRequired": "需要设置",
     "setupSummary": "{count} 项 | {count} 项",
     "severityCountsStatus": "{errors} 个阻塞性错误，需要设置 {setup}",
+=======
+    "setupNodeSummary": "{nodes} 个节点 — {count} 个项目 | {nodes} 个节点 — {count} 个项目",
+    "setupNodesSummary": "{nodes} 个节点 — {count} 个项目 | {nodes} 个节点 — {count} 个项目",
+    "setupRequired": "需要设置",
+    "setupSummary": "{count} 个项目 | {count} 个项目",
+    "severityCountsStatus": "{errors} 个阻塞性错误，{setup} 项需要设置",
+>>>>>>> Stashed changes
     "severityErrorLabel": "阻塞性错误",
     "severitySetupLabel": "需要设置",
     "showAdvancedInputsButton": "显示高级输入",
@@ -4279,9 +4313,15 @@
       "addNewPaymentMethod": "添加新的付款方式",
       "afterThat": "之后",
       "alipay": "支付宝",
+<<<<<<< Updated upstream
       "alipayRenewalNote": "支付宝授权也将用于自动续订和未来购买。",
       "applyPromoCode": "应用",
       "applyQuoteBeforeContinuing": "继续前，请应用优惠码以刷新报价。",
+=======
+      "alipayRenewalNote": "支付宝授权也将用于自动续费和未来购买。",
+      "applyPromoCode": "应用",
+      "applyQuoteBeforeContinuing": "请先应用优惠码以刷新报价，然后再继续。",
+>>>>>>> Stashed changes
       "backToAllPlans": "返回所有方案",
       "billedEachMonth": "每月收取 {amount}。随时可取消。",
       "changePaymentMethod": "更改",
@@ -4337,7 +4377,11 @@
         "upgradeBody": "您的 {plan} 原定于 {date} 结束。现在升级将重新激活订阅 — 今天将收取 {amount}，并将在 {nextDate} 自动续订，而不是结束。"
       },
       "refillReplacesNote": "替换您的月度补充。现有余额保留。",
+<<<<<<< Updated upstream
       "renewsAt": "将于 {date} 以 {amount} 续订。可随时取消。",
+=======
+      "renewsAt": "将于 {date} 以 {amount} 续费。可随时取消。",
+>>>>>>> Stashed changes
       "savedPaymentMethod": "付款方式",
       "showMoreFeatures": "显示更多功能",
       "starting": "{date} 开始",
@@ -4350,7 +4394,11 @@
       "switchToPlan": "切换到 {plan}",
       "switchesToday": "今日切换次数",
       "terms": "条款",
+<<<<<<< Updated upstream
       "termsAgreement": "继续即表示您同意 Comfy Org 的 {terms} 和 {privacy}，并授权 Comfy Org 在您取消前的每个计费周期从您的付款方式扣款。",
+=======
+      "termsAgreement": "继续即表示您同意 Comfy Org 的 {terms} 和 {privacy}，并授权 Comfy Org 在您取消前于每个计费周期从您的付款方式扣款。",
+>>>>>>> Stashed changes
       "totalDueToday": "今日应付总额",
       "yearlySubscription": "年度订阅",
       "youllBeCharged": "您将被收取"
@@ -4399,7 +4447,11 @@
       "inviteTitle": "邀请您的团队",
       "planUpdated": "您的方案已成功更新。",
       "promoApplied": "已应用 {code}。",
+<<<<<<< Updated upstream
       "promoRenews": "将于 {date} 以 {amount} 续订",
+=======
+      "promoRenews": "将于 {date} 以 {amount} 续费",
+>>>>>>> Stashed changes
       "receiptEmailed": "收据已发送至您的邮箱。",
       "sendInvites": "发送邀请"
     },
@@ -4626,8 +4678,13 @@
     "invalidTemplateData": "加载节点模板失败：数据无效",
     "legacyMaskEditorDeprecated": "旧版遮罩编辑器已弃用，即将删除。",
     "migrateToLitegraphReroute": "将来的版本中将删除重定向节点。点击以迁移到litegraph-native重定向。",
+<<<<<<< Updated upstream
     "missingMediaVerificationFailed": "验证缺失媒体失败。部分输入可能不会显示在“问题”选项卡中。",
     "missingModelVerificationFailed": "验证缺失模型失败。部分模型可能不会显示在“问题”选项卡中。",
+=======
+    "missingMediaVerificationFailed": "无法验证缺失的媒体。部分输入可能不会显示在“问题”选项卡中。",
+    "missingModelVerificationFailed": "无法验证缺失的模型。部分模型可能不会显示在“问题”选项卡中。",
+>>>>>>> Stashed changes
     "modelLoadedSuccessfully": "3D模型加载成功",
     "no3dScene": "没有3D场景可以应用纹理",
     "no3dSceneToExport": "没有3D场景可以导出",

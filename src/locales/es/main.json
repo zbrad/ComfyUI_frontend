@@ -346,6 +346,7 @@
     "index": "{current} / {total}"
   },
   "billingOperation": {
+<<<<<<< Updated upstream
     "authenticationFailedDetail": "No pudimos completar la verificación del pago. Inténtalo de nuevo.",
     "authenticationManagerRequired": "La verificación del pago requiere la atención de un administrador de facturación del espacio de trabajo.",
     "authenticationUnavailable": "La autenticación segura de pago no está disponible. Actualiza la página e inténtalo de nuevo.",
@@ -357,6 +358,19 @@
     "paymentDeclinedDetail": "Tu banco rechazó este pago. Prueba con otro método de pago o contacta con tu banco.",
     "processingErrorDetail": "No se pudo procesar tu pago. Inténtalo de nuevo o usa otro método de pago.",
     "reconciliationDetail": "Se recibió tu pago, pero no pudimos terminar de actualizar tu espacio de trabajo. Contacta con soporte e incluye este ID de operación:",
+=======
+    "authenticationFailedDetail": "No pudimos completar la verificación del pago. Vuelve a intentarlo.",
+    "authenticationManagerRequired": "La verificación del pago requiere la atención de un administrador de facturación del espacio de trabajo.",
+    "authenticationUnavailable": "La autenticación de pago seguro no está disponible. Actualiza la página y vuelve a intentarlo.",
+    "cancelFailed": "No se pudo cancelar la suscripción",
+    "cancelTimeout": "La cancelación de la suscripción excedió el tiempo de espera",
+    "expiredCardDetail": "Esta tarjeta ha caducado. Usa un método de pago diferente.",
+    "incorrectCvcDetail": "El código de seguridad de la tarjeta es incorrecto. Compruébalo y vuelve a intentarlo.",
+    "insufficientFundsDetail": "Este método de pago no tiene fondos suficientes. Prueba con otro método de pago o contacta con tu banco.",
+    "paymentDeclinedDetail": "Tu banco rechazó este pago. Prueba con otro método de pago o contacta con tu banco.",
+    "processingErrorDetail": "No se pudo procesar tu pago. Vuelve a intentarlo o usa otro método de pago.",
+    "reconciliationDetail": "Se recibió tu pago, pero no pudimos terminar de actualizar tu espacio de trabajo. Contacta con el soporte e incluye este ID de operación:",
+>>>>>>> Stashed changes
     "reconciliationTitle": "Pago recibido — confirmación pendiente",
     "retryVerification": "Reintentar verificación",
     "subscriptionActionRequired": "Verifica tu pago para finalizar la configuración de tu espacio de trabajo",
@@ -819,7 +833,11 @@
       "buy": "Comprar",
       "buyCredits": "Continuar al pago",
       "buyNow": "Comprar ahora",
+<<<<<<< Updated upstream
       "chargedImmediatelyNote": "Se cobrará inmediatamente a tu método de pago guardado.",
+=======
+      "chargedImmediatelyNote": "Se cobra de inmediato el método de pago guardado.",
+>>>>>>> Stashed changes
       "confirmSubtitle": "Los créditos se añadirán a este espacio de trabajo tan pronto como se complete el pago.",
       "confirmTitle": "Confirmar",
       "contactUs": "Contáctanos",
@@ -3425,12 +3443,20 @@
     "errorLog": "Registro de errores",
     "errorNodeSummary": "{nodes} nodo — {count} error | {nodes} nodo — {count} errores",
     "errorNodesSummary": "{nodes} nodos — {count} error | {nodes} nodos — {count} errores",
+<<<<<<< Updated upstream
     "errors": "Problemas",
+=======
+    "errors": "Incidencias",
+>>>>>>> Stashed changes
     "errorsDetected": "Error detectado | Errores detectados",
     "errorsFilter": "{count} error | {count} errores",
     "errorsFilterActive": "{count} error detectado | {count} errores detectados",
     "errorsSummary": "{count} error | {count} errores",
+<<<<<<< Updated upstream
     "executionErrorOccurred": "Se produjo un error durante la ejecución. Consulta la pestaña Problemas para obtener más detalles.",
+=======
+    "executionErrorOccurred": "Se produjo un error durante la ejecución. Consulta la pestaña Incidencias para obtener más información.",
+>>>>>>> Stashed changes
     "expand": "Expandir",
     "fallbackGroupTitle": "Grupo",
     "fallbackNodeTitle": "Nodo",
@@ -3468,7 +3494,11 @@
     "inputs": "ENTRADAS",
     "inputsNone": "SIN ENTRADAS",
     "inputsNoneTooltip": "El nodo no tiene entradas",
+<<<<<<< Updated upstream
     "issuesDetected": "Problema detectado | Problemas detectados",
+=======
+    "issuesDetected": "Incidencia detectada | Incidencias detectadas",
+>>>>>>> Stashed changes
     "locateNode": "Localizar nodo en el lienzo",
     "locateNodeFor": "Localizar {item}",
     "missingMedia": {
@@ -3513,7 +3543,11 @@
       "viewInManager": "Ver en el Gestor"
     },
     "mute": "Silenciar",
+<<<<<<< Updated upstream
     "noErrors": "Sin problemas",
+=======
+    "noErrors": "Sin incidencias",
+>>>>>>> Stashed changes
     "noSelection": "Selecciona un nodo para ver sus propiedades e información.",
     "nodeState": "Estado del nodo",
     "nodes": "Nodos",
@@ -3530,6 +3564,7 @@
     "resolveBeforeRun": "Resuelve antes de ejecutar el flujo de trabajo",
     "resolveErrorsBeforeRun": "Resuelve los errores antes de ejecutar el flujo de trabajo",
     "seeError": "Ver error",
+<<<<<<< Updated upstream
     "selectedNodeErrors": "{node} — {count} problema | {node} — {count} problemas",
     "selectedNodesErrors": "{nodes} nodos seleccionados — {count} problema | {nodes} nodos seleccionados — {count} problemas",
     "settings": "Configuración",
@@ -3541,6 +3576,19 @@
     "severityCountsStatus": "{errors} bloqueantes, se requiere configuración para {setup}",
     "severityErrorLabel": "Errores bloqueantes",
     "severitySetupLabel": "Configuración necesaria",
+=======
+    "selectedNodeErrors": "{node} — {count} incidencia | {node} — {count} incidencias",
+    "selectedNodesErrors": "{nodes} nodos seleccionados — {count} incidencia | {nodes} nodos seleccionados — {count} incidencias",
+    "settings": "Configuración",
+    "setupFilter": "{count} configuraciones requeridas",
+    "setupNodeSummary": "{nodes} nodo — {count} elemento | {nodes} nodo — {count} elementos",
+    "setupNodesSummary": "{nodes} nodos — {count} elemento | {nodes} nodos — {count} elementos",
+    "setupRequired": "Configuración requerida",
+    "setupSummary": "{count} elemento | {count} elementos",
+    "severityCountsStatus": "{errors} bloqueantes, {setup} requieren configuración",
+    "severityErrorLabel": "Errores bloqueantes",
+    "severitySetupLabel": "Configuración requerida",
+>>>>>>> Stashed changes
     "showAdvancedInputsButton": "Mostrar entradas avanzadas",
     "showAdvancedShort": "Mostrar avanzado",
     "showInput": "Mostrar entrada",
@@ -4279,7 +4327,11 @@
       "addNewPaymentMethod": "Añadir nuevo método de pago",
       "afterThat": "Después de eso",
       "alipay": "Alipay",
+<<<<<<< Updated upstream
       "alipayRenewalNote": "La autorización de Alipay también se utilizará para renovaciones automáticas y futuras compras.",
+=======
+      "alipayRenewalNote": "La autorización de Alipay también se usará para renovaciones automáticas y compras futuras.",
+>>>>>>> Stashed changes
       "applyPromoCode": "Aplicar",
       "applyQuoteBeforeContinuing": "Aplica el código promocional para actualizar tu cotización antes de continuar.",
       "backToAllPlans": "Volver a todos los planes",
@@ -4320,7 +4372,11 @@
       "proratedCharge": "Cargo prorrateado por {plan}",
       "proratedRefund": "Reembolso prorrateado por {plan}",
       "quoteRefreshFailed": "Tu cotización caducó y no se pudo actualizar. Elige tu plan de nuevo.",
+<<<<<<< Updated upstream
       "quoteStale": "Tu cotización cambió. Revisa el importe actualizado e inténtalo de nuevo.",
+=======
+      "quoteStale": "Tu cotización cambió. Revisa el importe actualizado y vuelve a intentarlo.",
+>>>>>>> Stashed changes
       "quoteUnavailable": "No disponible",
       "reactivation": {
         "amountChanged": "El monto del cargo ha cambiado desde que lo confirmaste — por favor revisa e inténtalo de nuevo",
@@ -4337,15 +4393,24 @@
         "upgradeBody": "Tu {plan} estaba programado para finalizar el {date}. Si actualizas ahora, se reactiva — se te cobrará {amount} hoy y se renovará automáticamente el {nextDate} en lugar de finalizar."
       },
       "refillReplacesNote": "Reemplaza tu recarga mensual. El saldo existente se mantiene.",
+<<<<<<< Updated upstream
       "renewsAt": "Se renovará por {amount} el {date}. Cancela cuando quieras.",
+=======
+      "renewsAt": "Se renueva por {amount} el {date}. Cancela en cualquier momento.",
+>>>>>>> Stashed changes
       "savedPaymentMethod": "Método de pago",
       "showMoreFeatures": "Mostrar más funciones",
       "starting": "Comienza el {date}",
       "startingToday": "Comienza hoy",
       "startsOn": "Comienza el {date}",
       "stayOnUntil": "Permanecerás en {plan} hasta el {date}.",
+<<<<<<< Updated upstream
       "stripeMethodChoice": "Stripe gestiona tus datos de pago de forma segura.",
       "stripeUnavailable": "Las opciones de pago no están disponibles. Actualiza la página e inténtalo de nuevo.",
+=======
+      "stripeMethodChoice": "Stripe gestiona de forma segura tus datos de pago.",
+      "stripeUnavailable": "Las opciones de pago no están disponibles. Actualiza la página y vuelve a intentarlo.",
+>>>>>>> Stashed changes
       "subscribeToPlan": "Suscribirse al plan {plan}",
       "switchToPlan": "Cambiar al plan {plan}",
       "switchesToday": "Cambios hoy",
@@ -4399,7 +4464,11 @@
       "inviteTitle": "Invita a tu equipo",
       "planUpdated": "Tu plan se ha actualizado correctamente.",
       "promoApplied": "Se aplicó {code}.",
+<<<<<<< Updated upstream
       "promoRenews": "Se renovará por {amount} el {date}",
+=======
+      "promoRenews": "Se renueva por {amount} el {date}",
+>>>>>>> Stashed changes
       "receiptEmailed": "Se ha enviado un recibo a tu correo electrónico.",
       "sendInvites": "Enviar invitaciones"
     },
@@ -4437,7 +4506,11 @@
         "name": "Creador"
       },
       "enterprise": {
+<<<<<<< Updated upstream
         "name": "Empresarial"
+=======
+        "name": "Enterprise"
+>>>>>>> Stashed changes
       },
       "founder": {
         "name": "Edición Fundador"
@@ -4575,7 +4648,11 @@
   },
   "toastMessages": {
     "a1111CoreNodesUnavailable": "No se pudo cargar el flujo de trabajo porque a esta instalación de ComfyUI le faltan nodos principales. Verifica que el backend se haya iniciado correctamente.",
+<<<<<<< Updated upstream
     "a1111EmbeddingsUnavailable": "No se pudieron cargar los embeddings desde el servidor. Se importó el flujo de trabajo, pero los nombres de los embeddings se dejaron como texto sin formato.",
+=======
+    "a1111EmbeddingsUnavailable": "No se pudieron cargar los embeddings desde el servidor. El flujo de trabajo se importó, pero los nombres de los embeddings se dejaron como texto sin formato.",
+>>>>>>> Stashed changes
     "cannotCreateSubgraph": "No se puede crear el subgrafo",
     "couldNotDetermineFileType": "No se pudo determinar el tipo de archivo",
     "dropFileError": "No se puede procesar el elemento soltado: {error}",

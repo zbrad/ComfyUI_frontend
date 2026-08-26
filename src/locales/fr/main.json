@@ -347,6 +347,7 @@
   },
   "billingOperation": {
     "authenticationFailedDetail": "Nous n’avons pas pu terminer la vérification du paiement. Veuillez réessayer.",
+<<<<<<< Updated upstream
     "authenticationManagerRequired": "La vérification du paiement nécessite l’intervention d’un responsable de la facturation de l’espace de travail.",
     "authenticationUnavailable": "L’authentification sécurisée du paiement est indisponible. Veuillez actualiser la page et réessayer.",
     "cancelFailed": "Échec de l'annulation de l'abonnement",
@@ -357,6 +358,18 @@
     "paymentDeclinedDetail": "Votre banque a refusé ce paiement. Essayez un autre moyen de paiement ou contactez votre banque.",
     "processingErrorDetail": "Votre paiement n’a pas pu être traité. Réessayez ou utilisez un autre moyen de paiement.",
     "reconciliationDetail": "Votre paiement a été reçu, mais nous n’avons pas pu terminer la mise à jour de votre espace de travail. Contactez l’assistance et indiquez cet identifiant d’opération :",
+=======
+    "authenticationManagerRequired": "La vérification du paiement requiert l’intervention d’un gestionnaire de facturation de l’espace de travail.",
+    "authenticationUnavailable": "L’authentification sécurisée du paiement est indisponible. Veuillez actualiser la page et réessayer.",
+    "cancelFailed": "Échec de l'annulation de l'abonnement",
+    "cancelTimeout": "Délai d'annulation de l'abonnement dépassé",
+    "expiredCardDetail": "Cette carte a expiré. Utilisez un autre mode de paiement.",
+    "incorrectCvcDetail": "Le code de sécurité de la carte est incorrect. Vérifiez-le et réessayez.",
+    "insufficientFundsDetail": "Ce mode de paiement ne dispose pas de fonds suffisants. Essayez un autre mode de paiement ou contactez votre banque.",
+    "paymentDeclinedDetail": "Votre banque a refusé ce paiement. Essayez un autre mode de paiement ou contactez votre banque.",
+    "processingErrorDetail": "Votre paiement n’a pas pu être traité. Réessayez ou utilisez un autre mode de paiement.",
+    "reconciliationDetail": "Votre paiement a été reçu, mais nous n’avons pas pu terminer la mise à jour de votre espace de travail. Contactez l’assistance et indiquez cet ID d’opération :",
+>>>>>>> Stashed changes
     "reconciliationTitle": "Paiement reçu — confirmation en attente",
     "retryVerification": "Réessayer la vérification",
     "subscriptionActionRequired": "Vérifiez votre paiement pour finaliser la configuration de votre espace de travail",
@@ -819,7 +832,11 @@
       "buy": "Acheter",
       "buyCredits": "Continuer vers le paiement",
       "buyNow": "Acheter maintenant",
+<<<<<<< Updated upstream
       "chargedImmediatelyNote": "Votre moyen de paiement enregistré est débité immédiatement.",
+=======
+      "chargedImmediatelyNote": "Votre mode de paiement enregistré est débité immédiatement.",
+>>>>>>> Stashed changes
       "confirmSubtitle": "Les crédits sont ajoutés à cet espace de travail dès que le paiement est effectué.",
       "confirmTitle": "Confirmer",
       "contactUs": "Contactez-nous",
@@ -3430,7 +3447,11 @@
     "errorsFilter": "{count} erreur | {count} erreurs",
     "errorsFilterActive": "{count} erreur détectée | {count} erreurs détectées",
     "errorsSummary": "{count} erreur | {count} erreurs",
+<<<<<<< Updated upstream
     "executionErrorOccurred": "Une erreur s’est produite lors de l’exécution. Consultez l’onglet Problèmes pour plus de détails.",
+=======
+    "executionErrorOccurred": "Une erreur s’est produite pendant l’exécution. Consultez l’onglet Problèmes pour plus de détails.",
+>>>>>>> Stashed changes
     "expand": "Développer",
     "fallbackGroupTitle": "Groupe",
     "fallbackNodeTitle": "Nœud",
@@ -3517,7 +3538,11 @@
     "noSelection": "Sélectionnez un nœud pour voir ses propriétés et informations.",
     "nodeState": "État du nœud",
     "nodes": "Nœuds",
+<<<<<<< Updated upstream
     "nodesAffected": "{count} nœud concerné | {count} nœuds concernés",
+=======
+    "nodesAffected": "{count} nœud affecté | {count} nœuds affectés",
+>>>>>>> Stashed changes
     "nodesNoneDesc": "AUCUN NŒUD",
     "noneSearchDesc": "Aucun élément ne correspond à votre recherche",
     "normal": "Normal",
@@ -3538,7 +3563,11 @@
     "setupNodesSummary": "{nodes} nœuds — {count} élément | {nodes} nœuds — {count} éléments",
     "setupRequired": "Configuration requise",
     "setupSummary": "{count} élément | {count} éléments",
+<<<<<<< Updated upstream
     "severityCountsStatus": "{errors} erreurs bloquantes, {setup} configuration requise",
+=======
+    "severityCountsStatus": "{errors} erreurs bloquantes, {setup} configurations requises",
+>>>>>>> Stashed changes
     "severityErrorLabel": "Erreurs bloquantes",
     "severitySetupLabel": "Configuration requise",
     "showAdvancedInputsButton": "Afficher les entrées avancées",
@@ -4276,12 +4305,20 @@
     "prepaidDescription": "Crédits prépayés",
     "preview": {
       "addCreditCard": "Ajouter une carte bancaire",
+<<<<<<< Updated upstream
       "addNewPaymentMethod": "Ajouter un nouveau moyen de paiement",
+=======
+      "addNewPaymentMethod": "Ajouter un nouveau mode de paiement",
+>>>>>>> Stashed changes
       "afterThat": "Après cela",
       "alipay": "Alipay",
       "alipayRenewalNote": "L’autorisation Alipay sera également utilisée pour les renouvellements automatiques et les achats futurs.",
       "applyPromoCode": "Appliquer",
+<<<<<<< Updated upstream
       "applyQuoteBeforeContinuing": "Appliquez le code promotionnel pour actualiser votre devis avant de continuer.",
+=======
+      "applyQuoteBeforeContinuing": "Appliquez le code promo pour actualiser votre devis avant de continuer.",
+>>>>>>> Stashed changes
       "backToAllPlans": "Retour à toutes les offres",
       "billedEachMonth": "{amount} facturé chaque mois. Annulez à tout moment.",
       "changePaymentMethod": "Modifier",
@@ -4300,8 +4337,13 @@
       "creditsYoullGetToday": "Crédits que vous recevrez aujourd'hui",
       "currentMonthly": "forfait mensuel",
       "discount": {
+<<<<<<< Updated upstream
         "plan": "Réduction sur la formule",
         "promotion": "Code promotionnel"
+=======
+        "plan": "Réduction sur le forfait",
+        "promotion": "Code promo"
+>>>>>>> Stashed changes
       },
       "discountComposition": "Réductions",
       "eachMonthCreditsRefill": "Chaque mois, les crédits sont réinitialisés à",
@@ -4312,6 +4354,7 @@
       "newMonthlySubscription": "Nouvel abonnement mensuel",
       "nextPaymentDue": "Prochain paiement dû le {date}. Annulez à tout moment.",
       "payAndSubscribe": "Payer et s’abonner",
+<<<<<<< Updated upstream
       "paymentMethod": "Moyen de paiement",
       "paymentPopupBlocked": "Impossible d'ouvrir la page de paiement — veuillez autoriser les pop-ups et réessayer.",
       "perMember": "/ membre",
@@ -4320,6 +4363,16 @@
       "proratedCharge": "Facturation au prorata pour {plan}",
       "proratedRefund": "Remboursement au prorata pour {plan}",
       "quoteRefreshFailed": "Votre devis a expiré et n’a pas pu être actualisé. Choisissez à nouveau votre formule.",
+=======
+      "paymentMethod": "Mode de paiement",
+      "paymentPopupBlocked": "Impossible d'ouvrir la page de paiement — veuillez autoriser les pop-ups et réessayer.",
+      "perMember": "/ membre",
+      "privacyPolicy": "Politique de confidentialité",
+      "promoCodePlaceholder": "Code promo",
+      "proratedCharge": "Facturation au prorata pour {plan}",
+      "proratedRefund": "Remboursement au prorata pour {plan}",
+      "quoteRefreshFailed": "Votre devis a expiré et n’a pas pu être actualisé. Choisissez à nouveau votre forfait.",
+>>>>>>> Stashed changes
       "quoteStale": "Votre devis a changé. Vérifiez le montant mis à jour et réessayez.",
       "quoteUnavailable": "Indisponible",
       "reactivation": {
@@ -4337,8 +4390,13 @@
         "upgradeBody": "Votre {plan} devait se terminer le {date}. La mise à niveau réactive votre abonnement — vous serez facturé {amount} aujourd'hui, et il se renouvellera automatiquement le {nextDate} au lieu de se terminer."
       },
       "refillReplacesNote": "Remplace votre recharge mensuelle. Le solde existant est conservé.",
+<<<<<<< Updated upstream
       "renewsAt": "Renouvellement à {amount} le {date}. Résiliable à tout moment.",
       "savedPaymentMethod": "Moyen de paiement",
+=======
+      "renewsAt": "Renouvellement à {amount} le {date}. Annulez à tout moment.",
+      "savedPaymentMethod": "Mode de paiement",
+>>>>>>> Stashed changes
       "showMoreFeatures": "Afficher plus de fonctionnalités",
       "starting": "À partir du {date}",
       "startingToday": "À partir d'aujourd'hui",
@@ -4350,7 +4408,11 @@
       "switchToPlan": "Passer au plan {plan}",
       "switchesToday": "Changements aujourd'hui",
       "terms": "Conditions",
+<<<<<<< Updated upstream
       "termsAgreement": "En continuant, vous acceptez les {terms} et la {privacy} de Comfy Org, et autorisez Comfy Org à débiter votre moyen de paiement à chaque période de facturation jusqu’à votre résiliation.",
+=======
+      "termsAgreement": "En continuant, vous acceptez les {terms} et la {privacy} de Comfy Org, et autorisez Comfy Org à débiter votre mode de paiement à chaque période de facturation jusqu’à votre résiliation.",
+>>>>>>> Stashed changes
       "totalDueToday": "Total dû aujourd'hui",
       "yearlySubscription": "Abonnement annuel",
       "youllBeCharged": "Vous serez facturé"
@@ -4575,7 +4637,11 @@
   },
   "toastMessages": {
     "a1111CoreNodesUnavailable": "Impossible de charger le workflow car cette installation de ComfyUI ne dispose pas des nœuds principaux. Vérifiez que le backend a démarré correctement.",
+<<<<<<< Updated upstream
     "a1111EmbeddingsUnavailable": "Les embeddings n’ont pas pu être chargés depuis le serveur. Le workflow a été importé, mais les noms des embeddings ont été laissés sous forme de texte brut.",
+=======
+    "a1111EmbeddingsUnavailable": "Les embeddings n’ont pas pu être chargés depuis le serveur. Le workflow a été importé, mais les noms des embeddings ont été conservés sous forme de texte brut.",
+>>>>>>> Stashed changes
     "cannotCreateSubgraph": "Impossible de créer le sous-graphe",
     "couldNotDetermineFileType": "Impossible de déterminer le type de fichier",
     "dropFileError": "Impossible de traiter l'élément déposé : {error}",
@@ -4626,8 +4692,13 @@
     "invalidTemplateData": "Échec du chargement du modèle de nœud : données invalides",
     "legacyMaskEditorDeprecated": "L’éditeur de masque hérité est obsolète et sera bientôt supprimé.",
     "migrateToLitegraphReroute": "Les nœuds de reroute seront supprimés dans les futures versions. Cliquez pour migrer vers le reroute natif de litegraph.",
+<<<<<<< Updated upstream
     "missingMediaVerificationFailed": "Échec de la vérification des médias manquants. Certaines entrées peuvent ne pas apparaître dans l’onglet Problèmes.",
     "missingModelVerificationFailed": "Échec de la vérification des modèles manquants. Certains modèles peuvent ne pas apparaître dans l’onglet Problèmes.",
+=======
+    "missingMediaVerificationFailed": "Échec de la vérification des médias manquants. Certaines entrées pourraient ne pas être affichées dans l’onglet Problèmes.",
+    "missingModelVerificationFailed": "Échec de la vérification des modèles manquants. Certains modèles pourraient ne pas être affichés dans l’onglet Problèmes.",
+>>>>>>> Stashed changes
     "modelLoadedSuccessfully": "Modèle 3D chargé avec succès",
     "no3dScene": "Aucune scène 3D pour appliquer la texture",
     "no3dSceneToExport": "Aucune scène 3D à exporter",
@@ -4852,7 +4923,11 @@
         "dismiss": "Ignorer",
         "memberBody": "Votre équipe a utilisé tous ses crédits. Les administrateurs de votre espace de travail doivent ajouter des crédits pour continuer à générer.",
         "title": "Plus de crédits",
+<<<<<<< Updated upstream
         "upgradeBody": "Mettez votre forfait à niveau pour ajouter des crédits et continuer à générer."
+=======
+        "upgradeBody": "Passez à un forfait supérieur pour ajouter des crédits et continuer à générer."
+>>>>>>> Stashed changes
       },
       "paused": {
         "body": "L'abonnement de cet espace de travail est en pause. Mettez à jour le paiement pour reprendre.",

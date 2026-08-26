@@ -16597,14 +16597,22 @@
     }
   },
   "PixverseV6ExtendVideoNode": {
+<<<<<<< Updated upstream
     "description": "یک ویدیوی موجود را با PixVerse ادامه می‌دهد، با امکان افزودن صدای بومی. منبع باید کمتر از ۴۰ ثانیه و حداکثر ۱۹۲۰px در هر ضلع باشد. خروجی وضوح منبع را حفظ می‌کند؛ بنابراین کیفیت تعیین می‌کند ادامه با چه کیفیتی رندر شود، نه اندازهٔ فریم.",
+=======
+    "description": "یک ویدیوی موجود را با PixVerse ادامه می‌دهد، به‌صورت اختیاری همراه با صدای بومی. منبع باید کمتر از ۴۰ ثانیه باشد و هیچ‌یک از ابعاد آن از ۱۹۲۰px بیشتر نباشد. خروجی رزولوشن منبع را حفظ می‌کند؛ بنابراین کیفیت تعیین می‌کند ادامه با چه دقتی رندر شود، نه اندازهٔ فریم.",
+>>>>>>> Stashed changes
     "display_name": "PixVerse V6 ادامهٔ ویدیو",
     "inputs": {
       "control_after_generate": {
         "name": "کنترل پس از تولید"
       },
       "model": {
+<<<<<<< Updated upstream
         "name": "model",
+=======
+        "name": "مدل",
+>>>>>>> Stashed changes
         "tooltip": "تنظیمات مدل و تولید."
       },
       "model_duration_seconds": {
@@ -16617,19 +16625,33 @@
         "name": "negative_prompt"
       },
       "model_prompt": {
+<<<<<<< Updated upstream
         "name": "prompt"
       },
       "model_quality": {
         "name": "quality"
+=======
+        "name": "پرامپت"
+      },
+      "model_quality": {
+        "name": "کیفیت"
+>>>>>>> Stashed changes
       },
       "model_seed": {
         "name": "seed"
       },
       "model_style": {
+<<<<<<< Updated upstream
         "name": "style"
       },
       "video": {
         "name": "video",
+=======
+        "name": "سبک"
+      },
+      "video": {
+        "name": "ویدیو",
+>>>>>>> Stashed changes
         "tooltip": "ویدیویی که باید ادامه یابد."
       }
     },
@@ -16640,8 +16662,13 @@
     }
   },
   "PixverseV6FirstLastFrameNode": {
+<<<<<<< Updated upstream
     "description": "ویدیویی ایجاد می‌کند که با PixVerse از فریم اول به فریم آخر گذار می‌کند، با امکان افزودن صدای بومی. خروجی نسبت ابعاد فریم اول را حفظ می‌کند.",
     "display_name": "PixVerse V6 فریم اول-آخر به ویدیو",
+=======
+    "description": "ویدیویی تولید می‌کند که با PixVerse از یک فریم اول به یک فریم آخر گذار می‌کند، به‌صورت اختیاری همراه با صدای بومی. خروجی نسبت ابعاد فریم اول را حفظ می‌کند.",
+    "display_name": "PixVerse V6 تبدیل فریم اول-آخر به ویدیو",
+>>>>>>> Stashed changes
     "inputs": {
       "control_after_generate": {
         "name": "کنترل پس از تولید"
@@ -16653,6 +16680,105 @@
         "name": "last_frame"
       },
       "model": {
+<<<<<<< Updated upstream
+=======
+        "name": "مدل",
+        "tooltip": "تنظیمات مدل و تولید."
+      },
+      "model_duration_seconds": {
+        "name": "duration_seconds"
+      },
+      "model_generate_audio": {
+        "name": "generate_audio"
+      },
+      "model_negative_prompt": {
+        "name": "negative_prompt"
+      },
+      "model_prompt": {
+        "name": "پرامپت"
+      },
+      "model_quality": {
+        "name": "کیفیت"
+      },
+      "model_seed": {
+        "name": "seed"
+      },
+      "model_style": {
+        "name": "سبک"
+      }
+    },
+    "outputs": {
+      "0": {
+        "tooltip": null
+      }
+    }
+  },
+  "PixverseV6FusionVideoNode": {
+    "description": "ویدیویی را با PixVerse از سوژه‌های مرجع، پس‌زمینه‌ها و ویدیوها ترکیب می‌کند. با نام‌بردن از یک مرجع در پرامپت، آن را در صحنه قرار دهید؛ برای مثال «{'@'}Subject1 walks through {'@'}Background1». اتصال یک ویدیوی مرجع، مدل را به حالت Omni تغییر می‌دهد که در آن طول خروجی با طولانی‌ترین ویدیوی مرجع برابر است.",
+    "display_name": "PixVerse V6 فیوژن (مرجع به ویدیو)",
+    "inputs": {
+      "backgrounds": {
+        "name": "پس‌زمینه‌ها",
+        "tooltip": "تصاویر مرجع صحنه‌ای که سوژه‌ها در آن قرار می‌گیرند."
+      },
+      "control_after_generate": {
+        "name": "کنترل پس از تولید"
+      },
+      "model": {
+        "name": "مدل",
+        "tooltip": "تنظیمات مدل و تولید."
+      },
+      "model_aspect_ratio": {
+        "name": "aspect_ratio"
+      },
+      "model_duration_seconds": {
+        "name": "duration_seconds"
+      },
+      "model_generate_audio": {
+        "name": "generate_audio"
+      },
+      "model_negative_prompt": {
+        "name": "negative_prompt"
+      },
+      "model_prompt": {
+        "name": "prompt"
+      },
+      "model_quality": {
+        "name": "quality"
+      },
+      "model_seed": {
+        "name": "seed"
+      },
+      "model_style": {
+        "name": "style"
+      },
+      "subjects": {
+        "name": "سوژه‌ها",
+        "tooltip": "تصاویر مرجع سوژه‌هایی که باید در صحنه قرار گیرند."
+      },
+      "videos": {
+        "name": "ویدیوها",
+        "tooltip": "ویدیوهای مرجع برای استفاده از سوژه‌ها، حرکت، قاب‌بندی یا سبک آن‌ها. حداکثر دو مورد، با مجموع مدت حداکثر ۱۵ ثانیه."
+      }
+    },
+    "outputs": {
+      "0": {
+        "tooltip": null
+      }
+    }
+  },
+  "PixverseV6ImageToVideoNode": {
+    "description": "یک تصویر را با PixVerse متحرک می‌کند و در صورت تمایل، صدای بومی نیز اضافه می‌کند. خروجی نسبت ابعاد تصویر ورودی را حفظ می‌کند.",
+    "display_name": "PixVerse V6 تصویر به ویدیو",
+    "inputs": {
+      "control_after_generate": {
+        "name": "control after generate"
+      },
+      "image": {
+        "name": "image"
+      },
+      "model": {
+>>>>>>> Stashed changes
         "name": "model",
         "tooltip": "تنظیمات مدل و تولید."
       },
@@ -16662,6 +16788,12 @@
       "model_generate_audio": {
         "name": "generate_audio"
       },
+<<<<<<< Updated upstream
+=======
+      "model_multi_clip": {
+        "name": "multi_clip"
+      },
+>>>>>>> Stashed changes
       "model_negative_prompt": {
         "name": "negative_prompt"
       },
@@ -16684,6 +16816,7 @@
       }
     }
   },
+<<<<<<< Updated upstream
   "PixverseV6FusionVideoNode": {
     "description": "ویدیویی را از سوژه‌ها، پس‌زمینه‌ها و ویدیوهای مرجع با PixVerse ترکیب می‌کند. با نام‌بردن از مرجع در prompt آن را در صحنه قرار دهید؛ برای نمونه: '{'@'}Subject1 walks through {'@'}Background1'. اتصال یک ویدیوی مرجع، مدل را به حالت Omni تغییر می‌دهد که در آن طول خروجی با طولانی‌ترین ویدیوی مرجع برابر است.",
     "display_name": "PixVerse V6 ادغام (مرجع به ویدیو)",
@@ -16694,6 +16827,14 @@
       },
       "control_after_generate": {
         "name": "کنترل پس از تولید"
+=======
+  "PixverseV6TextToVideoNode": {
+    "description": "با PixVerse از یک prompt متنی ویدیو تولید می‌کند و در صورت تمایل، صدای بومی نیز اضافه می‌کند.",
+    "display_name": "PixVerse V6 متن به ویدیو",
+    "inputs": {
+      "control_after_generate": {
+        "name": "control after generate"
+>>>>>>> Stashed changes
       },
       "model": {
         "name": "model",
@@ -16703,6 +16844,7 @@
         "name": "aspect_ratio"
       },
       "model_duration_seconds": {
+<<<<<<< Updated upstream
         "name": "مدت_زمان_ثانیه"
       },
       "model_generate_audio": {
@@ -16820,6 +16962,30 @@
       },
       "model_style": {
         "name": "سبک"
+=======
+        "name": "duration_seconds"
+      },
+      "model_generate_audio": {
+        "name": "generate_audio"
+      },
+      "model_multi_clip": {
+        "name": "multi_clip"
+      },
+      "model_negative_prompt": {
+        "name": "negative_prompt"
+      },
+      "model_prompt": {
+        "name": "prompt"
+      },
+      "model_quality": {
+        "name": "quality"
+      },
+      "model_seed": {
+        "name": "seed"
+      },
+      "model_style": {
+        "name": "style"
+>>>>>>> Stashed changes
       }
     },
     "outputs": {

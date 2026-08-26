@@ -16597,7 +16597,11 @@
     }
   },
   "PixverseV6ExtendVideoNode": {
+<<<<<<< Updated upstream
     "description": "ממשיך וידאו קיים באמצעות PixVerse, עם שמע מקורי לפי בחירה. המקור חייב להיות קצר מ-40 שניות ובגודל של עד 1920px בכל אחד מהצדדים. הפלט שומר על רזולוציית המקור, לכן האיכות קובעת עד כמה ההמשך מרונדר היטב ולא את גודל הפריים.",
+=======
+    "description": "ממשיך וידאו קיים עם PixVerse, עם שמע מובנה לפי בחירה. המקור חייב להיות באורך של פחות מ-40 שניות ובגודל של עד 1920px בכל אחד מהצדדים. הפלט שומר על רזולוציית המקור, לכן האיכות קובעת עד כמה ההמשך יעובד היטב ולא את גודל הפריים.",
+>>>>>>> Stashed changes
     "display_name": "PixVerse V6 הרחבת וידאו",
     "inputs": {
       "control_after_generate": {
@@ -16640,8 +16644,13 @@
     }
   },
   "PixverseV6FirstLastFrameNode": {
+<<<<<<< Updated upstream
     "description": "יוצר וידאו העובר מפריים ראשון לפריים אחרון באמצעות PixVerse, עם שמע מקורי לפי בחירה. הפלט שומר על יחס הממדים של הפריים הראשון.",
     "display_name": "PixVerse V6 פריים ראשון-אחרון לווידאו",
+=======
+    "description": "יוצר וידאו העובר מפריים ראשון לפריים אחרון באמצעות PixVerse, עם שמע מובנה לפי בחירה. הפלט שומר על יחס הממדים של הפריים הראשון.",
+    "display_name": "PixVerse V6 מהפריים הראשון והאחרון לווידאו",
+>>>>>>> Stashed changes
     "inputs": {
       "control_after_generate": {
         "name": "control after generate"
@@ -16685,12 +16694,20 @@
     }
   },
   "PixverseV6FusionVideoNode": {
+<<<<<<< Updated upstream
     "description": "מרכיב וידאו מנושאי הפניה, רקעים וסרטונים באמצעות PixVerse. הצב הפניה בסצנה באמצעות ציון שמה בפרומפט, לדוגמה: '{'@'}Subject1 walks through {'@'}Background1'. חיבור וידאו הפניה מעביר את המודל למצב Omni, שבו אורך הפלט תואם לווידאו ההפניה הארוך ביותר.",
+=======
+    "description": "מרכיב וידאו מנושאי ייחוס, רקעים וסרטונים באמצעות PixVerse. יש למקם ייחוס בסצנה באמצעות אזכור שמו בפרומפט, לדוגמה '{'@'}Subject1 הולך דרך {'@'}Background1'. חיבור וידאו ייחוס מעביר את המודל למצב Omni, שבו אורך הפלט תואם לווידאו הייחוס הארוך ביותר.",
+>>>>>>> Stashed changes
     "display_name": "PixVerse V6 מיזוג (הפניה לווידאו)",
     "inputs": {
       "backgrounds": {
         "name": "backgrounds",
+<<<<<<< Updated upstream
         "tooltip": "תמונות הפניה של הסצנה שבה הנושאים מוצבים."
+=======
+        "tooltip": "תמונות ייחוס של הסצנה שבה ממוקמים הנושאים."
+>>>>>>> Stashed changes
       },
       "control_after_generate": {
         "name": "control after generate"
@@ -16703,6 +16720,7 @@
         "name": "aspect_ratio"
       },
       "model_duration_seconds": {
+<<<<<<< Updated upstream
         "name": "משך (שניות)"
       },
       "model_generate_audio": {
@@ -16713,6 +16731,18 @@
       },
       "model_prompt": {
         "name": "פרומפט"
+=======
+        "name": "משך_בשניות"
+      },
+      "model_generate_audio": {
+        "name": "יצירת_שמע"
+      },
+      "model_negative_prompt": {
+        "name": "הנחיה_שלילית"
+      },
+      "model_prompt": {
+        "name": "הנחיה"
+>>>>>>> Stashed changes
       },
       "model_quality": {
         "name": "איכות"
@@ -16725,11 +16755,19 @@
       },
       "subjects": {
         "name": "subjects",
+<<<<<<< Updated upstream
         "tooltip": "תמונות הפניה של הנושאים להצבה בסצנה."
       },
       "videos": {
         "name": "videos",
         "tooltip": "סרטוני הפניה שמהם ניתן לשאול נושאים, תנועה, מסגור או סגנון. עד שניים, ועד 15 שניות בסך הכול."
+=======
+        "tooltip": "תמונות ייחוס של הנושאים למיקום בסצנה."
+      },
+      "videos": {
+        "name": "videos",
+        "tooltip": "סרטוני ייחוס שמהם ניתן לשאול נושאים, תנועה, מסגור או סגנון. עד שניים, באורך כולל של עד 15 שניות."
+>>>>>>> Stashed changes
       }
     },
     "outputs": {
@@ -16739,7 +16777,11 @@
     }
   },
   "PixverseV6ImageToVideoNode": {
+<<<<<<< Updated upstream
     "description": "הנפשת תמונה באמצעות PixVerse, עם שמע מובנה באופן אופציונלי. הפלט שומר על יחס הממדים של תמונת הקלט.",
+=======
+    "description": "מנפיש תמונה באמצעות PixVerse, עם שמע מובנה לפי בחירה. הפלט שומר על יחס הממדים של תמונת הקלט.",
+>>>>>>> Stashed changes
     "display_name": "PixVerse V6 מתמונה לווידאו",
     "inputs": {
       "control_after_generate": {
@@ -16753,6 +16795,7 @@
         "tooltip": "הגדרות מודל ויצירה."
       },
       "model_duration_seconds": {
+<<<<<<< Updated upstream
         "name": "משך (שניות)"
       },
       "model_generate_audio": {
@@ -16766,6 +16809,21 @@
       },
       "model_prompt": {
         "name": "פרומפט"
+=======
+        "name": "משך_בשניות"
+      },
+      "model_generate_audio": {
+        "name": "יצירת_שמע"
+      },
+      "model_multi_clip": {
+        "name": "ריבוי_קטעים"
+      },
+      "model_negative_prompt": {
+        "name": "הנחיה_שלילית"
+      },
+      "model_prompt": {
+        "name": "הנחיה"
+>>>>>>> Stashed changes
       },
       "model_quality": {
         "name": "איכות"
@@ -16784,7 +16842,11 @@
     }
   },
   "PixverseV6TextToVideoNode": {
+<<<<<<< Updated upstream
     "description": "יצירת וידאו מפרומפט טקסט באמצעות PixVerse, עם שמע מובנה באופן אופציונלי.",
+=======
+    "description": "יוצר וידאו מהנחיית טקסט באמצעות PixVerse, עם שמע מובנה לפי בחירה.",
+>>>>>>> Stashed changes
     "display_name": "PixVerse V6 מטקסט לווידאו",
     "inputs": {
       "control_after_generate": {
@@ -16795,6 +16857,7 @@
         "tooltip": "הגדרות מודל ויצירה."
       },
       "model_aspect_ratio": {
+<<<<<<< Updated upstream
         "name": "יחס ממדים"
       },
       "model_duration_seconds": {
@@ -16811,6 +16874,24 @@
       },
       "model_prompt": {
         "name": "פרומפט"
+=======
+        "name": "יחס_ממדים"
+      },
+      "model_duration_seconds": {
+        "name": "משך_בשניות"
+      },
+      "model_generate_audio": {
+        "name": "יצירת_שמע"
+      },
+      "model_multi_clip": {
+        "name": "ריבוי_קטעים"
+      },
+      "model_negative_prompt": {
+        "name": "הנחיה_שלילית"
+      },
+      "model_prompt": {
+        "name": "הנחיה"
+>>>>>>> Stashed changes
       },
       "model_quality": {
         "name": "איכות"

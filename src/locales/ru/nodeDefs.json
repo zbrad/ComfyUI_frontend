@@ -16597,8 +16597,13 @@
     }
   },
   "PixverseV6ExtendVideoNode": {
+<<<<<<< Updated upstream
     "description": "Продолжает существующее видео с помощью PixVerse, при необходимости с нативным аудио. Исходное видео должно быть короче 40 секунд и не более 1920px по любой стороне. Выходное видео сохраняет разрешение исходного, поэтому качество определяет качество рендеринга продолжения, а не размер кадра.",
     "display_name": "PixVerse V6: Продлить видео",
+=======
+    "description": "Продолжает существующее видео с помощью PixVerse, при необходимости с нативным звуком. Исходное видео должно быть короче 40 секунд и не превышать 1920 px по любой стороне. Результат сохраняет разрешение исходного видео, поэтому качество определяет, насколько хорошо отрисовывается продолжение, а не размер кадра.",
+    "display_name": "PixVerse V6 — продолжение видео",
+>>>>>>> Stashed changes
     "inputs": {
       "control_after_generate": {
         "name": "управление после генерации"
@@ -16640,8 +16645,13 @@
     }
   },
   "PixverseV6FirstLastFrameNode": {
+<<<<<<< Updated upstream
     "description": "Создаёт видео с переходом от первого кадра к последнему с помощью PixVerse, при необходимости с нативным аудио. Выходное видео сохраняет соотношение сторон первого кадра.",
     "display_name": "PixVerse V6: из первого и последнего кадра в видео",
+=======
+    "description": "Создаёт с помощью PixVerse видео с переходом от первого кадра к последнему, при необходимости с нативным звуком. Результат сохраняет соотношение сторон первого кадра.",
+    "display_name": "PixVerse V6 — из первого и последнего кадра в видео",
+>>>>>>> Stashed changes
     "inputs": {
       "control_after_generate": {
         "name": "управление после генерации"
@@ -16685,7 +16695,11 @@
     }
   },
   "PixverseV6FusionVideoNode": {
+<<<<<<< Updated upstream
     "description": "Создаёт видео из референсных объектов, фонов и видео с помощью PixVerse. Разместите референс в сцене, указав его имя в запросе, например: «{'@'}Subject1 проходит через {'@'}Background1». Подключение референсного видео переключает модель в режим Omni, в котором длительность выходного видео соответствует самому длинному референсному видео.",
+=======
+    "description": "Создаёт видео из референсных объектов, фонов и видео с помощью PixVerse. Разместите референс в сцене, указав его имя в промпте, например: «{'@'}Subject1 идёт через {'@'}Background1». При подключении референсного видео модель переключается в режим Omni, где длительность результата соответствует самому длинному референсному видео.",
+>>>>>>> Stashed changes
     "display_name": "PixVerse V6 Fusion (референсы в видео)",
     "inputs": {
       "backgrounds": {
@@ -16703,6 +16717,7 @@
         "name": "aspect_ratio"
       },
       "model_duration_seconds": {
+<<<<<<< Updated upstream
         "name": "длительность_в_секундах"
       },
       "model_generate_audio": {
@@ -16730,6 +16745,35 @@
       "videos": {
         "name": "videos",
         "tooltip": "Референсные видео, из которых заимствуются объекты, движение, кадрирование или стиль. Не более двух и не более 15 секунд в сумме."
+=======
+        "name": "duration_seconds"
+      },
+      "model_generate_audio": {
+        "name": "generate_audio"
+      },
+      "model_negative_prompt": {
+        "name": "negative_prompt"
+      },
+      "model_prompt": {
+        "name": "prompt"
+      },
+      "model_quality": {
+        "name": "quality"
+      },
+      "model_seed": {
+        "name": "seed"
+      },
+      "model_style": {
+        "name": "style"
+      },
+      "subjects": {
+        "name": "subjects",
+        "tooltip": "Референсные изображения объектов, которые нужно разместить в сцене."
+      },
+      "videos": {
+        "name": "videos",
+        "tooltip": "Референсные видео, из которых заимствуются объекты, движение, кадрирование или стиль. Не более двух, общей длительностью до 15 секунд."
+>>>>>>> Stashed changes
       }
     },
     "outputs": {
@@ -16743,6 +16787,7 @@
     "display_name": "PixVerse V6: изображение в видео",
     "inputs": {
       "control_after_generate": {
+<<<<<<< Updated upstream
         "name": "управление после генерации"
       },
       "image": {
@@ -16775,6 +16820,40 @@
       },
       "model_style": {
         "name": "стиль"
+=======
+        "name": "control after generate"
+      },
+      "image": {
+        "name": "image"
+      },
+      "model": {
+        "name": "model",
+        "tooltip": "Настройки модели и генерации."
+      },
+      "model_duration_seconds": {
+        "name": "duration_seconds"
+      },
+      "model_generate_audio": {
+        "name": "generate_audio"
+      },
+      "model_multi_clip": {
+        "name": "multi_clip"
+      },
+      "model_negative_prompt": {
+        "name": "negative_prompt"
+      },
+      "model_prompt": {
+        "name": "prompt"
+      },
+      "model_quality": {
+        "name": "quality"
+      },
+      "model_seed": {
+        "name": "seed"
+      },
+      "model_style": {
+        "name": "style"
+>>>>>>> Stashed changes
       }
     },
     "outputs": {
@@ -16784,6 +16863,7 @@
     }
   },
   "PixverseV6TextToVideoNode": {
+<<<<<<< Updated upstream
     "description": "Создаёт видео из текстового запроса с помощью PixVerse, при необходимости с встроенным аудио.",
     "display_name": "PixVerse V6: текст в видео",
     "inputs": {
@@ -16820,6 +16900,44 @@
       },
       "model_style": {
         "name": "стиль"
+=======
+    "description": "Создаёт видео по текстовому запросу с помощью PixVerse, при необходимости с встроенным аудио.",
+    "display_name": "PixVerse V6: текст в видео",
+    "inputs": {
+      "control_after_generate": {
+        "name": "control after generate"
+      },
+      "model": {
+        "name": "model",
+        "tooltip": "Настройки модели и генерации."
+      },
+      "model_aspect_ratio": {
+        "name": "aspect_ratio"
+      },
+      "model_duration_seconds": {
+        "name": "duration_seconds"
+      },
+      "model_generate_audio": {
+        "name": "generate_audio"
+      },
+      "model_multi_clip": {
+        "name": "multi_clip"
+      },
+      "model_negative_prompt": {
+        "name": "negative_prompt"
+      },
+      "model_prompt": {
+        "name": "prompt"
+      },
+      "model_quality": {
+        "name": "quality"
+      },
+      "model_seed": {
+        "name": "seed"
+      },
+      "model_style": {
+        "name": "style"
+>>>>>>> Stashed changes
       }
     },
     "outputs": {

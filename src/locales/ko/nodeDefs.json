@@ -16597,7 +16597,11 @@
     }
   },
   "PixverseV6ExtendVideoNode": {
+<<<<<<< Updated upstream
     "description": "PixVerse로 기존 비디오를 이어서 생성하며, 필요에 따라 네이티브 오디오를 포함할 수 있습니다. 소스는 40초 미만이어야 하며, 어느 한쪽도 최대 1920px를 초과할 수 없습니다. 출력은 소스 해상도를 유지하므로, 품질은 프레임 크기가 아니라 연장 부분의 렌더링 품질을 설정합니다.",
+=======
+    "description": "PixVerse로 기존 비디오를 이어서 생성하며, 선택적으로 네이티브 오디오를 포함할 수 있습니다. 소스는 40초 미만이어야 하며, 어느 한쪽도 1920px를 초과할 수 없습니다. 출력은 소스의 해상도를 유지하므로, 품질은 프레임 크기가 아니라 이어지는 영상의 렌더링 품질을 설정합니다.",
+>>>>>>> Stashed changes
     "display_name": "PixVerse V6 비디오 확장",
     "inputs": {
       "control_after_generate": {
@@ -16640,8 +16644,13 @@
     }
   },
   "PixverseV6FirstLastFrameNode": {
+<<<<<<< Updated upstream
     "description": "PixVerse를 사용하여 첫 번째 프레임에서 마지막 프레임으로 전환되는 비디오를 생성하며, 필요에 따라 네이티브 오디오를 포함할 수 있습니다. 출력은 첫 번째 프레임의 종횡비를 유지합니다.",
     "display_name": "PixVerse V6 첫-마지막 프레임에서 비디오",
+=======
+    "description": "PixVerse를 사용하여 첫 번째 프레임에서 마지막 프레임으로 전환되는 비디오를 생성하며, 선택적으로 네이티브 오디오를 포함할 수 있습니다. 출력은 첫 번째 프레임의 종횡비를 유지합니다.",
+    "display_name": "PixVerse V6 첫-마지막 프레임으로 비디오 생성",
+>>>>>>> Stashed changes
     "inputs": {
       "control_after_generate": {
         "name": "생성 후 제어"
@@ -16685,8 +16694,13 @@
     }
   },
   "PixverseV6FusionVideoNode": {
+<<<<<<< Updated upstream
     "description": "PixVerse를 사용하여 참조 대상, 배경 및 비디오로 비디오를 구성합니다. 프롬프트에서 참조의 이름을 지정하여 장면에 배치하세요. 예: '{'@'}Subject1 walks through {'@'}Background1'. 참조 비디오를 연결하면 모델이 Omni 모드로 전환되며, 출력 길이는 가장 긴 참조 비디오와 일치합니다.",
     "display_name": "PixVerse V6 퓨전(참조에서 비디오)",
+=======
+    "description": "PixVerse를 사용하여 참조 대상, 배경 및 비디오로 비디오를 구성합니다. 프롬프트에서 참조 이름을 지정해 장면에 배치하세요. 예: '{'@'}Subject1 walks through {'@'}Background1'. 참조 비디오를 연결하면 모델이 Omni 모드로 전환되며, 출력 길이는 가장 긴 참조 비디오와 일치합니다.",
+    "display_name": "PixVerse V6 퓨전(참조 이미지에서 비디오)",
+>>>>>>> Stashed changes
     "inputs": {
       "backgrounds": {
         "name": "배경",
@@ -16729,7 +16743,11 @@
       },
       "videos": {
         "name": "비디오",
+<<<<<<< Updated upstream
         "tooltip": "대상, 움직임, 구도 또는 스타일을 참조할 참조 비디오입니다. 최대 2개이며, 총 길이는 최대 15초입니다."
+=======
+        "tooltip": "대상, 움직임, 프레이밍 또는 스타일을 참조할 비디오입니다. 최대 2개이며, 총 길이는 최대 15초입니다."
+>>>>>>> Stashed changes
       }
     },
     "outputs": {
@@ -16739,7 +16757,11 @@
     }
   },
   "PixverseV6ImageToVideoNode": {
+<<<<<<< Updated upstream
     "description": "PixVerse로 이미지에 애니메이션을 적용하며, 선택적으로 네이티브 오디오를 포함할 수 있습니다. 출력은 입력 이미지의 종횡비를 유지합니다.",
+=======
+    "description": "PixVerse로 이미지를 애니메이션화하며, 필요에 따라 네이티브 오디오를 포함할 수 있습니다. 출력은 입력 이미지의 종횡비를 유지합니다.",
+>>>>>>> Stashed changes
     "display_name": "PixVerse V6 이미지-비디오",
     "inputs": {
       "control_after_generate": {
@@ -16784,7 +16806,11 @@
     }
   },
   "PixverseV6TextToVideoNode": {
+<<<<<<< Updated upstream
     "description": "PixVerse로 텍스트 프롬프트에서 비디오를 생성하며, 선택적으로 네이티브 오디오를 포함할 수 있습니다.",
+=======
+    "description": "PixVerse를 사용하여 텍스트 프롬프트에서 비디오를 생성하며, 필요에 따라 네이티브 오디오를 포함할 수 있습니다.",
+>>>>>>> Stashed changes
     "display_name": "PixVerse V6 텍스트-비디오",
     "inputs": {
       "control_after_generate": {

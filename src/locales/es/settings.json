@@ -367,8 +367,13 @@
     "tooltip": "Reemplaza el panel flotante de la cola de trabajos por una cola de trabajos equivalente integrada en el panel lateral de Activos. Puedes desactivar esto para volver al diseño del panel flotante."
   },
   "Comfy_RightSidePanel_ShowErrorsTab": {
+<<<<<<< Updated upstream
     "name": "Mostrar la pestaña Problemas en el panel lateral",
     "tooltip": "Cuando está activada, la pestaña Problemas se muestra en el panel lateral derecho para indicar errores bloqueantes y recursos faltantes que requieren configuración."
+=======
+    "name": "Mostrar la pestaña de problemas en el panel lateral",
+    "tooltip": "Cuando está activada, la pestaña Problemas se muestra en el panel lateral derecho para mostrar errores bloqueantes y recursos faltantes que requieren configuración."
+>>>>>>> Stashed changes
   },
   "Comfy_Sidebar_Location": {
     "name": "Ubicación de la barra lateral",

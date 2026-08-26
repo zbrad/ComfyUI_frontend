@@ -16597,11 +16597,19 @@
     }
   },
   "PixverseV6ExtendVideoNode": {
+<<<<<<< Updated upstream
     "description": "Mevcut bir videoyu PixVerse ile isteğe bağlı yerel sesle sürdürür. Kaynak 40 saniyenin altında olmalı ve her iki kenarı da en fazla 1920px olmalıdır. Çıktı, kaynağın çözünürlüğünü korur; bu nedenle kalite, kare boyutundan ziyade devamın ne kadar iyi oluşturulacağını belirler.",
     "display_name": "PixVerse V6 Videoyu Uzat",
     "inputs": {
       "control_after_generate": {
         "name": "Oluşturmadan sonra denetle"
+=======
+    "description": "Bir videoyu PixVerse ile, isteğe bağlı yerel sesle devam ettirir. Kaynak 40 saniyenin altında olmalı ve herhangi bir kenarı en fazla 1920px olmalıdır. Çıktı, kaynağın çözünürlüğünü korur; bu nedenle kalite kare boyutunu değil, devamın ne kadar iyi oluşturulduğunu belirler.",
+    "display_name": "PixVerse V6 Video Uzatma",
+    "inputs": {
+      "control_after_generate": {
+        "name": "oluşturma sonrası kontrol"
+>>>>>>> Stashed changes
       },
       "model": {
         "name": "model",
@@ -16630,7 +16638,11 @@
       },
       "video": {
         "name": "video",
+<<<<<<< Updated upstream
         "tooltip": "Sürdürülecek video."
+=======
+        "tooltip": "Devam ettirilecek video."
+>>>>>>> Stashed changes
       }
     },
     "outputs": {
@@ -16640,11 +16652,19 @@
     }
   },
   "PixverseV6FirstLastFrameNode": {
+<<<<<<< Updated upstream
     "description": "PixVerse ile ilk kareden son kareye geçiş yapan, isteğe bağlı yerel sesli bir video oluşturur. Çıktı, ilk karenin en-boy oranını korur.",
     "display_name": "PixVerse V6 İlk-Son-Kareden Videoya",
     "inputs": {
       "control_after_generate": {
         "name": "Oluşturmadan sonra denetle"
+=======
+    "description": "PixVerse ile ilk kareden son kareye geçiş yapan, isteğe bağlı yerel ses içeren bir video oluşturur. Çıktı, ilk karenin en-boy oranını korur.",
+    "display_name": "PixVerse V6 İlk-Son-Kareden Videoya",
+    "inputs": {
+      "control_after_generate": {
+        "name": "oluşturma sonrası kontrol"
+>>>>>>> Stashed changes
       },
       "first_frame": {
         "name": "first_frame"
@@ -16685,6 +16705,7 @@
     }
   },
   "PixverseV6FusionVideoNode": {
+<<<<<<< Updated upstream
     "description": "PixVerse ile referans öznelerden, arka planlardan ve videolardan bir video oluşturur. İstem içinde adını belirterek bir referansı sahneye yerleştirin; örneğin '{'@'}Subject1, {'@'}Background1 içinde yürür'. Bir referans videosu bağlamak, modeli Omni moduna geçirir; burada çıktı uzunluğu en uzun referans videosuyla eşleşir.",
     "display_name": "PixVerse V6 Birleştirme (Referanstan Videoya)",
     "inputs": {
@@ -16694,6 +16715,17 @@
       },
       "control_after_generate": {
         "name": "Oluşturmadan sonra denetle"
+=======
+    "description": "PixVerse ile referans öznelerden, arka planlardan ve videolardan bir video oluşturur. Bir referansı istemde adıyla belirterek sahneye yerleştirin; örneğin '{'@'}Subject1, {'@'}Background1 içinde yürür'. Bir referans video bağlamak modeli Omni moduna geçirir; bu modda çıktı uzunluğu en uzun referans videoyla eşleşir.",
+    "display_name": "PixVerse V6 Birleştirme (Referanstan Videoya)",
+    "inputs": {
+      "backgrounds": {
+        "name": "arka planlar",
+        "tooltip": "Öznelerin yerleştirildiği sahnenin referans görüntüleri."
+      },
+      "control_after_generate": {
+        "name": "oluşturma sonrası kontrol"
+>>>>>>> Stashed changes
       },
       "model": {
         "name": "model",
@@ -16703,6 +16735,7 @@
         "name": "aspect_ratio"
       },
       "model_duration_seconds": {
+<<<<<<< Updated upstream
         "name": "süre_saniye"
       },
       "model_generate_audio": {
@@ -16730,6 +16763,35 @@
       "videos": {
         "name": "videos",
         "tooltip": "Özneleri, hareketi, kadrajlamayı veya stili ödünç almak için referans videoları. En fazla iki adet ve toplamda en fazla 15 saniye."
+=======
+        "name": "duration_seconds"
+      },
+      "model_generate_audio": {
+        "name": "generate_audio"
+      },
+      "model_negative_prompt": {
+        "name": "negative_prompt"
+      },
+      "model_prompt": {
+        "name": "prompt"
+      },
+      "model_quality": {
+        "name": "quality"
+      },
+      "model_seed": {
+        "name": "seed"
+      },
+      "model_style": {
+        "name": "style"
+      },
+      "subjects": {
+        "name": "özneler",
+        "tooltip": "Sahneye yerleştirilecek öznelerin referans görüntüleri."
+      },
+      "videos": {
+        "name": "videolar",
+        "tooltip": "Özneleri, hareketi, kadrajı veya stili ödünç almak için referans videolar. En fazla iki adet ve toplamda en fazla 15 saniye."
+>>>>>>> Stashed changes
       }
     },
     "outputs": {
@@ -16739,6 +16801,7 @@
     }
   },
   "PixverseV6ImageToVideoNode": {
+<<<<<<< Updated upstream
     "description": "Bir görüntüyü PixVerse ile, isteğe bağlı olarak yerel sesle canlandırır. Çıktı, giriş görüntüsünün en-boy oranını korur.",
     "display_name": "PixVerse V6 Görüntüden Videoya",
     "inputs": {
@@ -16747,12 +16810,23 @@
       },
       "image": {
         "name": "görüntü"
+=======
+    "description": "PixVerse ile bir görüntüyü, isteğe bağlı olarak yerel sesle canlandırır. Çıktı, giriş görüntüsünün en-boy oranını korur.",
+    "display_name": "PixVerse V6 Görüntüden Videoya",
+    "inputs": {
+      "control_after_generate": {
+        "name": "Oluşturma sonrası kontrol"
+      },
+      "image": {
+        "name": "image"
+>>>>>>> Stashed changes
       },
       "model": {
         "name": "model",
         "tooltip": "Model ve oluşturma ayarları."
       },
       "model_duration_seconds": {
+<<<<<<< Updated upstream
         "name": "süre_saniye"
       },
       "model_generate_audio": {
@@ -16775,6 +16849,30 @@
       },
       "model_style": {
         "name": "stil"
+=======
+        "name": "duration_seconds"
+      },
+      "model_generate_audio": {
+        "name": "generate_audio"
+      },
+      "model_multi_clip": {
+        "name": "multi_clip"
+      },
+      "model_negative_prompt": {
+        "name": "negative_prompt"
+      },
+      "model_prompt": {
+        "name": "prompt"
+      },
+      "model_quality": {
+        "name": "quality"
+      },
+      "model_seed": {
+        "name": "seed"
+      },
+      "model_style": {
+        "name": "style"
+>>>>>>> Stashed changes
       }
     },
     "outputs": {
@@ -16784,17 +16882,26 @@
     }
   },
   "PixverseV6TextToVideoNode": {
+<<<<<<< Updated upstream
     "description": "PixVerse ile bir metin isteminden, isteğe bağlı olarak yerel ses içeren bir video oluşturur.",
     "display_name": "PixVerse V6 Metinden Videoya",
     "inputs": {
       "control_after_generate": {
         "name": "oluşturmadan sonra kontrol et"
+=======
+    "description": "PixVerse ile bir metin isteminden, isteğe bağlı olarak yerel sesle video oluşturur.",
+    "display_name": "PixVerse V6 Metinden Videoya",
+    "inputs": {
+      "control_after_generate": {
+        "name": "Oluşturma sonrası kontrol"
+>>>>>>> Stashed changes
       },
       "model": {
         "name": "model",
         "tooltip": "Model ve oluşturma ayarları."
       },
       "model_aspect_ratio": {
+<<<<<<< Updated upstream
         "name": "en_boy_oranı"
       },
       "model_duration_seconds": {
@@ -16820,6 +16927,33 @@
       },
       "model_style": {
         "name": "stil"
+=======
+        "name": "aspect_ratio"
+      },
+      "model_duration_seconds": {
+        "name": "duration_seconds"
+      },
+      "model_generate_audio": {
+        "name": "generate_audio"
+      },
+      "model_multi_clip": {
+        "name": "multi_clip"
+      },
+      "model_negative_prompt": {
+        "name": "negative_prompt"
+      },
+      "model_prompt": {
+        "name": "prompt"
+      },
+      "model_quality": {
+        "name": "quality"
+      },
+      "model_seed": {
+        "name": "seed"
+      },
+      "model_style": {
+        "name": "style"
+>>>>>>> Stashed changes
       }
     },
     "outputs": {

@@ -368,7 +368,11 @@
   },
   "Comfy_RightSidePanel_ShowErrorsTab": {
     "name": "사이드 패널에 문제 탭 표시",
+<<<<<<< Updated upstream
     "tooltip": "활성화하면 설정이 필요한 차단 오류 및 누락된 리소스를 표시하기 위해 오른쪽 사이드 패널에 문제 탭이 표시됩니다."
+=======
+    "tooltip": "활성화하면 설정이 필요한 실행 차단 오류 및 누락된 리소스를 표시하는 문제 탭이 오른쪽 사이드 패널에 표시됩니다."
+>>>>>>> Stashed changes
   },
   "Comfy_Sidebar_Location": {
     "name": "사이드바 위치",

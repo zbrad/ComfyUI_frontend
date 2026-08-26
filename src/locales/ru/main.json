@@ -347,12 +347,20 @@
   },
   "billingOperation": {
     "authenticationFailedDetail": "Не удалось завершить проверку платежа. Повторите попытку.",
+<<<<<<< Updated upstream
     "authenticationManagerRequired": "Проверка платежа требует внимания менеджера по оплате рабочего пространства.",
+=======
+    "authenticationManagerRequired": "Для проверки платежа требуется участие менеджера по биллингу рабочего пространства.",
+>>>>>>> Stashed changes
     "authenticationUnavailable": "Безопасная аутентификация платежа недоступна. Обновите страницу и повторите попытку.",
     "cancelFailed": "Не удалось отменить подписку",
     "cancelTimeout": "Время ожидания отмены подписки истекло",
     "expiredCardDetail": "Срок действия этой карты истёк. Используйте другой способ оплаты.",
+<<<<<<< Updated upstream
     "incorrectCvcDetail": "Неверный код безопасности карты. Проверьте его и повторите попытку.",
+=======
+    "incorrectCvcDetail": "Код безопасности карты указан неверно. Проверьте его и повторите попытку.",
+>>>>>>> Stashed changes
     "insufficientFundsDetail": "На этом способе оплаты недостаточно средств. Попробуйте другой способ оплаты или обратитесь в банк.",
     "paymentDeclinedDetail": "Ваш банк отклонил этот платёж. Попробуйте другой способ оплаты или обратитесь в банк.",
     "processingErrorDetail": "Не удалось обработать ваш платёж. Повторите попытку или используйте другой способ оплаты.",
@@ -819,7 +827,11 @@
       "buy": "Купить",
       "buyCredits": "Перейти к оплате",
       "buyNow": "Купить сейчас",
+<<<<<<< Updated upstream
       "chargedImmediatelyNote": "Сохранённый способ оплаты будет списан немедленно.",
+=======
+      "chargedImmediatelyNote": "С сохранённого способа оплаты средства списываются немедленно.",
+>>>>>>> Stashed changes
       "confirmSubtitle": "Кредиты будут добавлены в это рабочее пространство сразу после завершения оплаты.",
       "confirmTitle": "Подтвердить",
       "contactUs": "Свяжитесь с нами",
@@ -3430,7 +3442,11 @@
     "errorsFilter": "{count} ошибка | {count} ошибок",
     "errorsFilterActive": "Обнаружена {count} ошибка | Обнаружено {count} ошибок",
     "errorsSummary": "{count} ошибка | {count} ошибки | {count} ошибок",
+<<<<<<< Updated upstream
     "executionErrorOccurred": "Во время выполнения произошла ошибка. Подробнее см. на вкладке «Проблемы».",
+=======
+    "executionErrorOccurred": "Во время выполнения произошла ошибка. Подробности см. на вкладке «Проблемы».",
+>>>>>>> Stashed changes
     "expand": "Развернуть",
     "fallbackGroupTitle": "Группа",
     "fallbackNodeTitle": "Узел",
@@ -3513,11 +3529,19 @@
       "viewInManager": "Просмотреть в менеджере"
     },
     "mute": "Отключить",
+<<<<<<< Updated upstream
     "noErrors": "Проблем нет",
     "noSelection": "Выберите узел, чтобы увидеть его свойства и информацию.",
     "nodeState": "Состояние узла",
     "nodes": "Узлы",
     "nodesAffected": "{count} затронутый узел | {count} затронутых узлов",
+=======
+    "noErrors": "Нет проблем",
+    "noSelection": "Выберите узел, чтобы увидеть его свойства и информацию.",
+    "nodeState": "Состояние узла",
+    "nodes": "Узлы",
+    "nodesAffected": "{count} узел затронут | {count} узлов затронуто",
+>>>>>>> Stashed changes
     "nodesNoneDesc": "НЕТ УЗЛОВ",
     "noneSearchDesc": "Нет элементов, соответствующих вашему поиску",
     "normal": "Обычный",
@@ -3531,9 +3555,15 @@
     "resolveErrorsBeforeRun": "Устраните ошибки перед запуском рабочего процесса",
     "seeError": "Посмотреть ошибку",
     "selectedNodeErrors": "{node} — {count} проблема | {node} — {count} проблем",
+<<<<<<< Updated upstream
     "selectedNodesErrors": "Выбрано узлов: {nodes} — {count} проблема | Выбрано узлов: {nodes} — {count} проблем",
     "settings": "Настройки",
     "setupFilter": "{count}: требуется настройка",
+=======
+    "selectedNodesErrors": "Выбрано {nodes} узлов — {count} проблема | Выбрано {nodes} узлов — {count} проблем",
+    "settings": "Настройки",
+    "setupFilter": "Требуется настройка: {count}",
+>>>>>>> Stashed changes
     "setupNodeSummary": "{nodes} узел — {count} элемент | {nodes} узел — {count} элементов",
     "setupNodesSummary": "{nodes} узлов — {count} элемент | {nodes} узлов — {count} элементов",
     "setupRequired": "Требуется настройка",
@@ -4281,7 +4311,11 @@
       "alipay": "Alipay",
       "alipayRenewalNote": "Авторизация Alipay также будет использоваться для автоматического продления и будущих покупок.",
       "applyPromoCode": "Применить",
+<<<<<<< Updated upstream
       "applyQuoteBeforeContinuing": "Примените промокод, чтобы обновить расчёт перед продолжением.",
+=======
+      "applyQuoteBeforeContinuing": "Примените промокод, чтобы обновить расчёт стоимости перед продолжением.",
+>>>>>>> Stashed changes
       "backToAllPlans": "Назад ко всем тарифам",
       "billedEachMonth": "{amount} списывается каждый месяц. Можно отменить в любое время.",
       "changePaymentMethod": "Изменить",
@@ -4300,7 +4334,11 @@
       "creditsYoullGetToday": "Кредиты, которые вы получите сегодня",
       "currentMonthly": "месячный план",
       "discount": {
+<<<<<<< Updated upstream
         "plan": "Скидка на тариф",
+=======
+        "plan": "Скидка по тарифу",
+>>>>>>> Stashed changes
         "promotion": "Промокод"
       },
       "discountComposition": "Скидки",
@@ -4319,8 +4357,13 @@
       "promoCodePlaceholder": "Промокод",
       "proratedCharge": "Пропорциональная оплата за {plan}",
       "proratedRefund": "Пропорциональный возврат за {plan}",
+<<<<<<< Updated upstream
       "quoteRefreshFailed": "Срок действия вашего расчёта истёк, и его не удалось обновить. Снова выберите тарифный план.",
       "quoteStale": "Ваш расчёт изменился. Проверьте обновлённую сумму и повторите попытку.",
+=======
+      "quoteRefreshFailed": "Срок действия расчёта стоимости истёк, и его не удалось обновить. Выберите тариф снова.",
+      "quoteStale": "Расчёт стоимости изменился. Проверьте обновлённую сумму и повторите попытку.",
+>>>>>>> Stashed changes
       "quoteUnavailable": "Недоступно",
       "reactivation": {
         "amountChanged": "Сумма оплаты изменилась после подтверждения — пожалуйста, проверьте и попробуйте снова",
@@ -4337,20 +4380,32 @@
         "upgradeBody": "Ваша {plan} должна была закончиться {date}. Обновление сейчас возобновит её — с вас будет списано {amount} сегодня, и она будет автоматически продлена {nextDate} вместо завершения."
       },
       "refillReplacesNote": "Заменяет ваше ежемесячное пополнение. Текущий баланс сохраняется.",
+<<<<<<< Updated upstream
       "renewsAt": "Продление за {amount} {date}. Отменить можно в любое время.",
+=======
+      "renewsAt": "Продление {date} за {amount}. Отменить можно в любое время.",
+>>>>>>> Stashed changes
       "savedPaymentMethod": "Способ оплаты",
       "showMoreFeatures": "Показать больше функций",
       "starting": "Начинается {date}",
       "startingToday": "Начинается сегодня",
       "startsOn": "Начинается {date}",
       "stayOnUntil": "Вы останетесь на {plan} до {date}.",
+<<<<<<< Updated upstream
       "stripeMethodChoice": "Ваши платёжные данные надёжно обрабатываются Stripe.",
+=======
+      "stripeMethodChoice": "Данные вашей оплаты надёжно обрабатываются Stripe.",
+>>>>>>> Stashed changes
       "stripeUnavailable": "Способы оплаты недоступны. Обновите страницу и повторите попытку.",
       "subscribeToPlan": "Подписаться на {plan}",
       "switchToPlan": "Перейти на {plan}",
       "switchesToday": "Переключений сегодня",
       "terms": "Условия",
+<<<<<<< Updated upstream
       "termsAgreement": "Продолжая, вы соглашаетесь с {terms} и {privacy} Comfy Org и разрешаете Comfy Org списывать средства с вашего способа оплаты в каждый расчётный период до отмены подписки.",
+=======
+      "termsAgreement": "Продолжая, вы соглашаетесь с {terms} и {privacy} компании Comfy Org и разрешаете Comfy Org списывать средства с вашего способа оплаты в каждом расчётном периоде, пока не отмените подписку.",
+>>>>>>> Stashed changes
       "totalDueToday": "Итого к оплате сегодня",
       "yearlySubscription": "Годовая подписка",
       "youllBeCharged": "С вас будет списано"
@@ -4399,7 +4454,11 @@
       "inviteTitle": "Пригласить команду",
       "planUpdated": "Ваш тариф успешно обновлён.",
       "promoApplied": "{code} применён.",
+<<<<<<< Updated upstream
       "promoRenews": "Продление за {amount} {date}",
+=======
+      "promoRenews": "Продление {date} за {amount}",
+>>>>>>> Stashed changes
       "receiptEmailed": "Квитанция отправлена на вашу электронную почту.",
       "sendInvites": "Отправить приглашения"
     },
@@ -4575,7 +4634,11 @@
   },
   "toastMessages": {
     "a1111CoreNodesUnavailable": "Не удалось загрузить рабочий процесс, так как в этой установке ComfyUI отсутствуют основные узлы. Проверьте, что сервер запущен корректно.",
+<<<<<<< Updated upstream
     "a1111EmbeddingsUnavailable": "Не удалось загрузить эмбеддинги с сервера. Рабочий процесс импортирован, но названия эмбеддингов оставлены в виде обычного текста.",
+=======
+    "a1111EmbeddingsUnavailable": "Не удалось загрузить эмбеддинги с сервера. Рабочий процесс был импортирован, но имена эмбеддингов оставлены как обычный текст.",
+>>>>>>> Stashed changes
     "cannotCreateSubgraph": "Невозможно создать подграф",
     "couldNotDetermineFileType": "Не удалось определить тип файла",
     "dropFileError": "Не удалось обработать перетаскиваемый элемент: {error}",

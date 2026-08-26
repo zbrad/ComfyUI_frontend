@@ -16597,13 +16597,19 @@
     }
   },
   "PixverseV6ExtendVideoNode": {
+<<<<<<< Updated upstream
     "description": "使用 PixVerse 延续现有视频，可选择生成原生音频。源视频必须短于 40 秒，且任一边最长不超过 1920px。输出将保持源视频的分辨率，因此质量设置影响的是延续内容的渲染效果，而非画面尺寸。",
     "display_name": "PixVerse V6 视频延长",
+=======
+    "description": "使用 PixVerse 延续现有视频，可选择生成原生音频。源视频必须短于 40 秒，且任一边长不得超过 1920px。输出会保留源视频的分辨率，因此质量决定续接部分的渲染效果，而非帧尺寸。",
+    "display_name": "PixVerse V6 延长视频",
+>>>>>>> Stashed changes
     "inputs": {
       "control_after_generate": {
         "name": "生成后控制"
       },
       "model": {
+<<<<<<< Updated upstream
         "name": "模型",
         "tooltip": "模型和生成设置。"
       },
@@ -16631,6 +16637,35 @@
       "video": {
         "name": "视频",
         "tooltip": "要延续的视频。"
+=======
+        "name": "model",
+        "tooltip": "模型和生成设置。"
+      },
+      "model_duration_seconds": {
+        "name": "duration_seconds"
+      },
+      "model_generate_audio": {
+        "name": "generate_audio"
+      },
+      "model_negative_prompt": {
+        "name": "negative_prompt"
+      },
+      "model_prompt": {
+        "name": "prompt"
+      },
+      "model_quality": {
+        "name": "quality"
+      },
+      "model_seed": {
+        "name": "seed"
+      },
+      "model_style": {
+        "name": "style"
+      },
+      "video": {
+        "name": "video",
+        "tooltip": "要续接的视频。"
+>>>>>>> Stashed changes
       }
     },
     "outputs": {
@@ -16640,13 +16675,18 @@
     }
   },
   "PixverseV6FirstLastFrameNode": {
+<<<<<<< Updated upstream
     "description": "使用 PixVerse 生成从首帧过渡到尾帧的视频，可选择生成原生音频。输出将保持首帧的宽高比。",
+=======
+    "description": "使用 PixVerse 生成从首帧过渡到尾帧的视频，可选择生成原生音频。输出会保留首帧的宽高比。",
+>>>>>>> Stashed changes
     "display_name": "PixVerse V6 首尾帧转视频",
     "inputs": {
       "control_after_generate": {
         "name": "生成后控制"
       },
       "first_frame": {
+<<<<<<< Updated upstream
         "name": "首帧"
       },
       "last_frame": {
@@ -16676,6 +16716,37 @@
       },
       "model_style": {
         "name": "风格"
+=======
+        "name": "first_frame"
+      },
+      "last_frame": {
+        "name": "last_frame"
+      },
+      "model": {
+        "name": "model",
+        "tooltip": "模型和生成设置。"
+      },
+      "model_duration_seconds": {
+        "name": "duration_seconds"
+      },
+      "model_generate_audio": {
+        "name": "generate_audio"
+      },
+      "model_negative_prompt": {
+        "name": "negative_prompt"
+      },
+      "model_prompt": {
+        "name": "prompt"
+      },
+      "model_quality": {
+        "name": "quality"
+      },
+      "model_seed": {
+        "name": "seed"
+      },
+      "model_style": {
+        "name": "style"
+>>>>>>> Stashed changes
       }
     },
     "outputs": {
@@ -16685,17 +16756,27 @@
     }
   },
   "PixverseV6FusionVideoNode": {
+<<<<<<< Updated upstream
     "description": "使用 PixVerse 根据参考主体、背景和视频合成视频。在提示词中通过名称引用参考对象，即可将其放入场景中，例如“{'@'}Subject1 穿过 {'@'}Background1”。连接参考视频后，模型会切换至 Omni 模式，输出时长将与最长的参考视频一致。",
     "display_name": "PixVerse V6 融合（参考图转视频）",
     "inputs": {
       "backgrounds": {
         "name": "背景",
         "tooltip": "主体将被放入其中的场景参考图像。"
+=======
+    "description": "使用 PixVerse 根据参考主体、背景和视频合成视频。通过在提示词中指名参考，将其放入场景，例如“{'@'}Subject1 穿过 {'@'}Background1”。连接参考视频会将模型切换为 Omni 模式，此时输出时长与最长的参考视频一致。",
+    "display_name": "PixVerse V6 融合（参考转视频）",
+    "inputs": {
+      "backgrounds": {
+        "name": "backgrounds",
+        "tooltip": "主体所置入场景的参考图像。"
+>>>>>>> Stashed changes
       },
       "control_after_generate": {
         "name": "生成后控制"
       },
       "model": {
+<<<<<<< Updated upstream
         "name": "模型",
         "tooltip": "模型和生成设置。"
       },
@@ -16704,6 +16785,16 @@
       },
       "model_duration_seconds": {
         "name": "持续时间（秒）"
+=======
+        "name": "model",
+        "tooltip": "模型和生成设置。"
+      },
+      "model_aspect_ratio": {
+        "name": "aspect_ratio"
+      },
+      "model_duration_seconds": {
+        "name": "时长（秒）"
+>>>>>>> Stashed changes
       },
       "model_generate_audio": {
         "name": "生成音频"
@@ -16724,12 +16815,21 @@
         "name": "风格"
       },
       "subjects": {
+<<<<<<< Updated upstream
         "name": "主体",
         "tooltip": "要放入场景中的主体参考图像。"
       },
       "videos": {
         "name": "视频",
         "tooltip": "用于借鉴主体、动作、构图或风格的参考视频。最多两个，合计最长 15 秒。"
+=======
+        "name": "subjects",
+        "tooltip": "要放入场景中的主体参考图像。"
+      },
+      "videos": {
+        "name": "videos",
+        "tooltip": "用于借鉴主体、运动、构图或风格的参考视频。最多两个，合计最长 15 秒。"
+>>>>>>> Stashed changes
       }
     },
     "outputs": {
@@ -16739,7 +16839,11 @@
     }
   },
   "PixverseV6ImageToVideoNode": {
+<<<<<<< Updated upstream
     "description": "使用 PixVerse 为图像添加动画，可选择生成原生音频。输出将保持输入图像的宽高比。",
+=======
+    "description": "使用 PixVerse 为图像制作动画，可选择生成原生音频。输出将保持输入图像的宽高比。",
+>>>>>>> Stashed changes
     "display_name": "PixVerse V6 图像转视频",
     "inputs": {
       "control_after_generate": {
@@ -16753,7 +16857,11 @@
         "tooltip": "模型和生成设置。"
       },
       "model_duration_seconds": {
+<<<<<<< Updated upstream
         "name": "持续时间（秒）"
+=======
+        "name": "时长（秒）"
+>>>>>>> Stashed changes
       },
       "model_generate_audio": {
         "name": "生成音频"
@@ -16798,7 +16906,11 @@
         "name": "宽高比"
       },
       "model_duration_seconds": {
+<<<<<<< Updated upstream
         "name": "持续时间（秒）"
+=======
+        "name": "时长（秒）"
+>>>>>>> Stashed changes
       },
       "model_generate_audio": {
         "name": "生成音频"

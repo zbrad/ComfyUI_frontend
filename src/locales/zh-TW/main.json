@@ -346,6 +346,7 @@
     "index": "{current} / {total}"
   },
   "billingOperation": {
+<<<<<<< Updated upstream
     "authenticationFailedDetail": "無法完成付款驗證。請再試一次。",
     "authenticationManagerRequired": "付款驗證需要工作區帳務管理員處理。",
     "authenticationUnavailable": "安全付款驗證目前無法使用。請重新整理後再試一次。",
@@ -357,6 +358,19 @@
     "paymentDeclinedDetail": "您的銀行拒絕了這筆付款。請嘗試其他付款方式或聯絡您的銀行。",
     "processingErrorDetail": "無法處理您的付款。請再試一次或使用其他付款方式。",
     "reconciliationDetail": "已收到您的付款，但無法完成工作區更新。請聯絡支援團隊，並提供此操作 ID：",
+=======
+    "authenticationFailedDetail": "我們無法完成付款驗證。請再試一次。",
+    "authenticationManagerRequired": "付款驗證需要工作區帳務管理員處理。",
+    "authenticationUnavailable": "安全付款驗證服務無法使用。請重新整理後再試一次。",
+    "cancelFailed": "取消訂閱失敗",
+    "cancelTimeout": "訂閱取消逾時",
+    "expiredCardDetail": "此卡片已過期。請使用其他付款方式。",
+    "incorrectCvcDetail": "卡片安全碼不正確。請確認後再試一次。",
+    "insufficientFundsDetail": "此付款方式餘額不足。請嘗試其他付款方式或聯絡您的銀行。",
+    "paymentDeclinedDetail": "您的銀行已拒絕這筆付款。請嘗試其他付款方式或聯絡您的銀行。",
+    "processingErrorDetail": "無法處理您的付款。請再試一次或使用其他付款方式。",
+    "reconciliationDetail": "已收到您的付款，但我們無法完成工作區的更新。請聯絡支援團隊並提供此操作 ID：",
+>>>>>>> Stashed changes
     "reconciliationTitle": "已收到付款 — 等待確認",
     "retryVerification": "重試驗證",
     "subscriptionActionRequired": "請驗證您的付款以完成工作區設置",
@@ -819,7 +833,11 @@
       "buy": "購買",
       "buyCredits": "繼續付款",
       "buyNow": "立即購買",
+<<<<<<< Updated upstream
       "chargedImmediatelyNote": "系統會立即向您儲存的付款方式扣款。",
+=======
+      "chargedImmediatelyNote": "系統會立即從您儲存的付款方式扣款。",
+>>>>>>> Stashed changes
       "confirmSubtitle": "付款完成後，點數將立即加到此工作區。",
       "confirmTitle": "確認",
       "contactUs": "聯絡我們",
@@ -2202,7 +2220,11 @@
     "loadFailed": "載入圖層失敗",
     "moveDown": "圖層下移",
     "moveUp": "圖層上移",
+<<<<<<< Updated upstream
     "needsTwoImages": "圖層編輯器至少需要兩張輸出圖片",
+=======
+    "needsTwoImages": "圖層編輯器至少需要兩張輸出影像",
+>>>>>>> Stashed changes
     "opacity": "不透明度",
     "position": "位置",
     "redo": "重做",
@@ -3430,7 +3452,11 @@
     "errorsFilter": "{count} 個錯誤 | {count} 個錯誤",
     "errorsFilterActive": "偵測到 {count} 個錯誤 | 偵測到 {count} 個錯誤",
     "errorsSummary": "{count} 個錯誤 | {count} 個錯誤",
+<<<<<<< Updated upstream
     "executionErrorOccurred": "執行期間發生錯誤。請查看「問題」分頁以取得詳細資訊。",
+=======
+    "executionErrorOccurred": "執行期間發生錯誤。請查看「問題」分頁以瞭解詳細資訊。",
+>>>>>>> Stashed changes
     "expand": "展開",
     "fallbackGroupTitle": "群組",
     "fallbackNodeTitle": "節點",
@@ -3440,7 +3466,11 @@
     "favoritesNoneHint": "在參數分頁，點擊任一輸入的 {moreIcon} 可加入這裡",
     "favoritesNoneTooltip": "將元件加星標，快速存取無需選擇節點",
     "findOnGithubTooltip": "在 GitHub 問題中搜尋相關問題",
+<<<<<<< Updated upstream
     "finishSetupBeforeRun": "執行工作流程前請完成設定",
+=======
+    "finishSetupBeforeRun": "請先完成設定再執行工作流程",
+>>>>>>> Stashed changes
     "getHelpTooltip": "回報此錯誤，我們會協助您解決",
     "globalSettings": {
       "canvas": "畫布",
@@ -3517,7 +3547,11 @@
     "noSelection": "請選擇節點以檢視其屬性與資訊。",
     "nodeState": "節點狀態",
     "nodes": "節點",
+<<<<<<< Updated upstream
     "nodesAffected": "{count} 個受影響的節點 | {count} 個受影響的節點",
+=======
+    "nodesAffected": "{count} 個受影響節點 | {count} 個受影響節點",
+>>>>>>> Stashed changes
     "nodesNoneDesc": "無節點",
     "noneSearchDesc": "沒有符合搜尋的項目",
     "normal": "一般",
@@ -3528,11 +3562,16 @@
     "resetAllParameters": "重設所有參數",
     "resetToDefault": "重設為預設值",
     "resolveBeforeRun": "請在執行工作流程前解決錯誤",
+<<<<<<< Updated upstream
     "resolveErrorsBeforeRun": "執行工作流程前請先解決錯誤",
+=======
+    "resolveErrorsBeforeRun": "請先解決錯誤再執行工作流程",
+>>>>>>> Stashed changes
     "seeError": "查看錯誤",
     "selectedNodeErrors": "{node} — {count} 個問題 | {node} — {count} 個問題",
     "selectedNodesErrors": "已選取 {nodes} 個節點 — {count} 個問題 | 已選取 {nodes} 個節點 — {count} 個問題",
     "settings": "設定",
+<<<<<<< Updated upstream
     "setupFilter": "{count} 項需要設定",
     "setupNodeSummary": "{nodes} 個節點 — {count} 個項目 | {nodes} 個節點 — {count} 個項目",
     "setupNodesSummary": "{nodes} 個節點 — {count} 個項目 | {nodes} 個節點 — {count} 個項目",
@@ -3541,6 +3580,16 @@
     "severityCountsStatus": "{errors} 個阻礙執行的錯誤，{setup} 項需要設定",
     "severityErrorLabel": "阻礙執行的錯誤",
     "severitySetupLabel": "需要設定",
+=======
+    "setupFilter": "{count} 項需要完成設定",
+    "setupNodeSummary": "{nodes} 個節點 — {count} 個項目 | {nodes} 個節點 — {count} 個項目",
+    "setupNodesSummary": "{nodes} 個節點 — {count} 個項目 | {nodes} 個節點 — {count} 個項目",
+    "setupRequired": "需要完成設定",
+    "setupSummary": "{count} 個項目 | {count} 個項目",
+    "severityCountsStatus": "{errors} 個阻斷性錯誤，{setup} 項需要完成設定",
+    "severityErrorLabel": "阻斷性錯誤",
+    "severitySetupLabel": "需要完成設定",
+>>>>>>> Stashed changes
     "showAdvancedInputsButton": "顯示進階輸入",
     "showAdvancedShort": "顯示進階",
     "showInput": "顯示輸入",
@@ -4279,7 +4328,11 @@
       "addNewPaymentMethod": "新增付款方式",
       "afterThat": "之後",
       "alipay": "Alipay",
+<<<<<<< Updated upstream
       "alipayRenewalNote": "Alipay 授權也將用於自動續訂及未來購買。",
+=======
+      "alipayRenewalNote": "Alipay 授權也將用於自動續訂及日後購買。",
+>>>>>>> Stashed changes
       "applyPromoCode": "套用",
       "applyQuoteBeforeContinuing": "繼續前，請套用優惠碼以重新整理您的報價。",
       "backToAllPlans": "返回所有方案",
@@ -4319,8 +4372,13 @@
       "promoCodePlaceholder": "優惠碼",
       "proratedCharge": "{plan} 按比例收費",
       "proratedRefund": "{plan} 按比例退款",
+<<<<<<< Updated upstream
       "quoteRefreshFailed": "您的報價已過期且無法重新整理。請重新選擇方案。",
       "quoteStale": "您的報價已變更。請確認更新後的金額，然後再試一次。",
+=======
+      "quoteRefreshFailed": "您的報價已過期且無法重新整理。請再次選擇方案。",
+      "quoteStale": "您的報價已變更。請查看更新後的金額並再試一次。",
+>>>>>>> Stashed changes
       "quoteUnavailable": "無法使用",
       "reactivation": {
         "amountChanged": "自您確認後，收費金額已變更 — 請重新檢查並再試一次",
@@ -4344,13 +4402,22 @@
       "startingToday": "今日開始",
       "startsOn": "開始於 {date}",
       "stayOnUntil": "您將於 {date} 前維持 {plan}。",
+<<<<<<< Updated upstream
       "stripeMethodChoice": "您的付款資訊將由 Stripe 安全處理。",
       "stripeUnavailable": "付款選項目前無法使用。請重新整理後再試一次。",
+=======
+      "stripeMethodChoice": "您的付款資訊由 Stripe 安全處理。",
+      "stripeUnavailable": "付款選項無法使用。請重新整理後再試一次。",
+>>>>>>> Stashed changes
       "subscribeToPlan": "訂閱 {plan}",
       "switchToPlan": "切換至 {plan}",
       "switchesToday": "今日切換次數",
       "terms": "服務條款",
+<<<<<<< Updated upstream
       "termsAgreement": "繼續即表示您同意 Comfy Org 的 {terms} 與 {privacy}，並授權 Comfy Org 在您取消前的每個計費週期向您的付款方式扣款。",
+=======
+      "termsAgreement": "繼續操作即表示您同意 Comfy Org 的 {terms} 與 {privacy}，並授權 Comfy Org 在每個計費週期向您的付款方式扣款，直到您取消為止。",
+>>>>>>> Stashed changes
       "totalDueToday": "今日應付總額",
       "yearlySubscription": "年度訂閱",
       "youllBeCharged": "您將被收取"
@@ -4852,7 +4919,11 @@
         "dismiss": "關閉",
         "memberBody": "您的團隊已用完所有點數。請聯絡工作區管理員新增點數以繼續產生。",
         "title": "點數已用完",
+<<<<<<< Updated upstream
         "upgradeBody": "升級您的方案以新增點數並繼續生成。"
+=======
+        "upgradeBody": "升級您的方案以增加點數並繼續生成。"
+>>>>>>> Stashed changes
       },
       "paused": {
         "body": "此工作區的訂閱已暫停。請更新付款方式以恢復使用。",

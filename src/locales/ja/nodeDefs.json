@@ -16597,8 +16597,13 @@
     }
   },
   "PixverseV6ExtendVideoNode": {
+<<<<<<< Updated upstream
     "description": "PixVerseで既存の動画を延長します。ネイティブ音声は任意で追加できます。元動画は40秒未満で、各辺が最大1920pxである必要があります。出力は元動画の解像度を維持するため、qualityはフレームサイズではなく延長部分のレンダリング品質を設定します。",
     "display_name": "PixVerse V6 動画の延長",
+=======
+    "description": "PixVerseで既存の動画を継続します。必要に応じてネイティブ音声も使用できます。元動画は40秒未満かつ、いずれの辺も1920px以下である必要があります。出力は元動画の解像度を維持するため、qualityはフレームサイズではなく継続部分のレンダリング品質を設定します。",
+    "display_name": "PixVerse V6 動画延長",
+>>>>>>> Stashed changes
     "inputs": {
       "control_after_generate": {
         "name": "生成後の制御"
@@ -16630,7 +16635,11 @@
       },
       "video": {
         "name": "video",
+<<<<<<< Updated upstream
         "tooltip": "延長する動画。"
+=======
+        "tooltip": "継続する動画。"
+>>>>>>> Stashed changes
       }
     },
     "outputs": {
@@ -16640,7 +16649,11 @@
     }
   },
   "PixverseV6FirstLastFrameNode": {
+<<<<<<< Updated upstream
     "description": "PixVerseで最初のフレームから最後のフレームへ遷移する動画を生成します。ネイティブ音声は任意で追加できます。出力は最初のフレームのアスペクト比を維持します。",
+=======
+    "description": "PixVerseを使用して、最初のフレームから最後のフレームへ遷移する動画を生成します。必要に応じてネイティブ音声も使用できます。出力は最初のフレームのアスペクト比を維持します。",
+>>>>>>> Stashed changes
     "display_name": "PixVerse V6 最初・最後のフレームから動画",
     "inputs": {
       "control_after_generate": {
@@ -16685,7 +16698,11 @@
     }
   },
   "PixverseV6FusionVideoNode": {
+<<<<<<< Updated upstream
     "description": "PixVerseで、参照する被写体、背景、動画から動画を構成します。プロンプト内で名前を指定して参照をシーンに配置します。例:「{'@'}Subject1 walks through {'@'}Background1」。参照動画を接続するとモデルはOmniモードに切り替わり、出力の長さは最も長い参照動画に一致します。",
+=======
+    "description": "PixVerseを使用して、参照する被写体、背景、動画から動画を合成します。プロンプト内で名前を指定して参照をシーンに配置します。例: 「{'@'}Subject1 walks through {'@'}Background1」。参照動画を接続するとモデルはOmniモードに切り替わり、出力の長さは最も長い参照動画に一致します。",
+>>>>>>> Stashed changes
     "display_name": "PixVerse V6 フュージョン（参照から動画）",
     "inputs": {
       "backgrounds": {
@@ -16729,7 +16746,11 @@
       },
       "videos": {
         "name": "videos",
+<<<<<<< Updated upstream
         "tooltip": "被写体、動き、フレーミング、スタイルを参照する動画。最大2本、合計15秒まで。"
+=======
+        "tooltip": "被写体、動き、構図、スタイルを参照するための動画。最大2本、合計15秒まで。"
+>>>>>>> Stashed changes
       }
     },
     "outputs": {
@@ -16759,7 +16780,11 @@
         "name": "音声を生成"
       },
       "model_multi_clip": {
+<<<<<<< Updated upstream
         "name": "マルチクリップ"
+=======
+        "name": "複数クリップ"
+>>>>>>> Stashed changes
       },
       "model_negative_prompt": {
         "name": "ネガティブプロンプト"
@@ -16804,7 +16829,11 @@
         "name": "音声を生成"
       },
       "model_multi_clip": {
+<<<<<<< Updated upstream
         "name": "マルチクリップ"
+=======
+        "name": "複数クリップ"
+>>>>>>> Stashed changes
       },
       "model_negative_prompt": {
         "name": "ネガティブプロンプト"

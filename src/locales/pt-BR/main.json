@@ -347,6 +347,7 @@
   },
   "billingOperation": {
     "authenticationFailedDetail": "Não foi possível concluir a verificação do pagamento. Tente novamente.",
+<<<<<<< Updated upstream
     "authenticationManagerRequired": "A verificação do pagamento precisa da atenção de um gerente de cobrança do espaço de trabalho.",
     "authenticationUnavailable": "A autenticação de pagamento segura está indisponível. Atualize a página e tente novamente.",
     "cancelFailed": "Falha ao cancelar a assinatura",
@@ -356,6 +357,17 @@
     "insufficientFundsDetail": "Este método de pagamento não tem saldo suficiente. Tente outro método de pagamento ou entre em contato com seu banco.",
     "paymentDeclinedDetail": "Seu banco recusou este pagamento. Tente outro método de pagamento ou entre em contato com seu banco.",
     "processingErrorDetail": "Não foi possível processar seu pagamento. Tente novamente ou use outro método de pagamento.",
+=======
+    "authenticationManagerRequired": "A verificação do pagamento precisa da atenção de um gerente de faturamento do espaço de trabalho.",
+    "authenticationUnavailable": "A autenticação de pagamento seguro está indisponível. Atualize a página e tente novamente.",
+    "cancelFailed": "Falha ao cancelar a assinatura",
+    "cancelTimeout": "Tempo esgotado ao cancelar a assinatura",
+    "expiredCardDetail": "Este cartão expirou. Use uma forma de pagamento diferente.",
+    "incorrectCvcDetail": "O código de segurança do cartão está incorreto. Verifique-o e tente novamente.",
+    "insufficientFundsDetail": "Esta forma de pagamento não tem fundos suficientes. Tente outra forma de pagamento ou entre em contato com seu banco.",
+    "paymentDeclinedDetail": "Seu banco recusou este pagamento. Tente outra forma de pagamento ou entre em contato com seu banco.",
+    "processingErrorDetail": "Não foi possível processar seu pagamento. Tente novamente ou use outra forma de pagamento.",
+>>>>>>> Stashed changes
     "reconciliationDetail": "Seu pagamento foi recebido, mas não foi possível concluir a atualização do seu espaço de trabalho. Entre em contato com o suporte e inclua este ID da operação:",
     "reconciliationTitle": "Pagamento recebido — confirmação pendente",
     "retryVerification": "Tentar verificação novamente",
@@ -819,7 +831,11 @@
       "buy": "Comprar",
       "buyCredits": "Continuar para o pagamento",
       "buyNow": "Comprar agora",
+<<<<<<< Updated upstream
       "chargedImmediatelyNote": "Seu método de pagamento salvo é cobrado imediatamente.",
+=======
+      "chargedImmediatelyNote": "A forma de pagamento salva será cobrada imediatamente.",
+>>>>>>> Stashed changes
       "confirmSubtitle": "Os créditos são adicionados a este workspace assim que o pagamento for concluído.",
       "confirmTitle": "Confirmar",
       "contactUs": "Fale conosco",
@@ -3427,10 +3443,17 @@
     "errorNodesSummary": "{nodes} nodes — {count} erro | {nodes} nodes — {count} erros",
     "errors": "Problemas",
     "errorsDetected": "Erro detectado | Erros detectados",
+<<<<<<< Updated upstream
     "errorsFilter": "{count} Erro | {count} Erros",
     "errorsFilterActive": "{count} Erro detectado | {count} Erros detectados",
     "errorsSummary": "{count} erro | {count} erros",
     "executionErrorOccurred": "Ocorreu um erro durante a execução. Consulte a aba Problemas para obter detalhes.",
+=======
+    "errorsFilter": "{count} erro | {count} erros",
+    "errorsFilterActive": "{count} erro detectado | {count} erros detectados",
+    "errorsSummary": "{count} erro | {count} erros",
+    "executionErrorOccurred": "Ocorreu um erro durante a execução. Consulte a aba Problemas para mais detalhes.",
+>>>>>>> Stashed changes
     "expand": "Expandir",
     "fallbackGroupTitle": "Grupo",
     "fallbackNodeTitle": "Nó",
@@ -3533,13 +3556,22 @@
     "selectedNodeErrors": "{node} — {count} problema | {node} — {count} problemas",
     "selectedNodesErrors": "{nodes} nós selecionados — {count} problema | {nodes} nós selecionados — {count} problemas",
     "settings": "Configurações",
+<<<<<<< Updated upstream
     "setupFilter": "{count} Configuração necessária",
+=======
+    "setupFilter": "{count} configuração necessária",
+>>>>>>> Stashed changes
     "setupNodeSummary": "{nodes} nó — {count} item | {nodes} nó — {count} itens",
     "setupNodesSummary": "{nodes} nós — {count} item | {nodes} nós — {count} itens",
     "setupRequired": "Configuração necessária",
     "setupSummary": "{count} item | {count} itens",
+<<<<<<< Updated upstream
     "severityCountsStatus": "{errors} bloqueando, {setup} exigem configuração",
     "severityErrorLabel": "Erros bloqueadores",
+=======
+    "severityCountsStatus": "{errors} impeditivos, {setup} configurações necessárias",
+    "severityErrorLabel": "Erros impeditivos",
+>>>>>>> Stashed changes
     "severitySetupLabel": "Configuração necessária",
     "showAdvancedInputsButton": "Mostrar entradas avançadas",
     "showAdvancedShort": "Mostrar avançado",
@@ -4276,7 +4308,11 @@
     "prepaidDescription": "Créditos pré-pagos",
     "preview": {
       "addCreditCard": "Adicionar cartão de crédito",
+<<<<<<< Updated upstream
       "addNewPaymentMethod": "Adicionar novo método de pagamento",
+=======
+      "addNewPaymentMethod": "Adicionar nova forma de pagamento",
+>>>>>>> Stashed changes
       "afterThat": "Depois disso",
       "alipay": "Alipay",
       "alipayRenewalNote": "A autorização do Alipay também será usada para renovações automáticas e compras futuras.",
@@ -4312,7 +4348,11 @@
       "newMonthlySubscription": "Nova assinatura mensal",
       "nextPaymentDue": "Próximo pagamento em {date}. Cancele a qualquer momento.",
       "payAndSubscribe": "Pagar e assinar",
+<<<<<<< Updated upstream
       "paymentMethod": "Método de pagamento",
+=======
+      "paymentMethod": "Forma de pagamento",
+>>>>>>> Stashed changes
       "paymentPopupBlocked": "Não foi possível abrir a página de pagamento — permita pop-ups e tente novamente.",
       "perMember": "/ membro",
       "privacyPolicy": "Política de Privacidade",
@@ -4337,8 +4377,13 @@
         "upgradeBody": "Sua {plan} estava programada para terminar em {date}. Fazer o upgrade agora a reativa — você será cobrado {amount} hoje, e ela será renovada automaticamente em {nextDate} em vez de encerrar."
       },
       "refillReplacesNote": "Substitui sua recarga mensal. O saldo existente é mantido.",
+<<<<<<< Updated upstream
       "renewsAt": "Renova por {amount} em {date}. Cancele a qualquer momento.",
       "savedPaymentMethod": "Método de pagamento",
+=======
+      "renewsAt": "Renova por {amount} em {date}. Cancele quando quiser.",
+      "savedPaymentMethod": "Forma de pagamento",
+>>>>>>> Stashed changes
       "showMoreFeatures": "Mostrar mais recursos",
       "starting": "Começando em {date}",
       "startingToday": "Começando hoje",
@@ -4350,7 +4395,11 @@
       "switchToPlan": "Mudar para {plan}",
       "switchesToday": "Trocas hoje",
       "terms": "Termos",
+<<<<<<< Updated upstream
       "termsAgreement": "Ao continuar, você concorda com os {terms} e a {privacy} da Comfy Org e autoriza a Comfy Org a cobrar seu método de pagamento a cada período de cobrança até que você cancele.",
+=======
+      "termsAgreement": "Ao continuar, você concorda com os {terms} e a {privacy} da Comfy Org e autoriza a Comfy Org a cobrar sua forma de pagamento a cada período de faturamento até que você cancele.",
+>>>>>>> Stashed changes
       "totalDueToday": "Total devido hoje",
       "yearlySubscription": "Assinatura anual",
       "youllBeCharged": "Você será cobrado"

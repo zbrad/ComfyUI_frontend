@@ -368,7 +368,11 @@
   },
   "Comfy_RightSidePanel_ShowErrorsTab": {
     "name": "Afficher l’onglet Problèmes dans le panneau latéral",
+<<<<<<< Updated upstream
     "tooltip": "Lorsque cette option est activée, l’onglet Problèmes s’affiche dans le panneau latéral droit pour indiquer les erreurs bloquantes et les ressources manquantes à configurer."
+=======
+    "tooltip": "Lorsqu’il est activé, l’onglet Problèmes s’affiche dans le panneau latéral droit afin d’indiquer les erreurs bloquantes et les ressources manquantes nécessitant une configuration."
+>>>>>>> Stashed changes
   },
   "Comfy_Sidebar_Location": {
     "name": "Emplacement de la barre latérale",

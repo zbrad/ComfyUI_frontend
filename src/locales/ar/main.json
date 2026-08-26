@@ -348,16 +348,28 @@
   "billingOperation": {
     "authenticationFailedDetail": "تعذر إكمال التحقق من الدفع. يُرجى المحاولة مرة أخرى.",
     "authenticationManagerRequired": "يتطلب التحقق من الدفع اهتمام مدير فوترة مساحة العمل.",
+<<<<<<< Updated upstream
     "authenticationUnavailable": "المصادقة الآمنة للدفع غير متاحة. يُرجى التحديث والمحاولة مرة أخرى.",
+=======
+    "authenticationUnavailable": "مصادقة الدفع الآمنة غير متاحة. يُرجى التحديث والمحاولة مرة أخرى.",
+>>>>>>> Stashed changes
     "cancelFailed": "فشل في إلغاء الاشتراك",
     "cancelTimeout": "انتهت مهلة إلغاء الاشتراك",
     "expiredCardDetail": "انتهت صلاحية هذه البطاقة. استخدم طريقة دفع مختلفة.",
     "incorrectCvcDetail": "رمز أمان البطاقة غير صحيح. تحقّق منه وحاول مرة أخرى.",
+<<<<<<< Updated upstream
     "insufficientFundsDetail": "لا تحتوي طريقة الدفع هذه على رصيد كافٍ. جرّب طريقة دفع أخرى أو تواصل مع مصرفك.",
     "paymentDeclinedDetail": "رفض مصرفك هذه الدفعة. جرّب طريقة دفع أخرى أو تواصل مع مصرفك.",
     "processingErrorDetail": "تعذرت معالجة دفعتك. حاول مرة أخرى أو استخدم طريقة دفع أخرى.",
     "reconciliationDetail": "تم استلام دفعتك، لكن تعذر علينا إكمال تحديث مساحة عملك. تواصل مع الدعم وأدرج معرّف العملية هذا:",
     "reconciliationTitle": "تم استلام الدفعة — التأكيد قيد الانتظار",
+=======
+    "insufficientFundsDetail": "لا تحتوي طريقة الدفع هذه على رصيد كافٍ. جرّب طريقة دفع أخرى أو اتصل بمصرفك.",
+    "paymentDeclinedDetail": "رفض مصرفك هذه الدفعة. جرّب طريقة دفع أخرى أو اتصل بمصرفك.",
+    "processingErrorDetail": "تعذرت معالجة دفعتك. حاول مرة أخرى أو استخدم طريقة دفع أخرى.",
+    "reconciliationDetail": "تم استلام دفعتك، لكن تعذر إكمال تحديث مساحة العمل. اتصل بالدعم وأدرج معرّف العملية هذا:",
+    "reconciliationTitle": "تم استلام الدفعة — التأكيد معلّق",
+>>>>>>> Stashed changes
     "retryVerification": "إعادة محاولة التحقق",
     "subscriptionActionRequired": "يرجى التحقق من الدفع لإكمال إعداد مساحة العمل الخاصة بك",
     "subscriptionFailed": "فشل تحديث الاشتراك",
@@ -819,7 +831,11 @@
       "buy": "شراء",
       "buyCredits": "المتابعة للدفع",
       "buyNow": "اشترِ الآن",
+<<<<<<< Updated upstream
       "chargedImmediatelyNote": "سيتم تحصيل الرسوم من طريقة الدفع المحفوظة لديك فورًا.",
+=======
+      "chargedImmediatelyNote": "سيتم تحصيل الرسوم من طريقة الدفع المحفوظة فورًا.",
+>>>>>>> Stashed changes
       "confirmSubtitle": "سيتم إضافة الرصيد إلى مساحة العمل هذه بمجرد إتمام الدفع.",
       "confirmTitle": "تأكيد",
       "contactUs": "اتصل بنا",
@@ -3428,9 +3444,15 @@
     "errors": "المشكلات",
     "errorsDetected": "تم اكتشاف خطأ | تم اكتشاف أخطاء",
     "errorsFilter": "{count} خطأ | {count} أخطاء",
+<<<<<<< Updated upstream
     "errorsFilterActive": "تم اكتشاف {count} خطأ | تم اكتشاف {count} أخطاء",
     "errorsSummary": "{count} خطأ | {count} أخطاء",
     "executionErrorOccurred": "حدث خطأ أثناء التنفيذ. راجع علامة تبويب «المشكلات» للتفاصيل.",
+=======
+    "errorsFilterActive": "{count} خطأ مكتشف | {count} أخطاء مكتشفة",
+    "errorsSummary": "{count} خطأ | {count} أخطاء",
+    "executionErrorOccurred": "حدث خطأ أثناء التنفيذ. راجع علامة تبويب المشكلات للتفاصيل.",
+>>>>>>> Stashed changes
     "expand": "توسيع",
     "fallbackGroupTitle": "مجموعة",
     "fallbackNodeTitle": "عقدة",
@@ -3528,19 +3550,34 @@
     "resetAllParameters": "إعادة تعيين جميع المعلمات",
     "resetToDefault": "إعادة التعيين إلى الافتراضي",
     "resolveBeforeRun": "يرجى الحل قبل تشغيل سير العمل",
+<<<<<<< Updated upstream
     "resolveErrorsBeforeRun": "حلّ الأخطاء قبل تشغيل سير العمل",
     "seeError": "عرض الخطأ",
     "selectedNodeErrors": "{node} — {count} مشكلة | {node} — {count} مشكلات",
     "selectedNodesErrors": "تم تحديد {nodes} عقدة — {count} مشكلة | تم تحديد {nodes} عقدة — {count} مشكلات",
+=======
+    "resolveErrorsBeforeRun": "حل الأخطاء قبل تشغيل سير العمل",
+    "seeError": "عرض الخطأ",
+    "selectedNodeErrors": "{node} — {count} مشكلة | {node} — {count} مشكلات",
+    "selectedNodesErrors": "تم تحديد {nodes} عقد — {count} مشكلة | تم تحديد {nodes} عقد — {count} مشكلات",
+>>>>>>> Stashed changes
     "settings": "الإعدادات",
     "setupFilter": "{count} إعداد مطلوب",
     "setupNodeSummary": "{nodes} عقدة — {count} عنصر | {nodes} عقدة — {count} عناصر",
     "setupNodesSummary": "{nodes} عقد — {count} عنصر | {nodes} عقد — {count} عناصر",
+<<<<<<< Updated upstream
     "setupRequired": "الإعداد مطلوب",
     "setupSummary": "{count} عنصر | {count} عناصر",
     "severityCountsStatus": "{errors} أخطاء مانعة، {setup} إعدادات مطلوبة",
     "severityErrorLabel": "أخطاء مانعة",
     "severitySetupLabel": "الإعداد مطلوب",
+=======
+    "setupRequired": "يلزم الإعداد",
+    "setupSummary": "{count} عنصر | {count} عناصر",
+    "severityCountsStatus": "{errors} أخطاء مانعة، {setup} إعدادات مطلوبة",
+    "severityErrorLabel": "أخطاء مانعة",
+    "severitySetupLabel": "يلزم الإعداد",
+>>>>>>> Stashed changes
     "showAdvancedInputsButton": "إظهار المدخلات المتقدمة",
     "showAdvancedShort": "إظهار الخيارات المتقدمة",
     "showInput": "إظهار المدخل",
@@ -4350,7 +4387,11 @@
       "switchToPlan": "انتقل إلى {plan}",
       "switchesToday": "تبديلات اليوم",
       "terms": "الشروط",
+<<<<<<< Updated upstream
       "termsAgreement": "بالمتابعة، فإنك توافق على {terms} و{privacy} الخاصين بـ Comfy Org، وتفوض Comfy Org بخصم الرسوم من طريقة الدفع الخاصة بك في كل فترة فوترة حتى الإلغاء.",
+=======
+      "termsAgreement": "بالمتابعة، توافق على {terms} و{privacy} الخاصة بـ Comfy Org، وتفوّض Comfy Org بتحصيل الرسوم من طريقة الدفع الخاصة بك في كل فترة فوترة حتى تقوم بالإلغاء.",
+>>>>>>> Stashed changes
       "totalDueToday": "الإجمالي المستحق اليوم",
       "yearlySubscription": "اشتراك سنوي",
       "youllBeCharged": "سيتم خصم"
@@ -4575,7 +4616,11 @@
   },
   "toastMessages": {
     "a1111CoreNodesUnavailable": "تعذر تحميل سير العمل لأن تثبيت ComfyUI هذا يفتقد إلى العقد الأساسية. تحقق من أن الواجهة الخلفية بدأت بشكل صحيح.",
+<<<<<<< Updated upstream
     "a1111EmbeddingsUnavailable": "تعذر تحميل التضمينات من الخادم. تم استيراد سير العمل، لكن تُركت أسماء التضمينات كنص عادي.",
+=======
+    "a1111EmbeddingsUnavailable": "تعذر تحميل التضمينات من الخادم. تم استيراد سير العمل، ولكن تُركت أسماء التضمينات كنص عادي.",
+>>>>>>> Stashed changes
     "cannotCreateSubgraph": "لا يمكن إنشاء مخطط فرعي",
     "couldNotDetermineFileType": "تعذر تحديد نوع الملف",
     "dropFileError": "غير قادر على معالجة العنصر المسقط: {error}",
@@ -4626,8 +4671,13 @@
     "invalidTemplateData": "فشل في تحميل قالب العقدة: بيانات غير صالحة",
     "legacyMaskEditorDeprecated": "محرر القناع القديم لم يعد مدعوماً وسيتم إزالته قريباً.",
     "migrateToLitegraphReroute": "سيتم إزالة عقد إعادة التوجيه في الإصدارات المستقبلية. انقر للترحيل إلى إعادة التوجيه الأصلية في Litegraph.",
+<<<<<<< Updated upstream
     "missingMediaVerificationFailed": "فشل التحقق من الوسائط المفقودة. قد لا تظهر بعض المدخلات في علامة تبويب المشاكل.",
     "missingModelVerificationFailed": "فشل التحقق من النماذج المفقودة. قد لا تظهر بعض النماذج في علامة تبويب المشاكل.",
+=======
+    "missingMediaVerificationFailed": "فشل التحقق من الوسائط المفقودة. قد لا تظهر بعض المدخلات في علامة تبويب المشكلات.",
+    "missingModelVerificationFailed": "فشل التحقق من النماذج المفقودة. قد لا تظهر بعض النماذج في علامة تبويب المشكلات.",
+>>>>>>> Stashed changes
     "modelLoadedSuccessfully": "تم تحميل النموذج ثلاثي الأبعاد بنجاح",
     "no3dScene": "لا يوجد مشهد ثلاثي الأبعاد لتطبيق الخامة",
     "no3dSceneToExport": "لا يوجد مشهد ثلاثي الأبعاد للتصدير",
@@ -4852,7 +4902,11 @@
         "dismiss": "تجاهل",
         "memberBody": "لقد استخدم فريقك جميع أرصدته. يجب على مسؤولي المساحة workspace إضافة المزيد من الأرصدة للمتابعة.",
         "title": "نفدت الأرصدة",
+<<<<<<< Updated upstream
         "upgradeBody": "قم بترقية خطتك لإضافة أرصدة ومتابعة الإنشاء."
+=======
+        "upgradeBody": "قم بترقية خطتك لإضافة أرصدة ومتابعة التوليد."
+>>>>>>> Stashed changes
       },
       "paused": {
         "body": "تم إيقاف اشتراك هذه المساحة workspace مؤقتًا. يرجى تحديث الدفع للاستمرار.",
