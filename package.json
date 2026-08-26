@@ -236,7 +236,7 @@
     "zod-to-json-schema": "catalog:"
   },
   "engines": {
-    "node": ">=25 <26",
+    "node": ">=26.7",
     "pnpm": ">=11.3"
   },
   "packageManager": "pnpm@11.13.1"
