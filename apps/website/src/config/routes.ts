@@ -22,6 +22,7 @@ const baseRoutes = {
   affiliateTerms: '/affiliates/terms',
   contact: '/contact',
   models: '/p/supported-models',
+  modelsAll: '/p/supported-models/all',
   mcp: '/mcp',
   minimax: '/minimax-h3',
   minimaxMusic3: '/minimax-music-3',
@@ -58,7 +59,8 @@ const LOCALE_INVARIANT_ROUTE_KEYS = new Set<keyof Routes>([
   'affiliateTerms',
   'termsOfService',
   'enterpriseMsa',
-  'models'
+  'models',
+  'modelsAll'
 ])
 
 const LOCALE_INVARIANT_PATHS = new Set<string>(
