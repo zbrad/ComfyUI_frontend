@@ -12,8 +12,14 @@ import type { ConversationEntry } from '../../stores/agent/agentConversationStor
 import AgentMessage from './message/AgentMessage.vue'
 import UserMessage from './message/UserMessage.vue'
 
-const { entries } = defineProps<{
+const {
+  entries,
+  showPaywallAddCredits = true,
+  showPaywallUpgrade = true
+} = defineProps<{
   entries: ConversationEntry[]
+  showPaywallAddCredits?: boolean
+  showPaywallUpgrade?: boolean
 }>()
 const emit = defineEmits<{
   feedback: [turnId: string, vote: 'up' | 'down' | null]
@@ -83,6 +89,8 @@ watch(
             <AgentMessage
               v-else
               :message="entry"
+              :show-add-credits="showPaywallAddCredits"
+              :show-upgrade="showPaywallUpgrade"
               @feedback="emit('feedback', entry.id, $event)"
               @add-credits="emit('addCredits')"
               @upgrade-subscription="emit('upgradeSubscription')"

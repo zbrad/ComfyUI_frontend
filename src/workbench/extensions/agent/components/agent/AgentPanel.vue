@@ -41,6 +41,8 @@ const {
   workflowDetached = false,
   getMentionNodes = () => [],
   getMentionAssets = async () => [],
+  showPaywallAddCredits = true,
+  showPaywallUpgrade = true,
   sessionId = null,
   customTitle,
   historyGroups
@@ -58,6 +60,8 @@ const {
   workflowDetached?: boolean
   getMentionNodes?: () => SelectedNode[]
   getMentionAssets?: () => AssetItem[] | Promise<AssetItem[]>
+  showPaywallAddCredits?: boolean
+  showPaywallUpgrade?: boolean
   sessionId?: string | null
   customTitle?: string
   historyGroups: HistoryGroups
@@ -277,6 +281,8 @@ defineExpose({ addAttachment, updateAttachment, removeAttachment })
         <ConversationView
           v-else
           :entries="entries"
+          :show-paywall-add-credits="showPaywallAddCredits"
+          :show-paywall-upgrade="showPaywallUpgrade"
           @feedback="(id, vote) => emit('feedback', id, vote)"
           @add-credits="emit('addCredits')"
           @upgrade-subscription="emit('upgradeSubscription')"
