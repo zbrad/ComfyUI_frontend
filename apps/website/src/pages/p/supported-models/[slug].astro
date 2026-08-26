@@ -1,10 +1,10 @@
 ---
 import type { GetStaticPaths } from 'astro'
 import BaseLayout from '../../../layouts/BaseLayout.astro'
-import CardWorkflow01 from '../../../components/blocks/CardWorkflow01.vue'
-import BrandButton from '../../../components/common/BrandButton.vue'
-import SectionHeader from '../../../components/common/SectionHeader.vue'
 import ModelHeroSection from '../../../components/models/ModelHeroSection.vue'
+import ModelPricingSection from '../../../components/models/ModelPricingSection.astro'
+import ModelWorkflowGallery from '../../../components/models/ModelWorkflowGallery.vue'
+import SectionLabel from '../../../components/common/SectionLabel.vue'
 import type { CardWorkflowItem } from '../../../components/blocks/CardWorkflow01.vue'
 import { models, getModelBySlug } from '../../../config/models'
 import { t } from '../../../i18n/translations'
@@ -30,23 +30,20 @@ if (model.canonicalSlug) {
 }
 
 const { displayName } = model
-const workflowSearchUrl = `https://comfy.org/workflows/?search=${encodeURIComponent(model.name)}`
-const workflowPreview: CardWorkflowItem | undefined = model.thumbnailUrl
-  ? {
-      id: `${model.slug}-workflow`,
-      title: t('models.workflowGallery.cardTitle').replace(
-        '{name}',
-        displayName,
-      ),
-      href: workflowSearchUrl,
-      media: {
-        type: 'image',
-        src: model.thumbnailUrl,
-        alt: `${displayName} workflow preview`,
-      },
-      tags: model.categories,
-    }
-  : undefined
+const workflowsUrl = 'https://comfy.org/workflows/'
+const workflowPreviews: CardWorkflowItem[] = model.workflowPreviews.map(
+  (workflow) => ({
+    id: workflow.id,
+    title: workflow.title,
+    href: workflowsUrl,
+    media: {
+      type: 'image',
+      src: workflow.thumbnailUrl,
+      alt: `${workflow.title} workflow preview`,
+    },
+    tags: model.categories,
+  }),
+)
 
 const dirDescriptions: Record<string, string> = {
   diffusion_models: 'a diffusion model that generates images or video from text and image prompts',
@@ -148,23 +145,16 @@ const faqPage: JsonLdNode = {
     directory={model.directory}
   />
 
-  {workflowPreview && (
+  {workflowPreviews.length > 0 && (
     <section class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-      <div class="flex flex-wrap items-end justify-between gap-6">
-        <SectionHeader
-          label={t('models.workflowGallery.eyebrow')}
-          align="start"
-          maxWidth="xl"
-        >
-          {t('models.workflowGallery.heading').replace('{name}', displayName)}
-        </SectionHeader>
-        <BrandButton href={workflowSearchUrl} variant="outline" size="nav">
-          {t('models.workflowGallery.viewAll')}
-        </BrandButton>
-      </div>
-      <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <CardWorkflow01 item={workflowPreview} variant="compact" />
-      </div>
+      <SectionLabel>{t('models.workflowGallery.eyebrow')}</SectionLabel>
+      <ModelWorkflowGallery
+        client:visible
+        items={workflowPreviews}
+        catalogHref={workflowsUrl}
+        viewAllLabel={t('models.workflowGallery.viewAll')}
+        loadMoreLabel={t('models.workflowGallery.loadMore')}
+      />
     </section>
   )}
 
@@ -186,6 +176,11 @@ const faqPage: JsonLdNode = {
       </a>
     )}
   </section>
+
+  <ModelPricingSection
+    isPartnerNode={model.directory === 'partner_nodes'}
+    locale={locale}
+  />
 
   <section>
     {/* TODO: shared HowComfyWorks component */}
