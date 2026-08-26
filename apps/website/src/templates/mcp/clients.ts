@@ -1,8 +1,8 @@
-export const MCP_CONNECTION_IDS = ['cloud', 'local'] as const
+const MCP_CONNECTION_IDS = ['cloud', 'local'] as const
 
 export type ConnectionId = (typeof MCP_CONNECTION_IDS)[number]
 
-export const CLOUD_CLIENT_IDS = [
+const CLOUD_CLIENT_IDS = [
   'claude-desktop',
   'claude-code',
   'codex',
@@ -11,7 +11,7 @@ export const CLOUD_CLIENT_IDS = [
   'other'
 ] as const
 
-export const LOCAL_CLIENT_IDS = [
+const LOCAL_CLIENT_IDS = [
   'local-claude-code',
   'local-claude-desktop',
   'local-cursor',
