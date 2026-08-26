@@ -198,7 +198,7 @@ describe('persistThumbnail', () => {
     mockFetchEmpty()
     mockFetchResponse([localAsset])
     mockUploadAssetFromBase64.mockResolvedValue({ id: 'new-preview-id' })
-    mockUpdateAsset.mockResolvedValue({})
+    mockUpdateAsset.mockResolvedValue({ kind: 'updated', asset: localAsset })
 
     const blob = new Blob(['fake-png'], { type: 'image/png' })
     await persistThumbnail('ComfyUI_00081_.glb', blob)
@@ -247,7 +247,7 @@ describe('persistThumbnail', () => {
   it('works with cloud hash filename', async () => {
     mockFetchResponse([cloudAsset])
     mockUploadAssetFromBase64.mockResolvedValue({ id: 'new-preview-id' })
-    mockUpdateAsset.mockResolvedValue({})
+    mockUpdateAsset.mockResolvedValue({ kind: 'updated', asset: cloudAsset })
 
     const blob = new Blob(['fake-png'], { type: 'image/png' })
     await persistThumbnail('c6cadcee57dd.glb', blob)
@@ -264,7 +264,7 @@ describe('persistThumbnail', () => {
     mockFetchEmpty()
     mockFetchResponse([localAsset])
     mockUploadAssetFromBase64.mockResolvedValue({ id: 'new-preview-id' })
-    mockUpdateAsset.mockResolvedValue({})
+    mockUpdateAsset.mockResolvedValue({ kind: 'updated', asset: localAsset })
 
     const blob = new Blob(['fake-png'], { type: 'image/png' })
     await persistThumbnail('ComfyUI_00081_.glb', blob)
@@ -279,7 +279,7 @@ describe('persistThumbnail', () => {
   it('uses the cloud asset name (not the hash) when patching the store', async () => {
     mockFetchResponse([cloudAsset])
     mockUploadAssetFromBase64.mockResolvedValue({ id: 'new-preview-id' })
-    mockUpdateAsset.mockResolvedValue({})
+    mockUpdateAsset.mockResolvedValue({ kind: 'updated', asset: cloudAsset })
 
     const blob = new Blob(['fake-png'], { type: 'image/png' })
     await persistThumbnail('c6cadcee57dd.glb', blob)
