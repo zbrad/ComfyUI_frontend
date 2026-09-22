@@ -5,11 +5,13 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { LGraphNode } from '@/lib/litegraph/src/litegraph'
 import type { IComboWidget } from '@/lib/litegraph/src/types/widgets'
 
-const { mockFetchApi, mockAddAlert, mockUpdateInputs } = vi.hoisted(() => ({
-  mockFetchApi: vi.fn(),
-  mockAddAlert: vi.fn(),
-  mockUpdateInputs: vi.fn()
-}))
+const { mockFetchApi, mockAddAlert, mockInvalidateInputAssets } = vi.hoisted(
+  () => ({
+    mockFetchApi: vi.fn(),
+    mockAddAlert: vi.fn(),
+    mockInvalidateInputAssets: vi.fn()
+  })
+)
 
 vi.mock('@/scripts/app', () => ({
   app: { canvas: undefined },
@@ -25,7 +27,11 @@ vi.mock('@/platform/updates/common/toastStore', () => ({
 }))
 
 vi.mock('@/stores/assetsStore', () => ({
-  useAssetsStore: () => ({ updateInputs: mockUpdateInputs })
+  // 1.53.6 replaced assetsStore.updateInputs() with inputAssets.invalidate();
+  // uploadFile awaits it, so a stale mock throws and aborts the upload.
+  useAssetsStore: () => ({
+    inputAssets: { invalidate: mockInvalidateInputAssets }
+  })
 }))
 
 vi.mock('vue-router', () => ({
@@ -78,7 +84,6 @@ function jsonUploadResponse(name: string) {
 describe('getMissingTemplateAssetOption', () => {
   beforeEach(() => {
     setActivePinia(createTestingPinia({ stubActions: false }))
-    vi.clearAllMocks()
     vi.stubGlobal(
       'fetch',
       vi.fn().mockResolvedValue({
